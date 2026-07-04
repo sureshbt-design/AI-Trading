@@ -1,6 +1,6 @@
 
 PATCC MODULE 2 - TECHNICAL SCANNER AGENT V3
-Generated: 2026-07-03 22:42:59
+Generated: 2026-07-04 06:04:59
 
 +--------+----------+---------+-----------+-------+-----------+---------+---------+--------------+----------------+---------------+------------------+----------------+------------------+----------------------------------------------------------+-------------+------------+------------+---------+---------+
 |   Rank | Symbol   |   Price |   Daily % |   RSI |   Rel Vol |   ATR % |   ROC20 |   52W Dist % | Trend          |   Trend Score |   Momentum Score |   Volume Score |   Strength Score | Patterns                                                 |   RS vs SPY |   RS Score | RS Label   |   Score | Grade   |
