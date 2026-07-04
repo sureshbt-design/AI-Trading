@@ -18,6 +18,7 @@ from Core.indicators import (
     relative_volume,
     distance_from_high,
 )
+from Core.patterns import detect_patterns
 
 
 SYMBOLS = [
@@ -63,6 +64,9 @@ def analyze_symbol(symbol):
         auto_adjust=True
     )
 
+   
+
+
     if df.empty or len(df) < 220:
         return None
 
@@ -80,6 +84,8 @@ def analyze_symbol(symbol):
     df["ROC20"] = roc(df["Close"], 20)
     df["REL_VOL"] = relative_volume(df["Volume"], 20)
     df["DIST_52W_HIGH"] = distance_from_high(df)
+
+    patterns = detect_patterns(df)
 
     latest = df.iloc[-1]
     previous = df.iloc[-2]
@@ -174,6 +180,7 @@ def analyze_symbol(symbol):
         "Trend Score": round(trend_score, 1),
         "Momentum Score": round(momentum_score, 1),
         "Volume Score": round(volume_score, 1),
+        "Patterns": ", ".join(patterns[:3]),
         "Score": score,
         "Grade": grade_score(score),
     }
