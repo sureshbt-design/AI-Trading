@@ -1,0 +1,26 @@
+# Python
+
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual Environment
+.venv/
+venv/
+
+# Cursor
+.cursor/
+
+# VS Code
+.vscode/
+
+# Logs
+*.log
+
+# OS Files
+.DS_Store
+Thumbs.db
+
+# Reports (optional)
+# Uncomment if you don't want generated reports tracked
+# Reports/*.txt
