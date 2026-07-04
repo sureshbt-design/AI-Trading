@@ -1,0 +1,19 @@
+{
+    "name": "Macro Markets",
+    "market": "Global",
+    "asset_class": "Mixed",
+    "provider": "Yahoo",
+    "scan_frequency": "Daily",
+    "symbols": [
+        "SPY",
+        "QQQ",
+        "DIA",
+        "IWM",
+        "^VIX",
+        "^TNX",
+        "DX-Y.NYB",
+        "BTC-USD",
+        "GC=F",
+        "CL=F"
+    ]
+}

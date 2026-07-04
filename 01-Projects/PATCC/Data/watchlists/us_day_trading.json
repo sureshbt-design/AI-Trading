@@ -1,0 +1,21 @@
+{
+    "name": "US Day Trading",
+    "market": "US",
+    "asset_class": "Equity",
+    "provider": "Yahoo",
+    "scan_frequency": "Daily",
+    "symbols": [
+        "NVDA",
+        "AMD",
+        "PLTR",
+        "META",
+        "AAPL",
+        "MSFT",
+        "AMZN",
+        "TSLA",
+        "AVGO",
+        "NFLX",
+        "COIN",
+        "MSTR"
+    ]
+}

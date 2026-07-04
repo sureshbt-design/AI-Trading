@@ -1,0 +1,14 @@
+{
+    "name": "India Watchlist",
+    "market": "India",
+    "asset_class": "Equity",
+    "provider": "Yahoo",
+    "scan_frequency": "Daily",
+    "symbols": [
+        "LICI.NS",
+        "JIOFIN.NS",
+        "RELIANCE.NS",
+        "HDFCBANK.NS",
+        "TCS.NS"
+    ]
+}

@@ -1,0 +1,12 @@
+{
+    "name": "Crypto Core",
+    "market": "Crypto",
+    "asset_class": "Crypto",
+    "provider": "Coinbase",
+    "scan_frequency": "24x7",
+    "symbols": [
+        "BTC-USD",
+        "ETH-USD",
+        "SOL-USD"
+    ]
+}

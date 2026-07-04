@@ -1,0 +1,17 @@
+{
+    "name": "Core ETFs",
+    "market": "US",
+    "asset_class": "ETF",
+    "provider": "Yahoo",
+    "scan_frequency": "Daily",
+    "symbols": [
+        "SPY",
+        "QQQ",
+        "SMH",
+        "XLK",
+        "XLF",
+        "XLE",
+        "IBIT",
+        "SOXL"
+    ]
+}

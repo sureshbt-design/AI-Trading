@@ -1,0 +1,19 @@
+{
+    "name": "US Swing Trading",
+    "market": "US",
+    "asset_class": "Equity",
+    "provider": "Yahoo",
+    "scan_frequency": "Daily",
+    "symbols": [
+        "NVDA",
+        "MSFT",
+        "META",
+        "AMZN",
+        "AVGO",
+        "GOOGL",
+        "MU",
+        "PANW",
+        "ANET",
+        "LLY"
+    ]
+}
