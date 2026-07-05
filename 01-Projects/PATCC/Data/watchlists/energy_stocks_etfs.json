@@ -1,0 +1,19 @@
+{
+    "name": "Energy Stocks and ETFs",
+    "market": "US",
+    "asset_class": "Equity ETF",
+    "provider": "Yahoo",
+    "scan_frequency": "Daily",
+    "symbols": [
+        "XLE",
+        "XOP",
+        "OIH",
+        "XOM",
+        "CVX",
+        "COP",
+        "EOG",
+        "SLB",
+        "HAL",
+        "VLO"
+    ]
+}

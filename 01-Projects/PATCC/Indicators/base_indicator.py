@@ -18,20 +18,7 @@ class BaseIndicator(ABC):
 
     @abstractmethod
     def calculate(self, data: pd.DataFrame):
-        """
-        Calculate the indicator using market data.
-
-        Parameters
-        ----------
-        data : pandas.DataFrame
-            OHLCV market data.
-
-        Returns
-        -------
-        pandas.Series or pandas.DataFrame
-        """
         pass
 
     def __str__(self):
         return self.name
-        

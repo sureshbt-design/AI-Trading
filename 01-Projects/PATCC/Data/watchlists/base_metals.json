@@ -1,0 +1,16 @@
+{
+    "name": "Base Metals",
+    "market": "Global",
+    "asset_class": "Commodities",
+    "provider": "Yahoo",
+    "scan_frequency": "Daily",
+    "symbols": [
+        "HG=F",
+        "ALI=F",
+        "ZNC=F",
+        "CPER",
+        "DBB",
+        "PICK",
+        "COPX"
+    ]
+}

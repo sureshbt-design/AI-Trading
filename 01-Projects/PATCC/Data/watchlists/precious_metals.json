@@ -1,0 +1,18 @@
+{
+    "name": "Precious Metals",
+    "market": "Global",
+    "asset_class": "Commodities",
+    "provider": "Yahoo",
+    "scan_frequency": "Daily",
+    "symbols": [
+        "GC=F",
+        "SI=F",
+        "PL=F",
+        "PA=F",
+        "GLD",
+        "SLV",
+        "SILJ",
+        "GDX",
+        "GDXJ"
+    ]
+}

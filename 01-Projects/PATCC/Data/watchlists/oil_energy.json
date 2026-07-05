@@ -1,0 +1,16 @@
+{
+    "name": "Oil and Energy Commodities",
+    "market": "Global",
+    "asset_class": "Commodities",
+    "provider": "Yahoo",
+    "scan_frequency": "Daily",
+    "symbols": [
+        "CL=F",
+        "BZ=F",
+        "NG=F",
+        "USO",
+        "UNG",
+        "UCO",
+        "BOIL"
+    ]
+}
