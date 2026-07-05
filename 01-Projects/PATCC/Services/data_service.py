@@ -3,7 +3,7 @@ PATCC Data Service
 
 Acts as the single gateway for market data.
 """
-
+from Models.market_models import MarketData
 from Providers.yahoo_provider import YahooProvider
 from Services.cache_service import CacheService
 
@@ -41,7 +41,13 @@ class DataService:
         if use_cache:
             self.cache.save(cache_key, data)
 
-        return data
+        return MarketData(
+          symbol=symbol,
+          provider=self.provider.__class__.__name__,
+          period=period,
+          interval=interval,
+          data=data,
+        )
 
     def get_quote(self, symbol: str):
         return self.provider.get_quote(symbol)

@@ -2,8 +2,6 @@
 PATCC EMA Indicator
 """
 
-import pandas as pd
-
 from Indicators.base_indicator import BaseIndicator
 
 
@@ -13,7 +11,8 @@ class EMAIndicator(BaseIndicator):
         super().__init__(f"EMA({period})")
         self.period = period
 
-    def calculate(self, data: pd.DataFrame):
+    def calculate(self, market_data):
+        data = market_data.data
 
         if "Close" not in data.columns:
             raise ValueError("DataFrame must contain a 'Close' column.")
