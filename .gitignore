@@ -8,6 +8,11 @@ __pycache__/
 .venv/
 venv/
 
+# PATCC generated files
+01-Projects/PATCC/Data/cache/
+01-Projects/PATCC/Logs/
+01-Projects/PATCC/Reports/
+
 # Cursor
 .cursor/
 
