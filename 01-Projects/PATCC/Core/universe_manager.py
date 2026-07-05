@@ -6,25 +6,15 @@ Loads watchlists from JSON files.
 """
 
 import json
-from dataclasses import dataclass
-from pathlib import Path
-from typing import Dict, List
+from typing import Dict
 
-
-@dataclass
-class Universe:
-    name: str
-    market: str
-    asset_class: str
-    provider: str
-    scan_frequency: str
-    symbols: List[str]
-
+from Models.universe_models import Universe
+from Utils.paths import data_dir
 
 class UniverseManager:
 
     def __init__(self):
-        self.watchlist_dir = Path("01-Projects/PATCC/Data/Watchlists")
+        self.watchlist_dir = data_dir() / "Watchlists"
         self.universes: Dict[str, Universe] = {}
         self.load_watchlists()
 
