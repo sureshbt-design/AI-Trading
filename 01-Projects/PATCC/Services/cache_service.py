@@ -11,6 +11,9 @@ from pathlib import Path
 from Utils.paths import data_dir
 
 
+CACHE_VERSION = 2
+
+
 class CacheService:
 
     def __init__(self):
@@ -23,6 +26,7 @@ class CacheService:
 
     def save(self, key: str, data) -> None:
         payload = {
+            "cache_version": CACHE_VERSION,
             "saved_at": datetime.now(),
             "data": data,
         }
@@ -39,6 +43,9 @@ class CacheService:
         with open(file_path, "rb") as file:
             payload = pickle.load(file)
 
+        if payload.get("cache_version") != CACHE_VERSION:
+            return None
+
         return payload["data"]
 
     def is_expired(self, key: str, max_age_minutes: int = 60) -> bool:
@@ -49,6 +56,9 @@ class CacheService:
 
         with open(file_path, "rb") as file:
             payload = pickle.load(file)
+
+        if payload.get("cache_version") != CACHE_VERSION:
+            return True
 
         saved_at = payload["saved_at"]
         return datetime.now() - saved_at > timedelta(minutes=max_age_minutes)
