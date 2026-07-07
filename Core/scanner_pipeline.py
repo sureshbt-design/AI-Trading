@@ -20,6 +20,7 @@ from universe_manager import UniverseManager
 class ScanResult:
     ticker: str
     asset_type: str
+    market_response: object
     market_state: object
     score: object
 
@@ -37,11 +38,12 @@ class ScannerPipeline:
     def analyze(self, ticker: str, period: str = "1y", interval: str = "1d") -> ScanResult:
         asset_type = self.classifier.classify(ticker)
 
-        df = self.market_data.get_price_history(
+        market_response = self.market_data.get_price_history(
             MarketDataRequest(ticker=ticker, period=period, interval=interval)
         )
 
-        indicators = self.indicator_engine.calculate(df)
+        indicators = self.indicator_engine.calculate(market_response.data)
+
         state = self.market_state.analyze(indicators)
 
         score = self.scoring.score(
@@ -53,6 +55,7 @@ class ScannerPipeline:
         return ScanResult(
             ticker=ticker.upper(),
             asset_type=asset_type,
+            market_response=market_response,
             market_state=state,
             score=score,
         )
@@ -62,6 +65,10 @@ def print_report(result: ScanResult):
     print("=" * 60)
     print(f"Ticker      : {result.ticker}")
     print(f"Asset Type  : {result.asset_type}")
+    print(f"Data Source : {result.market_response.source}")
+    print(f"Data Mode   : {result.market_response.mode}")
+    print(f"Real-Time   : {result.market_response.realtime}")
+    print(f"Last Bar    : {result.market_response.last_bar.date()}")
     print("-" * 60)
     print(f"Trend       : {result.market_state.trend}")
     print(f"Momentum    : {result.market_state.momentum}")

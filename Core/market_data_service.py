@@ -10,6 +10,19 @@ from typing import Optional
 import pandas as pd
 import yfinance as yf
 
+from dataclasses import dataclass
+from datetime import datetime
+
+
+@dataclass
+class MarketDataResponse:
+    ticker: str
+    source: str
+    mode: str
+    realtime: bool
+    last_bar: datetime
+    rows: int
+    data: pd.DataFrame
 
 @dataclass
 class MarketDataRequest:
@@ -34,7 +47,17 @@ class MarketDataService:
             auto_adjust=False,
         )
 
-        return self._validate(ticker, data)
+        cleaned = self._validate(ticker, data)
+
+        return MarketDataResponse(
+           ticker=ticker,
+           source="Yahoo Finance",
+           mode="Research / Watchlist",
+           realtime=False,
+           last_bar=cleaned.index[-1].to_pydatetime(),
+           rows=len(cleaned),
+           data=cleaned,
+        )
 
     def _validate(self, ticker: str, data: Optional[pd.DataFrame]) -> pd.DataFrame:
         if data is None or data.empty:
@@ -64,8 +87,16 @@ if __name__ == "__main__":
         interval="1d",
     )
 
-    df = service.get_price_history(request)
+    response = service.get_price_history(request)
 
-    print(df.tail())
-    print(f"\nRows returned: {len(df)}")
+    print("=" * 60)
+    print(f"Ticker      : {response.ticker}")
+    print(f"Source      : {response.source}")
+    print(f"Mode        : {response.mode}")
+    print(f"Real-Time   : {response.realtime}")
+    print(f"Last Bar    : {response.last_bar}")
+    print(f"Rows        : {response.rows}")
+    print("=" * 60)
+
+    print(response.data.tail())
     
