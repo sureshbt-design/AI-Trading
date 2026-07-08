@@ -4,6 +4,7 @@ scoring_engine.py
 Profile-based scoring engine for trading candidates.
 """
 
+from target_engine import TargetEngine
 from dataclasses import dataclass
 
 from indicator_engine import IndicatorEngine
@@ -138,10 +139,17 @@ if __name__ == "__main__":
     indicator_engine = IndicatorEngine()
     state_analyzer = MarketStateAnalyzer()
     scoring_engine = ScoringEngine()
+    target_engine = TargetEngine()
 
-    df = service.get_price_history(
-        MarketDataRequest(ticker=ticker, period="1y", interval="1d")
+    market_data = service.get_price_history(
+        MarketDataRequest(
+            ticker=ticker,
+            period="1y",
+            interval="1d",
+        )
     )
+
+    df = market_data.data
 
     indicators = indicator_engine.calculate(df)
     state = state_analyzer.analyze(indicators)
@@ -150,7 +158,7 @@ if __name__ == "__main__":
         state=state,
         profile="leveraged_etf",
     )
-
+    targets = target_engine.calculate(df)
     print(state)
     print(score)
-    
+    print(targets)
