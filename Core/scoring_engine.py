@@ -4,6 +4,7 @@ scoring_engine.py
 Profile-based scoring engine for trading candidates.
 """
 
+import sys
 from target_engine import TargetEngine
 from dataclasses import dataclass
 
@@ -133,7 +134,7 @@ class ScoringEngine:
 
 
 if __name__ == "__main__":
-    ticker = "TQQQ"
+    ticker = sys.argv[1].upper() if len(sys.argv) > 1 else "TQQQ"
 
     service = MarketDataService()
     indicator_engine = IndicatorEngine()
