@@ -6,8 +6,8 @@ Analyzes the current market state using calculated indicators.
 
 from dataclasses import dataclass
 
-from indicator_engine import IndicatorEngine
-from market_data_service import MarketDataRequest, MarketDataService
+from Core.indicator_engine import IndicatorEngine
+from Core.market_data_service import MarketDataRequest, MarketDataService
 
 
 @dataclass

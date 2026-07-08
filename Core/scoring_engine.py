@@ -5,13 +5,16 @@ Profile-based scoring engine for trading candidates.
 """
 
 import sys
-from target_engine import TargetEngine
+
 from dataclasses import dataclass
 
-from indicator_engine import IndicatorEngine
-from market_data_service import MarketDataRequest, MarketDataService
-from market_state_analyzer import MarketStateAnalyzer
+from Core.target_engine import TargetEngine
+from Core.indicator_engine import IndicatorEngine
+from Core.market_data_service import MarketDataRequest, MarketDataService
+from Core.market_state_analyzer import MarketStateAnalyzer
 
+from Core.analysis_result import AnalysisResult
+from Core.report_builder import ReportBuilder
 
 @dataclass
 class ScoreResult:
@@ -160,6 +163,16 @@ if __name__ == "__main__":
         profile="leveraged_etf",
     )
     targets = target_engine.calculate(df)
-    print(state)
-    print(score)
-    print(targets)
+    analysis = AnalysisResult(
+        ticker=ticker,
+        profile="leveraged_etf",
+        market_data=market_data,
+        indicators=indicators,
+        market_state=state,
+        score=score,
+        targets=targets,
+    )
+
+    builder = ReportBuilder()
+    
+    print(builder.build_console_report(analysis))
