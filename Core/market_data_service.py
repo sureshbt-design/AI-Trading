@@ -36,7 +36,7 @@ class MarketDataService:
 
     REQUIRED_COLUMNS = ["Open", "High", "Low", "Close", "Volume"]
 
-    def get_price_history(self, request: MarketDataRequest) -> pd.DataFrame:
+    def get_price_history(self, request: MarketDataRequest) -> MarketDataResponse:
         ticker = request.ticker.upper().strip()
 
         data = yf.download(

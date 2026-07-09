@@ -19,6 +19,16 @@ class ReportBuilder:
 
         lines.append(f"Ticker              : {result.ticker}")
         lines.append(f"Profile             : {result.profile}")
+        lines.append("")
+        lines.append("DATA VALIDATION")
+        lines.append("-" * 65)
+
+        lines.append(f"Provider            : {result.market_data.source}")
+        lines.append(f"Mode                : {result.market_data.mode}")
+        lines.append(f"Real-Time           : {result.market_data.realtime}")
+        lines.append(f"Last Bar            : {result.market_data.last_bar}")
+        lines.append(f"Rows Downloaded     : {result.market_data.rows}")
+
 
         lines.append("")
         lines.append("MARKET STATE")
@@ -43,6 +53,7 @@ class ReportBuilder:
         lines.append("TARGETS")
         lines.append("-" * 65)
 
+        lines.append(f"Current Price       : {result.targets.current_price:.2f}")
         lines.append(f"Support             : {result.targets.support:.2f}")
         lines.append(f"Resistance          : {result.targets.resistance:.2f}")
 
@@ -51,6 +62,15 @@ class ReportBuilder:
         lines.append(f"Target 3            : {result.targets.target_3:.2f}")
 
         lines.append(f"Stop Loss           : {result.targets.stop_loss:.2f}")
+        lines.append("")
+        lines.append(f"Risk/Reward T1      : {result.targets.risk_reward_1:.2f}")
+        lines.append(f"Risk/Reward T2      : {result.targets.risk_reward_2:.2f}")
+        lines.append(f"Risk/Reward T3      : {result.targets.risk_reward_3:.2f}")
+
+        lines.append("")
+        lines.append(f"Probability T1      : {result.targets.probability_1:.0f}%")
+        lines.append(f"Probability T2      : {result.targets.probability_2:.0f}%")
+        lines.append(f"Probability T3      : {result.targets.probability_3:.0f}%")
 
         lines.append("")
 

@@ -1,9 +1,11 @@
 from dataclasses import dataclass
 from typing import Optional
+import pandas as pd
 
 
 @dataclass
 class TargetLevels:
+    current_price: float
     support: float
     resistance: float
     target_1: float
@@ -20,11 +22,11 @@ class TargetLevels:
 
 class TargetEngine:
     """
-    Calculates dynamic support, resistance, price targets,
-    stop loss, reward/risk, and basic target probabilities.
+    Calculates support, resistance, targets, stop loss, reward/risk,
+    and basic target probabilities using recent validated price data.
     """
 
-    def calculate(self, df, current_price: Optional[float] = None) -> TargetLevels:
+    def calculate(self, df: pd.DataFrame, current_price: Optional[float] = None) -> TargetLevels:
         if df is None or df.empty:
             raise ValueError("Price history dataframe is empty")
 
@@ -34,37 +36,52 @@ class TargetEngine:
         if missing:
             raise ValueError(f"Missing required columns: {missing}")
 
+        df = df.dropna(subset=["High", "Low", "Close"])
+
+        if len(df) < 20:
+            raise ValueError("Not enough price history to calculate reliable targets")
+
         if current_price is None:
             current_price = float(df["Close"].iloc[-1])
 
         recent = df.tail(60)
 
-        support = float(recent["Low"].min())
-        resistance = float(recent["High"].max())
+        support = self._nearest_support(recent, current_price)
+        resistance = self._nearest_resistance(recent, current_price)
 
-        price_range = resistance - support
+        atr = self._calculate_atr(recent)
 
-        if price_range <= 0:
-            price_range = current_price * 0.05
+        if support is None:
+            support = float(recent["Low"].tail(20).min())
 
-        target_1 = current_price + price_range * 0.382
-        target_2 = current_price + price_range * 0.618
-        target_3 = current_price + price_range * 1.000
+        if resistance is None:
+            resistance = float(recent["High"].tail(20).max())
 
-        stop_loss = support * 0.98
+        if resistance <= current_price:
+            resistance = current_price + atr * 2
+
+        if support >= current_price:
+            support = current_price - atr * 2
+
+        stop_loss = support - atr * 0.5
 
         risk = current_price - stop_loss
+
+        target_1 = resistance
+        target_2 = current_price + (current_price - support) * 1.5
+        target_3 = current_price + (current_price - support) * 2.5
 
         def rr(target: float) -> float:
             if risk <= 0:
                 return 0.0
             return round((target - current_price) / risk, 2)
 
-        probability_1 = 78.0
-        probability_2 = 62.0
-        probability_3 = 42.0
+        probability_1 = self._target_probability(rr(target_1))
+        probability_2 = self._target_probability(rr(target_2))
+        probability_3 = self._target_probability(rr(target_3))
 
         return TargetLevels(
+            current_price=round(current_price, 2),
             support=round(support, 2),
             resistance=round(resistance, 2),
             target_1=round(target_1, 2),
@@ -78,4 +95,48 @@ class TargetEngine:
             probability_2=probability_2,
             probability_3=probability_3,
         )
+
+    def _nearest_support(self, df: pd.DataFrame, current_price: float) -> Optional[float]:
+        lows_below_price = df[df["Low"] < current_price]["Low"]
+
+        if lows_below_price.empty:
+            return None
+
+        return float(lows_below_price.max())
+
+    def _nearest_resistance(self, df: pd.DataFrame, current_price: float) -> Optional[float]:
+        highs_above_price = df[df["High"] > current_price]["High"]
+
+        if highs_above_price.empty:
+            return None
+
+        return float(highs_above_price.min())
+
+    def _calculate_atr(self, df: pd.DataFrame, period: int = 14) -> float:
+        high_low = df["High"] - df["Low"]
+        high_close = (df["High"] - df["Close"].shift()).abs()
+        low_close = (df["Low"] - df["Close"].shift()).abs()
+
+        true_range = pd.concat([high_low, high_close, low_close], axis=1).max(axis=1)
+        atr = true_range.rolling(period).mean().iloc[-1]
+
+        if pd.isna(atr) or atr <= 0:
+            atr = float((df["High"] - df["Low"]).tail(period).mean())
+
+        return float(atr)
+
+    def _target_probability(self, risk_reward: float) -> float:
+        if risk_reward <= 0:
+            return 0.0
+
+        if risk_reward < 1:
+            return 75.0
+
+        if risk_reward < 2:
+            return 62.0
+
+        if risk_reward < 3:
+            return 48.0
+
+        return 35.0
         
