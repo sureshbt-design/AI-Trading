@@ -4,17 +4,23 @@ scoring_engine.py
 Profile-based scoring engine for trading candidates.
 """
 
-import sys
-
+import argparse
 from dataclasses import dataclass
 
 from Core.target_engine import TargetEngine
 from Core.indicator_engine import IndicatorEngine
 from Core.market_data_service import MarketDataRequest, MarketDataService
 from Core.market_state_analyzer import MarketStateAnalyzer
-
 from Core.analysis_result import AnalysisResult
 from Core.report_builder import ReportBuilder
+
+
+MODE_CONFIG = {
+    "swing": {"period": "1y", "interval": "1d"},
+    "intraday": {"period": "5d", "interval": "15m"},
+    "entry": {"period": "1d", "interval": "5m"},
+}
+
 
 @dataclass
 class ScoreResult:
@@ -136,9 +142,70 @@ class ScoringEngine:
         return "Avoid"
 
 
-if __name__ == "__main__":
-    ticker = sys.argv[1].upper() if len(sys.argv) > 1 else "TQQQ"
+def parse_args():
+    parser = argparse.ArgumentParser(
+        description="PATCC scoring engine"
+    )
 
+    parser.add_argument(
+        "--ticker",
+        default="TQQQ",
+        help="Ticker symbol to analyze. Default: TQQQ",
+    )
+
+    parser.add_argument(
+        "--mode",
+        choices=["swing", "intraday", "entry"],
+        default="swing",
+        help="Analysis mode. swing=1y/1d, intraday=5d/15m, entry=1d/5m",
+    )
+
+    parser.add_argument(
+        "--period",
+        default=None,
+        help="Optional custom Yahoo Finance period, for example 6mo, 1y, 5d",
+    )
+
+    parser.add_argument(
+        "--interval",
+        default=None,
+        help="Optional custom Yahoo Finance interval, for example 1d, 15m, 5m",
+    )
+
+    parser.add_argument(
+    "--tf",
+    "--timeframe",
+    dest="timeframe",
+    default=None,
+    help="Analysis timeframe (1m, 5m, 15m, 30m, 1h, 1d, 1wk, 1mo).",
+    )
+
+    parser.add_argument(
+        "--profile",
+        default="leveraged_etf",
+        choices=["stock", "etf", "leveraged_etf", "crypto"],
+        help="Risk profile used by the scoring engine. Default: leveraged_etf",
+    )
+
+    return parser.parse_args()
+
+
+def resolve_timeframe(mode: str, period: str | None, interval: str | None):
+    config = MODE_CONFIG[mode]
+
+    resolved_period = period if period else config["period"]
+    resolved_interval = interval if interval else config["interval"]
+
+    return resolved_period, resolved_interval
+
+
+def run_analysis(
+    ticker: str,
+    mode: str,
+    period: str,
+    interval: str,
+    profile: str,
+):
     service = MarketDataService()
     indicator_engine = IndicatorEngine()
     state_analyzer = MarketStateAnalyzer()
@@ -148,8 +215,8 @@ if __name__ == "__main__":
     market_data = service.get_price_history(
         MarketDataRequest(
             ticker=ticker,
-            period="1y",
-            interval="1d",
+            period=period,
+            interval=interval,
         )
     )
 
@@ -157,15 +224,18 @@ if __name__ == "__main__":
 
     indicators = indicator_engine.calculate(df)
     state = state_analyzer.analyze(indicators)
+
     score = scoring_engine.score(
         indicators=indicators,
         state=state,
-        profile="leveraged_etf",
+        profile=profile,
     )
+
     targets = target_engine.calculate(df)
+
     analysis = AnalysisResult(
         ticker=ticker,
-        profile="leveraged_etf",
+        profile=profile,
         market_data=market_data,
         indicators=indicators,
         market_state=state,
@@ -174,5 +244,24 @@ if __name__ == "__main__":
     )
 
     builder = ReportBuilder()
-    
     print(builder.build_console_report(analysis))
+
+
+if __name__ == "__main__":
+    args = parse_args()
+
+    ticker = args.ticker.upper().strip()
+    period, interval = resolve_timeframe(
+        mode=args.mode,
+        period=args.period,
+        interval=args.interval,
+    )
+
+    run_analysis(
+        ticker=ticker,
+        mode=args.mode,
+        period=period,
+        interval=interval,
+        profile=args.profile,
+    )
+    

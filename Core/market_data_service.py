@@ -12,7 +12,7 @@ import yfinance as yf
 
 from dataclasses import dataclass
 from datetime import datetime
-
+from Core.timeframe_manager import TimeframeManager
 
 @dataclass
 class MarketDataResponse:
@@ -26,9 +26,21 @@ class MarketDataResponse:
 
 @dataclass
 class MarketDataRequest:
+    """
+    Request object for market data retrieval.
+
+    Timeframe may be specified either directly (5m, 1h, 1d, etc.)
+    or by providing explicit period/interval values.
+    """
+
     ticker: str
-    period: str = "6mo"
-    interval: str = "1d"
+
+    timeframe: str = "1d"
+
+    period: str | None = None
+    interval: str | None = None
+
+    auto_adjust: bool = True
 
 
 class MarketDataService:
@@ -38,16 +50,20 @@ class MarketDataService:
 
     def get_price_history(self, request: MarketDataRequest) -> MarketDataResponse:
         ticker = request.ticker.upper().strip()
+        # Resolve timeframe defaults
+        config = TimeframeManager.get_config(request.timeframe)
 
-        data = yf.download(
+        period = request.period or config.period
+        interval = request.interval or config.interval
+
+        df = yf.download(
             ticker,
-            period=request.period,
-            interval=request.interval,
-            progress=False,
-            auto_adjust=False,
+            period=period,
+            interval=interval,
+            auto_adjust=request.auto_adjust,
         )
 
-        cleaned = self._validate(ticker, data)
+        cleaned = self._validate(ticker, df)
 
         return MarketDataResponse(
            ticker=ticker,
