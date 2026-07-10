@@ -6,7 +6,7 @@ Profile-based scoring engine for trading candidates.
 
 import argparse
 from dataclasses import dataclass
-
+from Core.asset_classifier import AssetClassifier
 from Core.target_engine import TargetEngine
 from Core.indicator_engine import IndicatorEngine
 from Core.market_data_service import MarketDataRequest, MarketDataService
@@ -182,9 +182,17 @@ def parse_args():
 
     parser.add_argument(
         "--profile",
-        default="leveraged_etf",
-        choices=["stock", "etf", "leveraged_etf", "crypto"],
-        help="Risk profile used by the scoring engine. Default: leveraged_etf",
+        choices=[
+            "stock",
+            "etf",
+            "leveraged_etf",
+            "crypto",
+            "index",
+            "future",
+            "currency",
+        ],
+        default=None,
+        help="Optional profile override. By default PATCC classifies the ticker automatically.", 
     )
 
     return parser.parse_args()
@@ -202,10 +210,12 @@ def resolve_timeframe(mode: str, period: str | None, interval: str | None):
 def run_analysis(
     ticker: str,
     mode: str,
-    period: str,
-    interval: str,
+    period: str | None,
+    interval: str | None,
+    timeframe: str | None,
     profile: str,
 ):
+
     service = MarketDataService()
     indicator_engine = IndicatorEngine()
     state_analyzer = MarketStateAnalyzer()
@@ -215,11 +225,11 @@ def run_analysis(
     market_data = service.get_price_history(
         MarketDataRequest(
             ticker=ticker,
+            timeframe=timeframe or "1d",
             period=period,
             interval=interval,
         )
     )
-
     df = market_data.data
 
     indicators = indicator_engine.calculate(df)
@@ -257,11 +267,16 @@ if __name__ == "__main__":
         interval=args.interval,
     )
 
+    asset_info = AssetClassifier.classify(args.ticker)
+
+    profile = args.profile or asset_info.profile
+
     run_analysis(
-        ticker=ticker,
+        ticker=args.ticker,
         mode=args.mode,
-        period=period,
-        interval=interval,
-        profile=args.profile,
-    )
+        period=args.period,
+        interval=args.interval,
+        timeframe=args.timeframe,
+        profile=profile,
+)
     
