@@ -3,7 +3,12 @@ report_builder.py
 
 Creates formatted reports from AnalysisResult.
 """
-
+from Core.version import (
+    PATCC_VERSION,
+    BUILD_DATE,
+    PROJECT_NAME,
+    PROJECT_DESCRIPTION,
+)
 from Core.analysis_result import AnalysisResult
 
 
@@ -13,9 +18,11 @@ class ReportBuilder:
 
         lines = []
 
-        lines.append("=" * 65)
-        lines.append("PATCC - Professional AI Trading & Capital Companion")
-        lines.append("=" * 65)
+        lines.append("=" * 75)
+        lines.append(f"{PROJECT_NAME} - {PROJECT_DESCRIPTION}")
+        lines.append(f"Version             : {PATCC_VERSION}")
+        lines.append(f"Build Date          : {BUILD_DATE}")
+        lines.append("=" * 75)
 
         lines.append(f"Ticker              : {result.ticker}")
         lines.append(f"Profile             : {result.profile}")

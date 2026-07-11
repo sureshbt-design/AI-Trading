@@ -1,0 +1,10 @@
+name: Swing Trading
+mode: swing
+market_type: equity
+period: 1y
+interval: 1d
+profile: leveraged_etf
+atr_period: 14
+target_model: swing
+risk_model: swing
+report_style: professional

@@ -1,0 +1,10 @@
+name: Intraday Trading
+mode: intraday
+market_type: equity
+period: 5d
+interval: 15m
+profile: leveraged_etf
+atr_period: 14
+target_model: intraday
+risk_model: intraday
+report_style: professional

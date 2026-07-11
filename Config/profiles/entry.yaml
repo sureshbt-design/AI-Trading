@@ -1,0 +1,10 @@
+name: Entry Timing
+mode: entry
+market_type: equity
+period: 1d
+interval: 5m
+profile: leveraged_etf
+atr_period: 14
+target_model: entry
+risk_model: tight
+report_style: professional
