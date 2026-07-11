@@ -38,3 +38,16 @@ Reports/errors/
 # Preserve selected monthly research snapshots
 !Reports/monthly/
 !Reports/monthly/**
+
+# PATCC generated data and runtime files
+Data/cache/
+Data/raw/**/*
+Data/processed/**/*
+Data/models/**/*
+Logs/**/*
+
+# Preserve directory placeholders
+!Data/raw/**/.gitkeep
+!Data/processed/.gitkeep
+!Data/models/.gitkeep
+!Logs/.gitkeep
