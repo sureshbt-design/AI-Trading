@@ -29,3 +29,12 @@ Thumbs.db
 # Reports (optional)
 # Uncomment if you don't want generated reports tracked
 # Reports/*.txt
+
+# PATCC generated reports
+Reports/latest/
+Reports/archive/
+Reports/errors/
+
+# Preserve selected monthly research snapshots
+!Reports/monthly/
+!Reports/monthly/**
