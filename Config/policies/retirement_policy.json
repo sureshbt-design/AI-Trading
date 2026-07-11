@@ -1,0 +1,14 @@
+{
+  "version": "1.0.0",
+  "objectives": [
+    "maintain_monthly_cash_flow",
+    "preserve_spouse_security",
+    "manage_sequence_of_returns_risk",
+    "reduce_future_rmd_pressure"
+  ],
+  "social_security_strategy": "not_configured",
+  "withdrawal_order": [],
+  "cash_reserve_months": null,
+  "survivor_scenario_required": true,
+  "annual_review_required": true
+}

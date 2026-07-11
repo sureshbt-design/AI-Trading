@@ -1,0 +1,26 @@
+{
+  "version": "1.0.0",
+  "enabled": true,
+  "report_formats": [
+    "html",
+    "json",
+    "text"
+  ],
+  "required_sections": [
+    "executive_summary",
+    "market_regime",
+    "watchlist",
+    "risk_warnings"
+  ],
+  "planned_sections": [
+    "cash_flow",
+    "bills_due",
+    "withdrawals",
+    "tax_status",
+    "maintenance",
+    "healthcare",
+    "family_continuity"
+  ],
+  "archive_retention_days": 90,
+  "open_browser_after_generation": false
+}

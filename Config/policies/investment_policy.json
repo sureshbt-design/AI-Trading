@@ -1,0 +1,20 @@
+{
+  "version": "1.0.0",
+  "objectives": [
+    "capital_preservation",
+    "long_term_growth",
+    "tax_efficiency",
+    "controlled_income_generation"
+  ],
+  "risk_tolerance": "moderate",
+  "manual_trade_execution": true,
+  "require_trade_reason": true,
+  "require_target_validation": true,
+  "require_stop_or_invalidation_level": true,
+  "maximum_position_percent": null,
+  "leveraged_products": {
+    "allowed": true,
+    "tactical_use_only": true,
+    "require_holding_period": true
+  }
+}

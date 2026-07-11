@@ -1,0 +1,16 @@
+{
+  "version": "1.0.0",
+  "objectives": [
+    "manage_lifetime_tax",
+    "monitor_agi",
+    "monitor_irmaa",
+    "evaluate_roth_conversions",
+    "monitor_capital_gains",
+    "monitor_tax_loss_harvesting"
+  ],
+  "filing_status": "married_filing_jointly",
+  "state": "VA",
+  "target_tax_bracket": null,
+  "irmaa_buffer": null,
+  "roth_conversion_review_frequency": "monthly"
+}

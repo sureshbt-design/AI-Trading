@@ -1,0 +1,13 @@
+{
+  "version": "1.0.0",
+  "objectives": [
+    "ensure_spouse_can_locate_accounts",
+    "document_income_and_bill_workflows",
+    "identify_advisors_and_emergency_contacts",
+    "maintain_current_beneficiaries",
+    "maintain_document_locations"
+  ],
+  "store_credentials_in_patcc": false,
+  "password_manager_reference_required": true,
+  "annual_continuity_review_required": true
+}

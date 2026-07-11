@@ -1,0 +1,133 @@
+{
+  "schema_version": "1.0.0",
+  "profile_status": "partial",
+  "last_reviewed": null,
+
+  "personal": {
+    "household_name": "",
+    "primary_user": "",
+    "spouse": "",
+    "residence_state": "VA",
+    "planning_currency": "USD"
+  },
+
+  "family": {
+    "members": [],
+    "dependents": [],
+    "emergency_contacts": []
+  },
+
+  "income_sources": [],
+
+  "expenses": {
+    "monthly_fixed": [],
+    "monthly_variable": [],
+    "annual": [],
+    "irregular": []
+  },
+
+  "assets": {
+    "bank_accounts": [],
+    "taxable_brokerage_accounts": [],
+    "retirement_accounts": [],
+    "crypto_accounts": [],
+    "precious_metals": [],
+    "real_estate": [],
+    "other_assets": []
+  },
+
+  "liabilities": {
+    "mortgages": [],
+    "credit_cards": [],
+    "auto_loans": [],
+    "personal_loans": [],
+    "other_liabilities": []
+  },
+
+  "retirement_planning": {
+    "pension_sources": [],
+    "social_security": {
+      "claiming_status": "not_configured",
+      "planned_claiming_age": null
+    },
+    "monthly_spending_target": null,
+    "cash_reserve_months": null,
+    "withdrawal_preferences": []
+  },
+
+  "tax_planning": {
+    "filing_status": "married_filing_jointly",
+    "state": "VA",
+    "irmaa_awareness": true,
+    "roth_conversion_policy": "not_configured",
+    "target_tax_bracket": null,
+    "target_agi": null,
+    "capital_gains_budget": null,
+    "rmd_monitoring": true
+  },
+
+  "insurance": {
+    "medicare": [],
+    "health": [],
+    "home": [],
+    "auto": [],
+    "life": [],
+    "umbrella": [],
+    "long_term_care": []
+  },
+
+  "healthcare": {
+    "providers": [],
+    "medications": [],
+    "pharmacies": [],
+    "medical_documents": [],
+    "maintenance_reminders": []
+  },
+
+  "household": {
+    "properties": [],
+    "utilities": [],
+    "maintenance_items": [],
+    "service_providers": []
+  },
+
+  "vehicles": [],
+
+  "estate_and_continuity": {
+    "will_status": "not_configured",
+    "trust_status": "not_configured",
+    "power_of_attorney_status": "not_configured",
+    "beneficiary_review_date": null,
+    "document_locations": [],
+    "credential_reference": "",
+    "survivor_instructions": []
+  },
+
+  "advisors": [],
+
+  "travel": {
+    "annual_budget": null,
+    "planned_trips": [],
+    "travel_insurance": []
+  },
+
+  "documents": [],
+
+  "preferences": {
+    "risk_tolerance": "moderate",
+    "capital_preservation_priority": true,
+    "tax_efficiency_priority": true,
+    "family_continuity_priority": true,
+    "morning_report_required": true,
+    "evening_report_desired": true
+  },
+
+  "operating_policies": [
+    "Generate and review the Morning Report before market open.",
+    "Maintain sufficient cash for near-term household expenses.",
+    "Validate all trade targets before presenting them.",
+    "Review tax and retirement planning monthly.",
+    "Review beneficiaries and continuity documents annually.",
+    "End every development session with a clean working build."
+  ]
+}
