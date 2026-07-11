@@ -34,6 +34,7 @@ import argparse
 import html
 import json
 import re
+import shutil
 import subprocess
 import sys
 import webbrowser
@@ -53,6 +54,12 @@ PROJECT_ROOT = Path(__file__).resolve().parents[1]
 REPORTS_ROOT = PROJECT_ROOT / "Reports"
 LATEST_DIR = REPORTS_ROOT / "latest"
 ARCHIVE_DIR = REPORTS_ROOT / "archive"
+MONTHLY_DIR = REPORTS_ROOT / "monthly"
+ERRORS_DIR = REPORTS_ROOT / "errors"
+
+DEFAULT_RETENTION_DAYS = 90
+ERROR_RETENTION_DAYS = 30
+
 
 DEFAULT_WATCHLIST = [
     "SPY",
@@ -111,9 +118,177 @@ class MorningReport:
 # ---------------------------------------------------------------------------
 
 def ensure_directories() -> None:
-    """Create report directories if they do not already exist."""
+    """Create all PATCC report directories."""
     LATEST_DIR.mkdir(parents=True, exist_ok=True)
     ARCHIVE_DIR.mkdir(parents=True, exist_ok=True)
+    MONTHLY_DIR.mkdir(parents=True, exist_ok=True)
+    ERRORS_DIR.mkdir(parents=True, exist_ok=True)
+
+def safe_report_path(path: Path) -> bool:
+    """
+    Confirm that a path is located inside the PATCC Reports directory.
+
+    This prevents accidental deletion outside Reports.
+    """
+    try:
+        path.resolve().relative_to(REPORTS_ROOT.resolve())
+        return True
+    except ValueError:
+        return False
+
+
+def parse_archive_date(folder: Path) -> datetime | None:
+    """
+    Parse an archive folder named YYYY-MM-DD.
+
+    Returns None when the folder name is not a valid archive date.
+    """
+    try:
+        return datetime.strptime(folder.name, "%Y-%m-%d")
+    except ValueError:
+        return None
+
+
+def cleanup_old_archives(
+    retention_days: int,
+    dry_run: bool = False,
+) -> list[str]:
+    """
+    Remove dated archive directories older than the retention period.
+
+    Safety protections:
+    - Never touches Reports/latest
+    - Never touches Reports/monthly
+    - Never removes today's archive
+    - Never removes anything outside Reports
+    """
+    ensure_directories()
+
+    now_et = datetime.now(EASTERN_TIME)
+    today = now_et.date()
+    cutoff_date = today.fromordinal(today.toordinal() - retention_days)
+
+    actions: list[str] = []
+
+    for date_folder in sorted(ARCHIVE_DIR.iterdir()):
+        if not date_folder.is_dir():
+            continue
+
+        archive_datetime = parse_archive_date(date_folder)
+
+        if archive_datetime is None:
+            actions.append(
+                f"SKIPPED unrecognized archive folder: {date_folder}"
+            )
+            continue
+
+        archive_date = archive_datetime.date()
+
+        if archive_date == today:
+            actions.append(
+                f"KEPT today's archive: {date_folder}"
+            )
+            continue
+
+        if archive_date >= cutoff_date:
+            continue
+
+        if not safe_report_path(date_folder):
+            actions.append(
+                f"SAFETY BLOCKED deletion outside Reports: {date_folder}"
+            )
+            continue
+
+        if dry_run:
+            actions.append(
+                f"DRY RUN would delete archive: {date_folder}"
+            )
+        else:
+            shutil.rmtree(date_folder)
+            actions.append(
+                f"DELETED archive: {date_folder}"
+            )
+
+    return actions
+
+
+def cleanup_old_error_reports(
+    retention_days: int = ERROR_RETENTION_DAYS,
+    dry_run: bool = False,
+) -> list[str]:
+    """
+    Remove error-report files and folders older than the retention period.
+    """
+    ensure_directories()
+
+    now_timestamp = datetime.now(EASTERN_TIME).timestamp()
+    retention_seconds = retention_days * 24 * 60 * 60
+
+    actions: list[str] = []
+
+    for item in sorted(ERRORS_DIR.iterdir()):
+        try:
+            age_seconds = now_timestamp - item.stat().st_mtime
+        except OSError as exc:
+            actions.append(
+                f"SKIPPED unreadable error item {item}: {exc}"
+            )
+            continue
+
+        if age_seconds <= retention_seconds:
+            continue
+
+        if not safe_report_path(item):
+            actions.append(
+                f"SAFETY BLOCKED deletion outside Reports: {item}"
+            )
+            continue
+
+        if dry_run:
+            actions.append(
+                f"DRY RUN would delete error item: {item}"
+            )
+            continue
+
+        if item.is_dir():
+            shutil.rmtree(item)
+        else:
+            item.unlink()
+
+        actions.append(
+            f"DELETED error item: {item}"
+        )
+
+    return actions
+
+
+def run_report_cleanup(
+    archive_retention_days: int,
+    dry_run: bool = False,
+) -> list[str]:
+    """Run all PATCC report cleanup policies."""
+    actions = []
+
+    actions.extend(
+        cleanup_old_archives(
+            retention_days=archive_retention_days,
+            dry_run=dry_run,
+        )
+    )
+
+    actions.extend(
+        cleanup_old_error_reports(
+            retention_days=ERROR_RETENTION_DAYS,
+            dry_run=dry_run,
+        )
+    )
+
+    if not actions:
+        actions.append(
+            "No reports qualified for cleanup."
+        )
+
+    return actions
 
 
 def normalize_tickers(tickers: Iterable[str]) -> list[str]:
@@ -1193,6 +1368,8 @@ def write_report_files(
         / now_et.strftime("%H%M%S")
     )
     archive_folder.mkdir(parents=True, exist_ok=True)
+    monthly_folder = MONTHLY_DIR / now_et.strftime("%Y-%m")
+    monthly_folder.mkdir(parents=True, exist_ok=True)
 
     json_content = json.dumps(
         asdict(report),
@@ -1209,6 +1386,10 @@ def write_report_files(
     archive_json = archive_folder / "morning_report.json"
     archive_text = archive_folder / "morning_report.txt"
     archive_html = archive_folder / "morning_report.html"
+    
+    monthly_json = monthly_folder / "morning_report.json"
+    monthly_text = monthly_folder / "morning_report.txt"
+    monthly_html = monthly_folder / "morning_report.html"
 
     latest_json.write_text(json_content, encoding="utf-8")
     latest_text.write_text(text_content, encoding="utf-8")
@@ -1217,6 +1398,12 @@ def write_report_files(
     archive_json.write_text(json_content, encoding="utf-8")
     archive_text.write_text(text_content, encoding="utf-8")
     archive_html.write_text(html_content, encoding="utf-8")
+
+    # The newest report generated during the month becomes that month's
+    # preserved research snapshot.
+    monthly_json.write_text(json_content, encoding="utf-8")
+    monthly_text.write_text(text_content, encoding="utf-8")
+    monthly_html.write_text(html_content, encoding="utf-8")
 
     return latest_text, latest_html, latest_json
 
@@ -1263,13 +1450,70 @@ def parse_arguments() -> argparse.Namespace:
         help="Open the generated HTML report in the default browser.",
     )
 
+    parser.add_argument(
+        "--cleanup",
+        action="store_true",
+        help=(
+            "Run report cleanup. When used by itself, cleanup runs "
+            "without generating a new report."
+        ),
+    )
+
+    parser.add_argument(
+        "--cleanup-days",
+        type=int,
+        default=DEFAULT_RETENTION_DAYS,
+        help=(
+            "Number of days to retain detailed archive reports. "
+            f"Default: {DEFAULT_RETENTION_DAYS}"
+        ),
+    )
+
+    parser.add_argument(
+        "--dry-run",
+        action="store_true",
+        help=(
+            "Preview cleanup actions without deleting files. "
+            "Use together with --cleanup."
+        ),
+    )
+
     return parser.parse_args()
 
 
 def main() -> int:
     """Generate the PATCC Morning Command Center."""
     args = parse_arguments()
+
+    if args.cleanup_days < 1:
+        print("ERROR: --cleanup-days must be at least 1.")
+        return 2
+
+    if args.cleanup:
+        print("=" * 78)
+        print("PATCC REPORT CLEANUP")
+        print("=" * 78)
+        print(f"Archive retention : {args.cleanup_days} days")
+        print(f"Error retention   : {ERROR_RETENTION_DAYS} days")
+        print(f"Dry run           : {args.dry_run}")
+        print("-" * 78)
+
+        cleanup_actions = run_report_cleanup(
+            archive_retention_days=args.cleanup_days,
+            dry_run=args.dry_run,
+        )
+
+        for action in cleanup_actions:
+            print(action)
+
+        print("=" * 78)
+
+        # A cleanup-only command should stop after cleanup.
+        if not args.open:
+            return 0
+
     watchlist = normalize_tickers(args.tickers)
+
 
     if not watchlist:
         print("ERROR: No valid ticker symbols were supplied.")
@@ -1321,12 +1565,21 @@ def main() -> int:
     )
 
     text_path, html_path, json_path = write_report_files(report)
+        
+    cleanup_actions = run_report_cleanup(
+        archive_retention_days=args.cleanup_days,
+        dry_run=False,
+    )
 
     print("-" * 78)
     print(f"Text report : {text_path}")
     print(f"HTML report : {html_path}")
     print(f"JSON data   : {json_path}")
     print(f"Posture     : {report.market_posture}")
+    print("Cleanup     : Automatic retention cleanup completed")
+
+    for action in cleanup_actions:
+        print(f"              {action}")
     print("=" * 78)
 
     if args.open:
@@ -1337,4 +1590,3 @@ def main() -> int:
 
 if __name__ == "__main__":
     raise SystemExit(main())
-    
