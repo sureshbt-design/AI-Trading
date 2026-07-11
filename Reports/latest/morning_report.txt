@@ -1,0 +1,217 @@
+==============================================================================
+PATCC - PROFESSIONAL AI TRADING & CAPITAL COMPANION
+MORNING COMMAND CENTER
+Version             : 0.1.0
+Generated           : Saturday, July 11, 2026 at 04:28:31 AM ET
+Timeframe           : 1d
+==============================================================================
+
+EXECUTIVE SUMMARY
+------------------------------------------------------------------------------
+Market Posture       : NEUTRAL — WAIT FOR CONFIRMATION
+Average Score        : 59.3
+Successful Scans     : 3
+Failed Scans         : 0
+Strongest Tickers   : SPY, QQQ, UNG
+Weakest Tickers     : UNG, QQQ, SPY
+
+WATCHLIST SUMMARY
+------------------------------------------------------------------------------
+Ticker      Status            Price    Score       Grade                Action
+------------------------------------------------------------------------------
+SPY         SUCCESS          754.95       80           B        Good Candidate
+QQQ         SUCCESS          725.51       62           C             Watchlist
+UNG         SUCCESS           10.60       36           F                 Avoid
+
+TICKER DRILL-DOWN
+------------------------------------------------------------------------------
+
+SPY — SUCCESS
+----------------------------------------
+Timeframe            : 1d
+Price                : 754.95
+Score                : 80
+Grade                : B
+Action               : Good Candidate
+Trend                : Strong Bullish
+Market State         : Not available
+Provider             : Yahoo Finance
+
+SCORING ENGINE OUTPUT
+----------------------------------------
+===========================================================================
+PATCC - Professional AI Trading & Capital Companion
+Version             : 0.4.0
+Build Date          : 2026-07-09
+===========================================================================
+Ticker              : SPY
+Profile             : etf
+
+DATA VALIDATION
+-----------------------------------------------------------------
+Provider            : Yahoo Finance
+Mode                : Research / Watchlist
+Real-Time           : False
+Last Bar            : 2026-07-10 00:00:00
+Rows Downloaded     : 1255
+
+MARKET STATE
+-----------------------------------------------------------------
+Trend               : Strong Bullish
+Momentum            : Bullish
+Volatility          : Low
+Volume              : Below Average
+Market Bias         : Buy
+Risk Level          : Conservative
+
+SCORING
+-----------------------------------------------------------------
+Overall Score       : 80
+Grade               : B
+Recommendation      : Good Candidate
+
+TARGETS
+-----------------------------------------------------------------
+Current Price       : 754.95
+Support             : 754.81
+Resistance          : 755.42
+Target 1            : 755.42
+Target 2            : 755.17
+Target 3            : 755.31
+Stop Loss           : 750.10
+
+Risk/Reward T1      : 0.10
+Risk/Reward T2      : 0.04
+Risk/Reward T3      : 0.07
+
+Probability T1      : 75%
+Probability T2      : 75%
+Probability T3      : 75%
+
+QQQ — SUCCESS
+----------------------------------------
+Timeframe            : 1d
+Price                : 725.51
+Score                : 62
+Grade                : C
+Action               : Watchlist
+Trend                : Bullish
+Market State         : Not available
+Provider             : Yahoo Finance
+
+SCORING ENGINE OUTPUT
+----------------------------------------
+===========================================================================
+PATCC - Professional AI Trading & Capital Companion
+Version             : 0.4.0
+Build Date          : 2026-07-09
+===========================================================================
+Ticker              : QQQ
+Profile             : etf
+
+DATA VALIDATION
+-----------------------------------------------------------------
+Provider            : Yahoo Finance
+Mode                : Research / Watchlist
+Real-Time           : False
+Last Bar            : 2026-07-10 00:00:00
+Rows Downloaded     : 1255
+
+MARKET STATE
+-----------------------------------------------------------------
+Trend               : Bullish
+Momentum            : Neutral
+Volatility          : Low
+Volume              : Below Average
+Market Bias         : Watch for Pullback
+Risk Level          : Conservative
+
+SCORING
+-----------------------------------------------------------------
+Overall Score       : 62
+Grade               : C
+Recommendation      : Watchlist
+
+TARGETS
+-----------------------------------------------------------------
+Current Price       : 725.51
+Support             : 724.64
+Resistance          : 726.08
+Target 1            : 726.08
+Target 2            : 726.81
+Target 3            : 727.68
+Stop Loss           : 716.77
+
+Risk/Reward T1      : 0.07
+Risk/Reward T2      : 0.15
+Risk/Reward T3      : 0.25
+
+Probability T1      : 75%
+Probability T2      : 75%
+Probability T3      : 75%
+
+UNG — SUCCESS
+----------------------------------------
+Timeframe            : 1d
+Price                : 10.6
+Score                : 36
+Grade                : F
+Action               : Avoid
+Trend                : Bearish
+Market State         : Not available
+Provider             : Yahoo Finance
+
+SCORING ENGINE OUTPUT
+----------------------------------------
+===========================================================================
+PATCC - Professional AI Trading & Capital Companion
+Version             : 0.4.0
+Build Date          : 2026-07-09
+===========================================================================
+Ticker              : UNG
+Profile             : etf
+
+DATA VALIDATION
+-----------------------------------------------------------------
+Provider            : Yahoo Finance
+Mode                : Research / Watchlist
+Real-Time           : False
+Last Bar            : 2026-07-10 00:00:00
+Rows Downloaded     : 1255
+
+MARKET STATE
+-----------------------------------------------------------------
+Trend               : Bearish
+Momentum            : Neutral
+Volatility          : Medium
+Volume              : Above Average
+Market Bias         : Avoid
+Risk Level          : Moderate
+
+SCORING
+-----------------------------------------------------------------
+Overall Score       : 36
+Grade               : F
+Recommendation      : Avoid
+
+TARGETS
+-----------------------------------------------------------------
+Current Price       : 10.60
+Support             : 10.55
+Resistance          : 10.62
+Target 1            : 10.62
+Target 2            : 10.68
+Target 3            : 10.73
+Stop Loss           : 10.36
+
+Risk/Reward T1      : 0.08
+Risk/Reward T2      : 0.32
+Risk/Reward T3      : 0.53
+
+Probability T1      : 75%
+Probability T2      : 75%
+Probability T3      : 75%
+
+==============================================================================
+PATCC v0.1 is decision support, not a guarantee of market outcomes.
+==============================================================================
