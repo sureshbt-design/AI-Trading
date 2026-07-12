@@ -1,0 +1,974 @@
+{
+    "schema_version": "1.0.0",
+    "universe_name": "PATCC Core Multi-Asset Universe",
+    "description": "Representative cross-asset universe used as the baseline for dynamic morning and evening watchlist generation.",
+    "last_reviewed": "2026-07-12",
+    "assets": [
+      {
+        "ticker": "SPY",
+        "name": "SPDR S&P 500 ETF Trust",
+        "asset_class": "Equity",
+        "category": "US Broad Market Benchmark",
+        "exchange": "NYSE Arca",
+        "currency": "USD",
+        "priority": 1,
+        "enabled": true,
+        "default_watchlist": true,
+        "timeframes": ["1d", "4h", "1h"],
+        "tags": ["benchmark", "core", "large-cap", "institutional"],
+        "source": {
+          "type": "core_universe",
+          "added_by": "PATCC",
+          "reason": "Primary US equity-market benchmark",
+          "expires": null
+        },
+        "operational_profile": {
+          "investment_role": "Core Growth",
+          "preferred_accounts": ["Brokerage", "Traditional IRA", "Roth IRA"],
+          "acceptable_accounts": [],
+          "review_required_accounts": [],
+          "preferred_strategies": ["Investment", "Position", "Swing"],
+          "day_trade_suitable": true,
+          "swing_trade_suitable": true,
+          "long_term_suitable": true,
+          "tax_efficiency": "High",
+          "tax_notes": "ETF structure and generally qualified distributions may support taxable-account use; verify current distribution composition.",
+          "holding_period": "Flexible"
+        },
+        "intelligence": {
+          "institutional_score": null,
+          "technical_score": null,
+          "macro_score": null,
+          "options_score": null,
+          "sentiment_score": null,
+          "overall_score": null
+        }
+      },
+      {
+        "ticker": "QQQ",
+        "name": "Invesco QQQ Trust",
+        "asset_class": "Equity",
+        "category": "US Growth Benchmark",
+        "exchange": "NASDAQ",
+        "currency": "USD",
+        "priority": 1,
+        "enabled": true,
+        "default_watchlist": true,
+        "timeframes": ["1d", "4h", "1h"],
+        "tags": ["benchmark", "growth", "technology", "institutional"],
+        "source": {
+          "type": "core_universe",
+          "added_by": "PATCC",
+          "reason": "NASDAQ-100 growth and technology benchmark",
+          "expires": null
+        },
+        "operational_profile": {
+          "investment_role": "Growth",
+          "preferred_accounts": ["Brokerage", "Traditional IRA", "Roth IRA"],
+          "acceptable_accounts": [],
+          "review_required_accounts": [],
+          "preferred_strategies": ["Investment", "Position", "Swing"],
+          "day_trade_suitable": true,
+          "swing_trade_suitable": true,
+          "long_term_suitable": true,
+          "tax_efficiency": "High",
+          "tax_notes": "Generally suitable across account types; taxable placement depends on turnover and distribution characteristics.",
+          "holding_period": "Flexible"
+        },
+        "intelligence": {
+          "institutional_score": null,
+          "technical_score": null,
+          "macro_score": null,
+          "options_score": null,
+          "sentiment_score": null,
+          "overall_score": null
+        }
+      },
+      {
+        "ticker": "IWM",
+        "name": "iShares Russell 2000 ETF",
+        "asset_class": "Equity",
+        "category": "US Small-Cap Benchmark",
+        "exchange": "NYSE Arca",
+        "currency": "USD",
+        "priority": 1,
+        "enabled": true,
+        "default_watchlist": true,
+        "timeframes": ["1d", "4h", "1h"],
+        "tags": ["benchmark", "small-cap", "risk-on"],
+        "source": {
+          "type": "core_universe",
+          "added_by": "PATCC",
+          "reason": "Small-cap participation and risk-appetite benchmark",
+          "expires": null
+        },
+        "operational_profile": {
+          "investment_role": "Small-Cap Diversification",
+          "preferred_accounts": ["Brokerage", "Traditional IRA", "Roth IRA"],
+          "acceptable_accounts": [],
+          "review_required_accounts": [],
+          "preferred_strategies": ["Investment", "Position", "Swing"],
+          "day_trade_suitable": true,
+          "swing_trade_suitable": true,
+          "long_term_suitable": true,
+          "tax_efficiency": "High",
+          "tax_notes": "Broad ETF generally supports flexible account placement.",
+          "holding_period": "Flexible"
+        },
+        "intelligence": {
+          "institutional_score": null,
+          "technical_score": null,
+          "macro_score": null,
+          "options_score": null,
+          "sentiment_score": null,
+          "overall_score": null
+        }
+      },
+      {
+        "ticker": "DIA",
+        "name": "SPDR Dow Jones Industrial Average ETF Trust",
+        "asset_class": "Equity",
+        "category": "US Blue-Chip Benchmark",
+        "exchange": "NYSE Arca",
+        "currency": "USD",
+        "priority": 1,
+        "enabled": true,
+        "default_watchlist": true,
+        "timeframes": ["1d", "4h", "1h"],
+        "tags": ["benchmark", "blue-chip", "value"],
+        "source": {
+          "type": "core_universe",
+          "added_by": "PATCC",
+          "reason": "Blue-chip and industrial-market benchmark",
+          "expires": null
+        },
+        "operational_profile": {
+          "investment_role": "Blue-Chip Core",
+          "preferred_accounts": ["Brokerage", "Traditional IRA", "Roth IRA"],
+          "acceptable_accounts": [],
+          "review_required_accounts": [],
+          "preferred_strategies": ["Investment", "Position", "Swing"],
+          "day_trade_suitable": true,
+          "swing_trade_suitable": true,
+          "long_term_suitable": true,
+          "tax_efficiency": "High",
+          "tax_notes": "Broad ETF generally supports flexible account placement.",
+          "holding_period": "Flexible"
+        },
+        "intelligence": {
+          "institutional_score": null,
+          "technical_score": null,
+          "macro_score": null,
+          "options_score": null,
+          "sentiment_score": null,
+          "overall_score": null
+        }
+      },
+  
+      {
+        "ticker": "XLK",
+        "name": "Technology Select Sector SPDR Fund",
+        "asset_class": "Equity",
+        "category": "Sector ETF",
+        "exchange": "NYSE Arca",
+        "currency": "USD",
+        "priority": 2,
+        "enabled": true,
+        "default_watchlist": true,
+        "timeframes": ["1d", "4h", "1h"],
+        "tags": ["sector", "technology", "growth"],
+        "source": {
+          "type": "core_universe",
+          "added_by": "PATCC",
+          "reason": "Technology-sector leadership monitor",
+          "expires": null
+        },
+        "operational_profile": {
+          "investment_role": "Sector Growth",
+          "preferred_accounts": ["Brokerage", "Traditional IRA", "Roth IRA"],
+          "acceptable_accounts": [],
+          "review_required_accounts": [],
+          "preferred_strategies": ["Investment", "Position", "Swing"],
+          "day_trade_suitable": true,
+          "swing_trade_suitable": true,
+          "long_term_suitable": true,
+          "tax_efficiency": "High",
+          "tax_notes": "Sector ETF generally supports flexible placement; monitor concentration risk.",
+          "holding_period": "Weeks to Years"
+        },
+        "intelligence": {
+          "institutional_score": null,
+          "technical_score": null,
+          "macro_score": null,
+          "options_score": null,
+          "sentiment_score": null,
+          "overall_score": null
+        }
+      },
+      {
+        "ticker": "XLE",
+        "name": "Energy Select Sector SPDR Fund",
+        "asset_class": "Equity",
+        "category": "Sector ETF",
+        "exchange": "NYSE Arca",
+        "currency": "USD",
+        "priority": 2,
+        "enabled": true,
+        "default_watchlist": true,
+        "timeframes": ["1d", "4h", "1h"],
+        "tags": ["sector", "energy", "inflation-sensitive"],
+        "source": {
+          "type": "core_universe",
+          "added_by": "PATCC",
+          "reason": "Energy-sector and inflation-theme monitor",
+          "expires": null
+        },
+        "operational_profile": {
+          "investment_role": "Energy Exposure",
+          "preferred_accounts": ["Brokerage", "Traditional IRA", "Roth IRA"],
+          "acceptable_accounts": [],
+          "review_required_accounts": [],
+          "preferred_strategies": ["Investment", "Position", "Swing"],
+          "day_trade_suitable": true,
+          "swing_trade_suitable": true,
+          "long_term_suitable": true,
+          "tax_efficiency": "Medium",
+          "tax_notes": "Equity-sector ETF; verify distribution characteristics and portfolio concentration.",
+          "holding_period": "Weeks to Years"
+        },
+        "intelligence": {
+          "institutional_score": null,
+          "technical_score": null,
+          "macro_score": null,
+          "options_score": null,
+          "sentiment_score": null,
+          "overall_score": null
+        }
+      },
+      {
+        "ticker": "XLF",
+        "name": "Financial Select Sector SPDR Fund",
+        "asset_class": "Equity",
+        "category": "Sector ETF",
+        "exchange": "NYSE Arca",
+        "currency": "USD",
+        "priority": 2,
+        "enabled": true,
+        "default_watchlist": true,
+        "timeframes": ["1d", "4h", "1h"],
+        "tags": ["sector", "financials", "rates-sensitive"],
+        "source": {
+          "type": "core_universe",
+          "added_by": "PATCC",
+          "reason": "Financial-sector and yield-curve monitor",
+          "expires": null
+        },
+        "operational_profile": {
+          "investment_role": "Financial Sector Exposure",
+          "preferred_accounts": ["Brokerage", "Traditional IRA", "Roth IRA"],
+          "acceptable_accounts": [],
+          "review_required_accounts": [],
+          "preferred_strategies": ["Investment", "Position", "Swing"],
+          "day_trade_suitable": true,
+          "swing_trade_suitable": true,
+          "long_term_suitable": true,
+          "tax_efficiency": "High",
+          "tax_notes": "Equity-sector ETF generally supports flexible account placement.",
+          "holding_period": "Weeks to Years"
+        },
+        "intelligence": {
+          "institutional_score": null,
+          "technical_score": null,
+          "macro_score": null,
+          "options_score": null,
+          "sentiment_score": null,
+          "overall_score": null
+        }
+      },
+      {
+        "ticker": "XLV",
+        "name": "Health Care Select Sector SPDR Fund",
+        "asset_class": "Equity",
+        "category": "Sector ETF",
+        "exchange": "NYSE Arca",
+        "currency": "USD",
+        "priority": 2,
+        "enabled": true,
+        "default_watchlist": true,
+        "timeframes": ["1d", "4h", "1h"],
+        "tags": ["sector", "healthcare", "defensive"],
+        "source": {
+          "type": "core_universe",
+          "added_by": "PATCC",
+          "reason": "Healthcare-sector and defensive-market monitor",
+          "expires": null
+        },
+        "operational_profile": {
+          "investment_role": "Defensive Growth",
+          "preferred_accounts": ["Brokerage", "Traditional IRA", "Roth IRA"],
+          "acceptable_accounts": [],
+          "review_required_accounts": [],
+          "preferred_strategies": ["Investment", "Position", "Swing"],
+          "day_trade_suitable": true,
+          "swing_trade_suitable": true,
+          "long_term_suitable": true,
+          "tax_efficiency": "High",
+          "tax_notes": "Equity-sector ETF generally supports flexible account placement.",
+          "holding_period": "Weeks to Years"
+        },
+        "intelligence": {
+          "institutional_score": null,
+          "technical_score": null,
+          "macro_score": null,
+          "options_score": null,
+          "sentiment_score": null,
+          "overall_score": null
+        }
+      },
+  
+      {
+        "ticker": "GLD",
+        "name": "SPDR Gold Shares",
+        "asset_class": "Commodity",
+        "category": "Precious Metals",
+        "exchange": "NYSE Arca",
+        "currency": "USD",
+        "priority": 2,
+        "enabled": true,
+        "default_watchlist": true,
+        "timeframes": ["1d", "4h", "1h"],
+        "tags": ["gold", "commodity", "hedge", "defensive"],
+        "source": {
+          "type": "core_universe",
+          "added_by": "PATCC",
+          "reason": "Gold, inflation, real-yield and risk-off monitor",
+          "expires": null
+        },
+        "operational_profile": {
+          "investment_role": "Diversifier and Hedge",
+          "preferred_accounts": ["Traditional IRA", "Roth IRA"],
+          "acceptable_accounts": ["Brokerage"],
+          "review_required_accounts": ["Brokerage"],
+          "preferred_strategies": ["Investment", "Position", "Swing"],
+          "day_trade_suitable": true,
+          "swing_trade_suitable": true,
+          "long_term_suitable": true,
+          "tax_efficiency": "Low in Taxable",
+          "tax_notes": "Physical-metal-backed products may receive collectibles-related federal tax treatment in taxable accounts; verify current tax rules.",
+          "holding_period": "Weeks to Years"
+        },
+        "intelligence": {
+          "institutional_score": null,
+          "technical_score": null,
+          "macro_score": null,
+          "options_score": null,
+          "sentiment_score": null,
+          "overall_score": null
+        }
+      },
+      {
+        "ticker": "SLV",
+        "name": "iShares Silver Trust",
+        "asset_class": "Commodity",
+        "category": "Precious Metals",
+        "exchange": "NYSE Arca",
+        "currency": "USD",
+        "priority": 2,
+        "enabled": true,
+        "default_watchlist": true,
+        "timeframes": ["1d", "4h", "1h"],
+        "tags": ["silver", "commodity", "industrial-metal", "hedge"],
+        "source": {
+          "type": "core_universe",
+          "added_by": "PATCC",
+          "reason": "Silver, precious-metal and industrial-demand monitor",
+          "expires": null
+        },
+        "operational_profile": {
+          "investment_role": "Precious-Metal Diversifier",
+          "preferred_accounts": ["Traditional IRA", "Roth IRA"],
+          "acceptable_accounts": ["Brokerage"],
+          "review_required_accounts": ["Brokerage"],
+          "preferred_strategies": ["Position", "Swing"],
+          "day_trade_suitable": true,
+          "swing_trade_suitable": true,
+          "long_term_suitable": true,
+          "tax_efficiency": "Low in Taxable",
+          "tax_notes": "Physical-metal-backed products may receive collectibles-related federal tax treatment in taxable accounts; verify current tax rules.",
+          "holding_period": "Days to Years"
+        },
+        "intelligence": {
+          "institutional_score": null,
+          "technical_score": null,
+          "macro_score": null,
+          "options_score": null,
+          "sentiment_score": null,
+          "overall_score": null
+        }
+      },
+      {
+        "ticker": "USO",
+        "name": "United States Oil Fund",
+        "asset_class": "Commodity",
+        "category": "Energy Commodity",
+        "exchange": "NYSE Arca",
+        "currency": "USD",
+        "priority": 2,
+        "enabled": true,
+        "default_watchlist": true,
+        "timeframes": ["1d", "4h", "1h"],
+        "tags": ["oil", "commodity", "energy", "futures-based"],
+        "source": {
+          "type": "core_universe",
+          "added_by": "PATCC",
+          "reason": "Crude-oil and energy-inflation monitor",
+          "expires": null
+        },
+        "operational_profile": {
+          "investment_role": "Tactical Energy Exposure",
+          "preferred_accounts": ["Brokerage"],
+          "acceptable_accounts": ["Traditional IRA", "Roth IRA"],
+          "review_required_accounts": ["Brokerage", "Traditional IRA", "Roth IRA"],
+          "preferred_strategies": ["Day Trade", "Swing", "Position"],
+          "day_trade_suitable": true,
+          "swing_trade_suitable": true,
+          "long_term_suitable": false,
+          "tax_efficiency": "Complex",
+          "tax_notes": "Futures-based structure may involve specialized tax reporting and roll effects; verify current fund tax documents.",
+          "holding_period": "Intraday to Several Weeks"
+        },
+        "intelligence": {
+          "institutional_score": null,
+          "technical_score": null,
+          "macro_score": null,
+          "options_score": null,
+          "sentiment_score": null,
+          "overall_score": null
+        }
+      },
+      {
+        "ticker": "UNG",
+        "name": "United States Natural Gas Fund",
+        "asset_class": "Commodity",
+        "category": "Energy Commodity",
+        "exchange": "NYSE Arca",
+        "currency": "USD",
+        "priority": 2,
+        "enabled": true,
+        "default_watchlist": true,
+        "timeframes": ["1d", "4h", "1h"],
+        "tags": ["natural-gas", "commodity", "energy", "futures-based"],
+        "source": {
+          "type": "core_universe",
+          "added_by": "PATCC",
+          "reason": "Natural-gas market and energy-volatility monitor",
+          "expires": null
+        },
+        "operational_profile": {
+          "investment_role": "Tactical Natural-Gas Exposure",
+          "preferred_accounts": ["Brokerage"],
+          "acceptable_accounts": ["Traditional IRA", "Roth IRA"],
+          "review_required_accounts": ["Brokerage", "Traditional IRA", "Roth IRA"],
+          "preferred_strategies": ["Day Trade", "Swing"],
+          "day_trade_suitable": true,
+          "swing_trade_suitable": true,
+          "long_term_suitable": false,
+          "tax_efficiency": "Complex",
+          "tax_notes": "Futures-based structure may involve specialized tax reporting, roll effects and potential Schedule K-1 considerations; verify current fund documents.",
+          "holding_period": "Intraday to Several Weeks"
+        },
+        "intelligence": {
+          "institutional_score": null,
+          "technical_score": null,
+          "macro_score": null,
+          "options_score": null,
+          "sentiment_score": null,
+          "overall_score": null
+        }
+      },
+  
+      {
+        "ticker": "TLT",
+        "name": "iShares 20+ Year Treasury Bond ETF",
+        "asset_class": "Fixed Income",
+        "category": "Long-Term Treasury",
+        "exchange": "NASDAQ",
+        "currency": "USD",
+        "priority": 2,
+        "enabled": true,
+        "default_watchlist": true,
+        "timeframes": ["1d", "4h", "1h"],
+        "tags": ["treasury", "duration", "rates", "defensive"],
+        "source": {
+          "type": "core_universe",
+          "added_by": "PATCC",
+          "reason": "Long-duration Treasury and interest-rate monitor",
+          "expires": null
+        },
+        "operational_profile": {
+          "investment_role": "Duration Exposure and Hedge",
+          "preferred_accounts": ["Traditional IRA", "Roth IRA"],
+          "acceptable_accounts": ["Brokerage"],
+          "review_required_accounts": [],
+          "preferred_strategies": ["Investment", "Position", "Swing"],
+          "day_trade_suitable": true,
+          "swing_trade_suitable": true,
+          "long_term_suitable": true,
+          "tax_efficiency": "Medium",
+          "tax_notes": "Treasury-related distributions may receive state-tax treatment advantages depending on fund composition; verify annual tax reporting.",
+          "holding_period": "Weeks to Years"
+        },
+        "intelligence": {
+          "institutional_score": null,
+          "technical_score": null,
+          "macro_score": null,
+          "options_score": null,
+          "sentiment_score": null,
+          "overall_score": null
+        }
+      },
+      {
+        "ticker": "IEF",
+        "name": "iShares 7-10 Year Treasury Bond ETF",
+        "asset_class": "Fixed Income",
+        "category": "Intermediate Treasury",
+        "exchange": "NASDAQ",
+        "currency": "USD",
+        "priority": 2,
+        "enabled": true,
+        "default_watchlist": true,
+        "timeframes": ["1d", "4h", "1h"],
+        "tags": ["treasury", "rates", "defensive", "intermediate-duration"],
+        "source": {
+          "type": "core_universe",
+          "added_by": "PATCC",
+          "reason": "Intermediate Treasury and interest-rate monitor",
+          "expires": null
+        },
+        "operational_profile": {
+          "investment_role": "Defensive Fixed Income",
+          "preferred_accounts": ["Traditional IRA", "Roth IRA"],
+          "acceptable_accounts": ["Brokerage"],
+          "review_required_accounts": [],
+          "preferred_strategies": ["Investment", "Position", "Swing"],
+          "day_trade_suitable": true,
+          "swing_trade_suitable": true,
+          "long_term_suitable": true,
+          "tax_efficiency": "Medium",
+          "tax_notes": "Treasury-related distributions may receive state-tax treatment advantages depending on fund composition; verify annual tax reporting.",
+          "holding_period": "Weeks to Years"
+        },
+        "intelligence": {
+          "institutional_score": null,
+          "technical_score": null,
+          "macro_score": null,
+          "options_score": null,
+          "sentiment_score": null,
+          "overall_score": null
+        }
+      },
+      {
+        "ticker": "HYG",
+        "name": "iShares iBoxx $ High Yield Corporate Bond ETF",
+        "asset_class": "Fixed Income",
+        "category": "High-Yield Credit",
+        "exchange": "NYSE Arca",
+        "currency": "USD",
+        "priority": 2,
+        "enabled": true,
+        "default_watchlist": true,
+        "timeframes": ["1d", "4h", "1h"],
+        "tags": ["credit", "high-yield", "risk-indicator", "income"],
+        "source": {
+          "type": "core_universe",
+          "added_by": "PATCC",
+          "reason": "Credit-risk and market-risk-appetite monitor",
+          "expires": null
+        },
+        "operational_profile": {
+          "investment_role": "Credit Income and Risk Sensor",
+          "preferred_accounts": ["Traditional IRA", "Roth IRA"],
+          "acceptable_accounts": ["Brokerage"],
+          "review_required_accounts": ["Brokerage"],
+          "preferred_strategies": ["Investment", "Position", "Swing"],
+          "day_trade_suitable": true,
+          "swing_trade_suitable": true,
+          "long_term_suitable": true,
+          "tax_efficiency": "Low to Medium in Taxable",
+          "tax_notes": "Bond distributions are commonly taxed as ordinary income; tax-deferred placement may be preferable depending on personal circumstances.",
+          "holding_period": "Weeks to Years"
+        },
+        "intelligence": {
+          "institutional_score": null,
+          "technical_score": null,
+          "macro_score": null,
+          "options_score": null,
+          "sentiment_score": null,
+          "overall_score": null
+        }
+      },
+      {
+        "ticker": "BIL",
+        "name": "SPDR Bloomberg 1-3 Month T-Bill ETF",
+        "asset_class": "Fixed Income",
+        "category": "Treasury Bill",
+        "exchange": "NYSE Arca",
+        "currency": "USD",
+        "priority": 2,
+        "enabled": true,
+        "default_watchlist": true,
+        "timeframes": ["1d"],
+        "tags": ["cash-proxy", "treasury", "low-volatility", "liquidity"],
+        "source": {
+          "type": "core_universe",
+          "added_by": "PATCC",
+          "reason": "Cash-equivalent and short-term-rate monitor",
+          "expires": null
+        },
+        "operational_profile": {
+          "investment_role": "Cash Equivalent",
+          "preferred_accounts": ["Brokerage", "Traditional IRA", "Roth IRA"],
+          "acceptable_accounts": [],
+          "review_required_accounts": [],
+          "preferred_strategies": ["Cash Management", "Investment"],
+          "day_trade_suitable": false,
+          "swing_trade_suitable": false,
+          "long_term_suitable": true,
+          "tax_efficiency": "Medium to High",
+          "tax_notes": "Treasury-related income may receive state-tax treatment advantages depending on annual fund composition.",
+          "holding_period": "Days to Years"
+        },
+        "intelligence": {
+          "institutional_score": null,
+          "technical_score": null,
+          "macro_score": null,
+          "options_score": null,
+          "sentiment_score": null,
+          "overall_score": null
+        }
+      },
+  
+      {
+        "ticker": "SOXL",
+        "name": "Direxion Daily Semiconductor Bull 3X Shares",
+        "asset_class": "Leveraged ETF",
+        "category": "Leveraged Long",
+        "exchange": "NYSE Arca",
+        "currency": "USD",
+        "priority": 3,
+        "enabled": true,
+        "default_watchlist": true,
+        "timeframes": ["1d", "4h", "1h", "15m"],
+        "tags": ["leveraged", "semiconductors", "trading", "high-risk"],
+        "source": {
+          "type": "core_universe",
+          "added_by": "PATCC",
+          "reason": "Tactical semiconductor risk-on instrument",
+          "expires": null
+        },
+        "operational_profile": {
+          "investment_role": "Aggressive Tactical Trading",
+          "preferred_accounts": ["Brokerage"],
+          "acceptable_accounts": ["Traditional IRA", "Roth IRA"],
+          "review_required_accounts": ["Traditional IRA", "Roth IRA"],
+          "preferred_strategies": ["Day Trade", "Swing"],
+          "day_trade_suitable": true,
+          "swing_trade_suitable": true,
+          "long_term_suitable": false,
+          "tax_efficiency": "Strategy Dependent",
+          "tax_notes": "Frequent trading in taxable accounts may generate short-term gains; retirement-account use still requires strict risk controls.",
+          "holding_period": "Intraday to Several Days"
+        },
+        "intelligence": {
+          "institutional_score": null,
+          "technical_score": null,
+          "macro_score": null,
+          "options_score": null,
+          "sentiment_score": null,
+          "overall_score": null
+        }
+      },
+      {
+        "ticker": "SOXS",
+        "name": "Direxion Daily Semiconductor Bear 3X Shares",
+        "asset_class": "Leveraged ETF",
+        "category": "Leveraged Inverse",
+        "exchange": "NYSE Arca",
+        "currency": "USD",
+        "priority": 3,
+        "enabled": true,
+        "default_watchlist": true,
+        "timeframes": ["1d", "4h", "1h", "15m"],
+        "tags": ["leveraged", "inverse", "semiconductors", "hedge", "high-risk"],
+        "source": {
+          "type": "core_universe",
+          "added_by": "PATCC",
+          "reason": "Tactical semiconductor downside and hedge instrument",
+          "expires": null
+        },
+        "operational_profile": {
+          "investment_role": "Aggressive Hedge or Short-Term Trade",
+          "preferred_accounts": ["Brokerage"],
+          "acceptable_accounts": ["Traditional IRA", "Roth IRA"],
+          "review_required_accounts": ["Traditional IRA", "Roth IRA"],
+          "preferred_strategies": ["Day Trade", "Swing", "Hedge"],
+          "day_trade_suitable": true,
+          "swing_trade_suitable": true,
+          "long_term_suitable": false,
+          "tax_efficiency": "Strategy Dependent",
+          "tax_notes": "Frequent trading in taxable accounts may generate short-term gains; inverse leverage and daily reset require strict holding-period controls.",
+          "holding_period": "Intraday to Several Days"
+        },
+        "intelligence": {
+          "institutional_score": null,
+          "technical_score": null,
+          "macro_score": null,
+          "options_score": null,
+          "sentiment_score": null,
+          "overall_score": null
+        }
+      },
+      {
+        "ticker": "TQQQ",
+        "name": "ProShares UltraPro QQQ",
+        "asset_class": "Leveraged ETF",
+        "category": "Leveraged Long",
+        "exchange": "NASDAQ",
+        "currency": "USD",
+        "priority": 3,
+        "enabled": true,
+        "default_watchlist": true,
+        "timeframes": ["1d", "4h", "1h", "15m"],
+        "tags": ["leveraged", "nasdaq", "growth", "trading", "high-risk"],
+        "source": {
+          "type": "core_universe",
+          "added_by": "PATCC",
+          "reason": "Tactical NASDAQ-100 risk-on instrument",
+          "expires": null
+        },
+        "operational_profile": {
+          "investment_role": "Aggressive Tactical Growth",
+          "preferred_accounts": ["Brokerage"],
+          "acceptable_accounts": ["Traditional IRA", "Roth IRA"],
+          "review_required_accounts": ["Traditional IRA", "Roth IRA"],
+          "preferred_strategies": ["Day Trade", "Swing"],
+          "day_trade_suitable": true,
+          "swing_trade_suitable": true,
+          "long_term_suitable": false,
+          "tax_efficiency": "Strategy Dependent",
+          "tax_notes": "Daily leverage reset and frequent taxable trading require strict risk and tax-lot management.",
+          "holding_period": "Intraday to Several Days"
+        },
+        "intelligence": {
+          "institutional_score": null,
+          "technical_score": null,
+          "macro_score": null,
+          "options_score": null,
+          "sentiment_score": null,
+          "overall_score": null
+        }
+      },
+      {
+        "ticker": "SQQQ",
+        "name": "ProShares UltraPro Short QQQ",
+        "asset_class": "Leveraged ETF",
+        "category": "Leveraged Inverse",
+        "exchange": "NASDAQ",
+        "currency": "USD",
+        "priority": 3,
+        "enabled": true,
+        "default_watchlist": true,
+        "timeframes": ["1d", "4h", "1h", "15m"],
+        "tags": ["leveraged", "inverse", "nasdaq", "hedge", "high-risk"],
+        "source": {
+          "type": "core_universe",
+          "added_by": "PATCC",
+          "reason": "Tactical NASDAQ downside and hedge instrument",
+          "expires": null
+        },
+        "operational_profile": {
+          "investment_role": "Aggressive Hedge or Short-Term Trade",
+          "preferred_accounts": ["Brokerage"],
+          "acceptable_accounts": ["Traditional IRA", "Roth IRA"],
+          "review_required_accounts": ["Traditional IRA", "Roth IRA"],
+          "preferred_strategies": ["Day Trade", "Swing", "Hedge"],
+          "day_trade_suitable": true,
+          "swing_trade_suitable": true,
+          "long_term_suitable": false,
+          "tax_efficiency": "Strategy Dependent",
+          "tax_notes": "Daily inverse leverage reset and frequent taxable trading require strict holding-period and tax-lot controls.",
+          "holding_period": "Intraday to Several Days"
+        },
+        "intelligence": {
+          "institutional_score": null,
+          "technical_score": null,
+          "macro_score": null,
+          "options_score": null,
+          "sentiment_score": null,
+          "overall_score": null
+        }
+      },
+  
+      {
+        "ticker": "BTC-USD",
+        "name": "Bitcoin",
+        "asset_class": "Crypto",
+        "category": "Large-Cap Cryptocurrency",
+        "exchange": "Multiple",
+        "currency": "USD",
+        "priority": 2,
+        "enabled": true,
+        "default_watchlist": true,
+        "timeframes": ["1d", "4h", "1h"],
+        "tags": ["crypto", "bitcoin", "risk-asset", "institutional"],
+        "source": {
+          "type": "core_universe",
+          "added_by": "PATCC",
+          "reason": "Primary cryptocurrency and digital-asset benchmark",
+          "expires": null
+        },
+        "operational_profile": {
+          "investment_role": "Digital-Asset Growth and Diversification",
+          "preferred_accounts": ["Brokerage or Crypto Custody"],
+          "acceptable_accounts": ["Retirement Account When Supported"],
+          "review_required_accounts": ["All"],
+          "preferred_strategies": ["Investment", "Position", "Swing"],
+          "day_trade_suitable": true,
+          "swing_trade_suitable": true,
+          "long_term_suitable": true,
+          "tax_efficiency": "Low in Taxable When Frequently Traded",
+          "tax_notes": "Digital-asset transactions may create taxable dispositions; tax-lot and transfer tracking are essential.",
+          "holding_period": "Flexible"
+        },
+        "intelligence": {
+          "institutional_score": null,
+          "technical_score": null,
+          "macro_score": null,
+          "options_score": null,
+          "sentiment_score": null,
+          "overall_score": null
+        }
+      },
+      {
+        "ticker": "ETH-USD",
+        "name": "Ethereum",
+        "asset_class": "Crypto",
+        "category": "Large-Cap Cryptocurrency",
+        "exchange": "Multiple",
+        "currency": "USD",
+        "priority": 2,
+        "enabled": true,
+        "default_watchlist": true,
+        "timeframes": ["1d", "4h", "1h"],
+        "tags": ["crypto", "ethereum", "smart-contracts", "risk-asset"],
+        "source": {
+          "type": "core_universe",
+          "added_by": "PATCC",
+          "reason": "Major smart-contract platform and crypto-market benchmark",
+          "expires": null
+        },
+        "operational_profile": {
+          "investment_role": "Digital-Asset Growth",
+          "preferred_accounts": ["Brokerage or Crypto Custody"],
+          "acceptable_accounts": ["Retirement Account When Supported"],
+          "review_required_accounts": ["All"],
+          "preferred_strategies": ["Investment", "Position", "Swing"],
+          "day_trade_suitable": true,
+          "swing_trade_suitable": true,
+          "long_term_suitable": true,
+          "tax_efficiency": "Low in Taxable When Frequently Traded",
+          "tax_notes": "Digital-asset transactions and staking-related activity may have separate tax consequences; maintain complete records.",
+          "holding_period": "Flexible"
+        },
+        "intelligence": {
+          "institutional_score": null,
+          "technical_score": null,
+          "macro_score": null,
+          "options_score": null,
+          "sentiment_score": null,
+          "overall_score": null
+        }
+      },
+      {
+        "ticker": "SOL-USD",
+        "name": "Solana",
+        "asset_class": "Crypto",
+        "category": "Large-Cap Cryptocurrency",
+        "exchange": "Multiple",
+        "currency": "USD",
+        "priority": 3,
+        "enabled": true,
+        "default_watchlist": true,
+        "timeframes": ["1d", "4h", "1h"],
+        "tags": ["crypto", "solana", "smart-contracts", "high-volatility"],
+        "source": {
+          "type": "core_universe",
+          "added_by": "PATCC",
+          "reason": "High-beta crypto ecosystem monitor",
+          "expires": null
+        },
+        "operational_profile": {
+          "investment_role": "Speculative Digital Growth",
+          "preferred_accounts": ["Brokerage or Crypto Custody"],
+          "acceptable_accounts": [],
+          "review_required_accounts": ["All"],
+          "preferred_strategies": ["Position", "Swing"],
+          "day_trade_suitable": true,
+          "swing_trade_suitable": true,
+          "long_term_suitable": true,
+          "tax_efficiency": "Low in Taxable When Frequently Traded",
+          "tax_notes": "Digital-asset transactions may create taxable dispositions; maintain tax-lot and transfer records.",
+          "holding_period": "Days to Years"
+        },
+        "intelligence": {
+          "institutional_score": null,
+          "technical_score": null,
+          "macro_score": null,
+          "options_score": null,
+          "sentiment_score": null,
+          "overall_score": null
+        }
+      },
+      {
+        "ticker": "XRP-USD",
+        "name": "XRP",
+        "asset_class": "Crypto",
+        "category": "Large-Cap Cryptocurrency",
+        "exchange": "Multiple",
+        "currency": "USD",
+        "priority": 3,
+        "enabled": true,
+        "default_watchlist": true,
+        "timeframes": ["1d", "4h", "1h"],
+        "tags": ["crypto", "xrp", "payments", "event-sensitive"],
+        "source": {
+          "type": "core_universe",
+          "added_by": "PATCC",
+          "reason": "Large-cap payment-network crypto and event-risk monitor",
+          "expires": null
+        },
+        "operational_profile": {
+          "investment_role": "Speculative Digital Asset",
+          "preferred_accounts": ["Brokerage or Crypto Custody"],
+          "acceptable_accounts": [],
+          "review_required_accounts": ["All"],
+          "preferred_strategies": ["Position", "Swing"],
+          "day_trade_suitable": true,
+          "swing_trade_suitable": true,
+          "long_term_suitable": true,
+          "tax_efficiency": "Low in Taxable When Frequently Traded",
+          "tax_notes": "Digital-asset transactions may create taxable dispositions; maintain complete records.",
+          "holding_period": "Days to Years"
+        },
+        "intelligence": {
+          "institutional_score": null,
+          "technical_score": null,
+          "macro_score": null,
+          "options_score": null,
+          "sentiment_score": null,
+          "overall_score": null
+        }
+      }
+    ]
+  }
+  

@@ -44,6 +44,13 @@ from datetime import datetime
 from pathlib import Path
 from typing import Iterable
 from zoneinfo import ZoneInfo
+from Core.watchlist_loader import (
+    DEFAULT_UNIVERSE_FILE,
+    WatchlistError,
+    get_enabled_assets,
+    get_tickers,
+    load_asset_universe,
+)
 
 
 # ---------------------------------------------------------------------------
@@ -309,6 +316,42 @@ def normalize_tickers(tickers: Iterable[str]) -> list[str]:
             normalized.append(symbol)
 
     return normalized
+
+def load_configured_watchlist(name: str) -> list[str]:
+    """
+    Load a configured PATCC watchlist.
+
+    Version 0.2 initially maps the names 'default', 'core', and
+    'asset_classes' to Config/watchlists/asset_classes.json.
+
+    Additional named watchlist files will be supported incrementally.
+    """
+    normalized_name = name.strip().lower()
+
+    supported_names = {
+        "default",
+        "core",
+        "asset_classes",
+    }
+
+    if normalized_name not in supported_names:
+        supported = ", ".join(sorted(supported_names))
+
+        raise ValueError(
+            f"Unsupported watchlist {name!r}. "
+            f"Available watchlists: {supported}"
+        )
+
+    try:
+        assets = load_asset_universe(DEFAULT_UNIVERSE_FILE)
+        enabled_assets = get_enabled_assets(assets)
+        tickers = get_tickers(enabled_assets)
+    except WatchlistError as exc:
+        raise ValueError(
+            f"Unable to load watchlist {name!r}: {exc}"
+        ) from exc
+
+    return normalize_tickers(tickers)
 
 
 def extract_text(
@@ -1424,13 +1467,21 @@ def parse_arguments() -> argparse.Namespace:
     parser.add_argument(
         "--tickers",
         nargs="+",
-        default=DEFAULT_WATCHLIST,
+        default=None,
         help=(
-            "Ticker symbols to scan. "
+            "Explicit ticker symbols to scan. This overrides --watchlist. "
             "Example: --tickers SPY QQQ IWM UNG"
         ),
     )
-
+    parser.add_argument(
+        "--watchlist",
+        default="default",
+        help=(
+            "Configured PATCC watchlist to load when --tickers is not used. "
+            "Available in v0.2: default, core, asset_classes. "
+            "Default: default"
+        ),
+    )
     parser.add_argument(
         "--tf",
         default="1d",
@@ -1508,26 +1559,40 @@ def main() -> int:
 
         print("=" * 78)
 
-        # A cleanup-only command should stop after cleanup.
+        # Cleanup-only command stops here unless --open was also supplied.
         if not args.open:
             return 0
 
-    watchlist = normalize_tickers(args.tickers)
-
+    # Resolve the ticker universe before it is used anywhere below.
+    if args.tickers is not None:
+        watchlist = normalize_tickers(args.tickers)
+        watchlist_source = "Command-line override"
+    else:
+        try:
+            watchlist = load_configured_watchlist(args.watchlist)
+            watchlist_source = (
+                f"Configured watchlist: {args.watchlist}"
+            )
+        except ValueError as exc:
+            print(f"ERROR: {exc}")
+            return 2
 
     if not watchlist:
         print("ERROR: No valid ticker symbols were supplied.")
         return 2
 
     print("=" * 78)
-    print("PATCC MORNING COMMAND CENTER v0.1")
+    print("PATCC MORNING COMMAND CENTER v0.2")
     print("=" * 78)
     print(f"Project root : {PROJECT_ROOT}")
     print(f"Timeframe    : {args.tf}")
+    print(f"Source       : {watchlist_source}")
     print(f"Watchlist    : {', '.join(watchlist)}")
+    print(f"Asset count  : {len(watchlist)}")
     print("-" * 78)
 
     ticker_reports: list[TickerReport] = []
+  
 
     for position, ticker in enumerate(watchlist, start=1):
         print(

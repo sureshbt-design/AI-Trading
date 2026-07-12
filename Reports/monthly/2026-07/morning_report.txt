@@ -2,29 +2,112 @@
 PATCC - PROFESSIONAL AI TRADING & CAPITAL COMPANION
 MORNING COMMAND CENTER
 Version             : 0.1.0
-Generated           : Saturday, July 11, 2026 at 04:53:05 AM ET
+Generated           : Sunday, July 12, 2026 at 08:24:06 AM ET
 Timeframe           : 1d
 ==============================================================================
 
 EXECUTIVE SUMMARY
 ------------------------------------------------------------------------------
 Market Posture       : NEUTRAL — WAIT FOR CONFIRMATION
-Average Score        : 59.3
-Successful Scans     : 3
+Average Score        : 53.5
+Successful Scans     : 24
 Failed Scans         : 0
-Strongest Tickers   : SPY, QQQ, UNG
-Weakest Tickers     : UNG, QQQ, SPY
+Strongest Tickers   : DIA, SPY, IWM
+Weakest Tickers     : TLT, SOXS, ETH-USD
 
 WATCHLIST SUMMARY
 ------------------------------------------------------------------------------
 Ticker      Status            Price    Score       Grade                Action
 ------------------------------------------------------------------------------
+DIA         SUCCESS          525.78       80           B        Good Candidate
 SPY         SUCCESS          754.95       80           B        Good Candidate
 QQQ         SUCCESS          725.51       62           C             Watchlist
+IWM         SUCCESS          295.99       75           B        Good Candidate
 UNG         SUCCESS           10.60       36           F                 Avoid
+USO         SUCCESS          108.70       47           D            Weak Setup
+GLD         SUCCESS          377.01       38           F                 Avoid
+SLV         SUCCESS           53.95       37           F                 Avoid
+BTC-USD     SUCCESS       63,999.80       52           D            Weak Setup
+ETH-USD     SUCCESS        1,804.77       30           F                 Avoid
+XLE         SUCCESS           55.08       74           B        Good Candidate
+XLF         SUCCESS           55.71       70           B        Good Candidate
+XLK         SUCCESS          185.78       59           C             Watchlist
+XLV         SUCCESS          160.84       70           B        Good Candidate
+HYG         SUCCESS           79.71       68           C             Watchlist
+IEF         SUCCESS           93.63       49           D            Weak Setup
+TLT         SUCCESS           84.47       26           F                 Avoid
+BIL         SUCCESS           91.50       56           C             Watchlist
+SOL-USD     SUCCESS           77.01       66           C             Watchlist
+XRP-USD     SUCCESS            1.10       47           D            Weak Setup
+SOXS        SUCCESS            4.08       28           F                 Avoid
+SQQQ        SUCCESS           37.78       39           F                 Avoid
+SOXL        SUCCESS          192.26       40           D            Weak Setup
+TQQQ        SUCCESS           77.03       56           C             Watchlist
 
 TICKER DRILL-DOWN
 ------------------------------------------------------------------------------
+
+DIA — SUCCESS
+----------------------------------------
+Timeframe            : 1d
+Price                : 525.78
+Score                : 80
+Grade                : B
+Action               : Good Candidate
+Trend                : Strong Bullish
+Market State         : Not available
+Provider             : Yahoo Finance
+
+SCORING ENGINE OUTPUT
+----------------------------------------
+===========================================================================
+PATCC - Professional AI Trading & Capital Companion
+Version             : 0.4.0
+Build Date          : 2026-07-09
+===========================================================================
+Ticker              : DIA
+Profile             : etf
+
+DATA VALIDATION
+-----------------------------------------------------------------
+Provider            : Yahoo Finance
+Mode                : Research / Watchlist
+Real-Time           : False
+Last Bar            : 2026-07-10 00:00:00
+Rows Downloaded     : 1255
+
+MARKET STATE
+-----------------------------------------------------------------
+Trend               : Strong Bullish
+Momentum            : Bullish
+Volatility          : Low
+Volume              : Below Average
+Market Bias         : Buy
+Risk Level          : Conservative
+
+SCORING
+-----------------------------------------------------------------
+Overall Score       : 80
+Grade               : B
+Recommendation      : Good Candidate
+
+TARGETS
+-----------------------------------------------------------------
+Current Price       : 525.78
+Support             : 523.73
+Resistance          : 526.47
+Target 1            : 526.47
+Target 2            : 528.86
+Target 3            : 530.91
+Stop Loss           : 521.00
+
+Risk/Reward T1      : 0.14
+Risk/Reward T2      : 0.64
+Risk/Reward T3      : 1.07
+
+Probability T1      : 75%
+Probability T2      : 75%
+Probability T3      : 62%
 
 SPY — SUCCESS
 ----------------------------------------
@@ -150,6 +233,68 @@ Probability T1      : 75%
 Probability T2      : 75%
 Probability T3      : 75%
 
+IWM — SUCCESS
+----------------------------------------
+Timeframe            : 1d
+Price                : 295.99
+Score                : 75
+Grade                : B
+Action               : Good Candidate
+Trend                : Strong Bullish
+Market State         : Not available
+Provider             : Yahoo Finance
+
+SCORING ENGINE OUTPUT
+----------------------------------------
+===========================================================================
+PATCC - Professional AI Trading & Capital Companion
+Version             : 0.4.0
+Build Date          : 2026-07-09
+===========================================================================
+Ticker              : IWM
+Profile             : etf
+
+DATA VALIDATION
+-----------------------------------------------------------------
+Provider            : Yahoo Finance
+Mode                : Research / Watchlist
+Real-Time           : False
+Last Bar            : 2026-07-10 00:00:00
+Rows Downloaded     : 1255
+
+MARKET STATE
+-----------------------------------------------------------------
+Trend               : Strong Bullish
+Momentum            : Bullish
+Volatility          : Low
+Volume              : Below Average
+Market Bias         : Buy
+Risk Level          : Conservative
+
+SCORING
+-----------------------------------------------------------------
+Overall Score       : 75
+Grade               : B
+Recommendation      : Good Candidate
+
+TARGETS
+-----------------------------------------------------------------
+Current Price       : 295.99
+Support             : 295.73
+Resistance          : 296.80
+Target 1            : 296.80
+Target 2            : 296.38
+Target 3            : 296.64
+Stop Loss           : 293.39
+
+Risk/Reward T1      : 0.31
+Risk/Reward T2      : 0.15
+Risk/Reward T3      : 0.25
+
+Probability T1      : 75%
+Probability T2      : 75%
+Probability T3      : 75%
+
 UNG — SUCCESS
 ----------------------------------------
 Timeframe            : 1d
@@ -207,6 +352,1184 @@ Stop Loss           : 10.36
 Risk/Reward T1      : 0.08
 Risk/Reward T2      : 0.32
 Risk/Reward T3      : 0.53
+
+Probability T1      : 75%
+Probability T2      : 75%
+Probability T3      : 75%
+
+USO — SUCCESS
+----------------------------------------
+Timeframe            : 1d
+Price                : 108.7
+Score                : 47
+Grade                : D
+Action               : Weak Setup
+Trend                : Neutral
+Market State         : Not available
+Provider             : Yahoo Finance
+
+SCORING ENGINE OUTPUT
+----------------------------------------
+===========================================================================
+PATCC - Professional AI Trading & Capital Companion
+Version             : 0.4.0
+Build Date          : 2026-07-09
+===========================================================================
+Ticker              : USO
+Profile             : etf
+
+DATA VALIDATION
+-----------------------------------------------------------------
+Provider            : Yahoo Finance
+Mode                : Research / Watchlist
+Real-Time           : False
+Last Bar            : 2026-07-10 00:00:00
+Rows Downloaded     : 1255
+
+MARKET STATE
+-----------------------------------------------------------------
+Trend               : Neutral
+Momentum            : Neutral
+Volatility          : Medium
+Volume              : Below Average
+Market Bias         : Wait
+Risk Level          : Moderate
+
+SCORING
+-----------------------------------------------------------------
+Overall Score       : 47
+Grade               : D
+Recommendation      : Weak Setup
+
+TARGETS
+-----------------------------------------------------------------
+Current Price       : 108.70
+Support             : 108.38
+Resistance          : 109.84
+Target 1            : 109.84
+Target 2            : 109.18
+Target 3            : 109.50
+Stop Loss           : 106.51
+
+Risk/Reward T1      : 0.52
+Risk/Reward T2      : 0.22
+Risk/Reward T3      : 0.36
+
+Probability T1      : 75%
+Probability T2      : 75%
+Probability T3      : 75%
+
+GLD — SUCCESS
+----------------------------------------
+Timeframe            : 1d
+Price                : 377.01
+Score                : 38
+Grade                : F
+Action               : Avoid
+Trend                : Bearish
+Market State         : Not available
+Provider             : Yahoo Finance
+
+SCORING ENGINE OUTPUT
+----------------------------------------
+===========================================================================
+PATCC - Professional AI Trading & Capital Companion
+Version             : 0.4.0
+Build Date          : 2026-07-09
+===========================================================================
+Ticker              : GLD
+Profile             : etf
+
+DATA VALIDATION
+-----------------------------------------------------------------
+Provider            : Yahoo Finance
+Mode                : Research / Watchlist
+Real-Time           : False
+Last Bar            : 2026-07-10 00:00:00
+Rows Downloaded     : 1255
+
+MARKET STATE
+-----------------------------------------------------------------
+Trend               : Bearish
+Momentum            : Neutral
+Volatility          : Low
+Volume              : Below Average
+Market Bias         : Avoid
+Risk Level          : Conservative
+
+SCORING
+-----------------------------------------------------------------
+Overall Score       : 38
+Grade               : F
+Recommendation      : Avoid
+
+TARGETS
+-----------------------------------------------------------------
+Current Price       : 377.01
+Support             : 376.29
+Resistance          : 377.55
+Target 1            : 377.55
+Target 2            : 378.09
+Target 3            : 378.81
+Stop Loss           : 372.78
+
+Risk/Reward T1      : 0.13
+Risk/Reward T2      : 0.26
+Risk/Reward T3      : 0.43
+
+Probability T1      : 75%
+Probability T2      : 75%
+Probability T3      : 75%
+
+SLV — SUCCESS
+----------------------------------------
+Timeframe            : 1d
+Price                : 53.95
+Score                : 37
+Grade                : F
+Action               : Avoid
+Trend                : Neutral
+Market State         : Not available
+Provider             : Yahoo Finance
+
+SCORING ENGINE OUTPUT
+----------------------------------------
+===========================================================================
+PATCC - Professional AI Trading & Capital Companion
+Version             : 0.4.0
+Build Date          : 2026-07-09
+===========================================================================
+Ticker              : SLV
+Profile             : etf
+
+DATA VALIDATION
+-----------------------------------------------------------------
+Provider            : Yahoo Finance
+Mode                : Research / Watchlist
+Real-Time           : False
+Last Bar            : 2026-07-10 00:00:00
+Rows Downloaded     : 1255
+
+MARKET STATE
+-----------------------------------------------------------------
+Trend               : Neutral
+Momentum            : Neutral
+Volatility          : Medium
+Volume              : Below Average
+Market Bias         : Wait
+Risk Level          : Moderate
+
+SCORING
+-----------------------------------------------------------------
+Overall Score       : 37
+Grade               : F
+Recommendation      : Avoid
+
+TARGETS
+-----------------------------------------------------------------
+Current Price       : 53.95
+Support             : 53.75
+Resistance          : 54.29
+Target 1            : 54.29
+Target 2            : 54.25
+Target 3            : 54.45
+Stop Loss           : 52.65
+
+Risk/Reward T1      : 0.26
+Risk/Reward T2      : 0.23
+Risk/Reward T3      : 0.38
+
+Probability T1      : 75%
+Probability T2      : 75%
+Probability T3      : 75%
+
+BTC-USD — SUCCESS
+----------------------------------------
+Timeframe            : 1d
+Price                : 63999.8
+Score                : 52
+Grade                : D
+Action               : Weak Setup
+Trend                : Neutral
+Market State         : Not available
+Provider             : Yahoo Finance
+
+SCORING ENGINE OUTPUT
+----------------------------------------
+===========================================================================
+PATCC - Professional AI Trading & Capital Companion
+Version             : 0.4.0
+Build Date          : 2026-07-09
+===========================================================================
+Ticker              : BTC-USD
+Profile             : crypto
+
+DATA VALIDATION
+-----------------------------------------------------------------
+Provider            : Yahoo Finance
+Mode                : Research / Watchlist
+Real-Time           : False
+Last Bar            : 2026-07-12 00:00:00
+Rows Downloaded     : 1827
+
+MARKET STATE
+-----------------------------------------------------------------
+Trend               : Neutral
+Momentum            : Bullish
+Volatility          : Low
+Volume              : Below Average
+Market Bias         : Wait
+Risk Level          : Conservative
+
+SCORING
+-----------------------------------------------------------------
+Overall Score       : 52
+Grade               : D
+Recommendation      : Weak Setup
+
+TARGETS
+-----------------------------------------------------------------
+Current Price       : 63999.80
+Support             : 63870.93
+Resistance          : 64128.04
+Target 1            : 64128.04
+Target 2            : 64193.11
+Target 3            : 64321.98
+Stop Loss           : 62935.59
+
+Risk/Reward T1      : 0.12
+Risk/Reward T2      : 0.18
+Risk/Reward T3      : 0.30
+
+Probability T1      : 75%
+Probability T2      : 75%
+Probability T3      : 75%
+
+ETH-USD — SUCCESS
+----------------------------------------
+Timeframe            : 1d
+Price                : 1804.77
+Score                : 30
+Grade                : F
+Action               : Avoid
+Trend                : Bearish
+Market State         : Not available
+Provider             : Yahoo Finance
+
+SCORING ENGINE OUTPUT
+----------------------------------------
+===========================================================================
+PATCC - Professional AI Trading & Capital Companion
+Version             : 0.4.0
+Build Date          : 2026-07-09
+===========================================================================
+Ticker              : ETH-USD
+Profile             : crypto
+
+DATA VALIDATION
+-----------------------------------------------------------------
+Provider            : Yahoo Finance
+Mode                : Research / Watchlist
+Real-Time           : False
+Last Bar            : 2026-07-12 00:00:00
+Rows Downloaded     : 1827
+
+MARKET STATE
+-----------------------------------------------------------------
+Trend               : Bearish
+Momentum            : Overbought
+Volatility          : Medium
+Volume              : Below Average
+Market Bias         : Avoid
+Risk Level          : Moderate
+
+SCORING
+-----------------------------------------------------------------
+Overall Score       : 30
+Grade               : F
+Recommendation      : Avoid
+
+TARGETS
+-----------------------------------------------------------------
+Current Price       : 1804.77
+Support             : 1786.30
+Resistance          : 1805.91
+Target 1            : 1805.91
+Target 2            : 1832.48
+Target 3            : 1850.96
+Stop Loss           : 1751.79
+
+Risk/Reward T1      : 0.02
+Risk/Reward T2      : 0.52
+Risk/Reward T3      : 0.87
+
+Probability T1      : 75%
+Probability T2      : 75%
+Probability T3      : 75%
+
+XLE — SUCCESS
+----------------------------------------
+Timeframe            : 1d
+Price                : 55.08
+Score                : 74
+Grade                : B
+Action               : Good Candidate
+Trend                : Bullish
+Market State         : Not available
+Provider             : Yahoo Finance
+
+SCORING ENGINE OUTPUT
+----------------------------------------
+===========================================================================
+PATCC - Professional AI Trading & Capital Companion
+Version             : 0.4.0
+Build Date          : 2026-07-09
+===========================================================================
+Ticker              : XLE
+Profile             : etf
+
+DATA VALIDATION
+-----------------------------------------------------------------
+Provider            : Yahoo Finance
+Mode                : Research / Watchlist
+Real-Time           : False
+Last Bar            : 2026-07-10 00:00:00
+Rows Downloaded     : 1255
+
+MARKET STATE
+-----------------------------------------------------------------
+Trend               : Bullish
+Momentum            : Bullish
+Volatility          : Low
+Volume              : Below Average
+Market Bias         : Watch for Pullback
+Risk Level          : Conservative
+
+SCORING
+-----------------------------------------------------------------
+Overall Score       : 74
+Grade               : B
+Recommendation      : Good Candidate
+
+TARGETS
+-----------------------------------------------------------------
+Current Price       : 55.08
+Support             : 55.06
+Resistance          : 55.08
+Target 1            : 55.08
+Target 2            : 55.11
+Target 3            : 55.12
+Stop Loss           : 54.57
+
+Risk/Reward T1      : 0.01
+Risk/Reward T2      : 0.05
+Risk/Reward T3      : 0.08
+
+Probability T1      : 75%
+Probability T2      : 75%
+Probability T3      : 75%
+
+XLF — SUCCESS
+----------------------------------------
+Timeframe            : 1d
+Price                : 55.71
+Score                : 70
+Grade                : B
+Action               : Good Candidate
+Trend                : Strong Bullish
+Market State         : Not available
+Provider             : Yahoo Finance
+
+SCORING ENGINE OUTPUT
+----------------------------------------
+===========================================================================
+PATCC - Professional AI Trading & Capital Companion
+Version             : 0.4.0
+Build Date          : 2026-07-09
+===========================================================================
+Ticker              : XLF
+Profile             : etf
+
+DATA VALIDATION
+-----------------------------------------------------------------
+Provider            : Yahoo Finance
+Mode                : Research / Watchlist
+Real-Time           : False
+Last Bar            : 2026-07-10 00:00:00
+Rows Downloaded     : 1255
+
+MARKET STATE
+-----------------------------------------------------------------
+Trend               : Strong Bullish
+Momentum            : Overbought
+Volatility          : Low
+Volume              : Below Average
+Market Bias         : Buy
+Risk Level          : Conservative
+
+SCORING
+-----------------------------------------------------------------
+Overall Score       : 70
+Grade               : B
+Recommendation      : Good Candidate
+
+TARGETS
+-----------------------------------------------------------------
+Current Price       : 55.71
+Support             : 55.58
+Resistance          : 55.80
+Target 1            : 55.80
+Target 2            : 55.90
+Target 3            : 56.03
+Stop Loss           : 55.20
+
+Risk/Reward T1      : 0.18
+Risk/Reward T2      : 0.38
+Risk/Reward T3      : 0.64
+
+Probability T1      : 75%
+Probability T2      : 75%
+Probability T3      : 75%
+
+XLK — SUCCESS
+----------------------------------------
+Timeframe            : 1d
+Price                : 185.78
+Score                : 59
+Grade                : C
+Action               : Watchlist
+Trend                : Bullish
+Market State         : Not available
+Provider             : Yahoo Finance
+
+SCORING ENGINE OUTPUT
+----------------------------------------
+===========================================================================
+PATCC - Professional AI Trading & Capital Companion
+Version             : 0.4.0
+Build Date          : 2026-07-09
+===========================================================================
+Ticker              : XLK
+Profile             : etf
+
+DATA VALIDATION
+-----------------------------------------------------------------
+Provider            : Yahoo Finance
+Mode                : Research / Watchlist
+Real-Time           : False
+Last Bar            : 2026-07-10 00:00:00
+Rows Downloaded     : 1255
+
+MARKET STATE
+-----------------------------------------------------------------
+Trend               : Bullish
+Momentum            : Neutral
+Volatility          : Medium
+Volume              : Below Average
+Market Bias         : Watch for Pullback
+Risk Level          : Moderate
+
+SCORING
+-----------------------------------------------------------------
+Overall Score       : 59
+Grade               : C
+Recommendation      : Watchlist
+
+TARGETS
+-----------------------------------------------------------------
+Current Price       : 185.78
+Support             : 185.60
+Resistance          : 186.05
+Target 1            : 186.05
+Target 2            : 186.05
+Target 3            : 186.23
+Stop Loss           : 182.71
+
+Risk/Reward T1      : 0.09
+Risk/Reward T2      : 0.09
+Risk/Reward T3      : 0.15
+
+Probability T1      : 75%
+Probability T2      : 75%
+Probability T3      : 75%
+
+XLV — SUCCESS
+----------------------------------------
+Timeframe            : 1d
+Price                : 160.84
+Score                : 70
+Grade                : B
+Action               : Good Candidate
+Trend                : Strong Bullish
+Market State         : Not available
+Provider             : Yahoo Finance
+
+SCORING ENGINE OUTPUT
+----------------------------------------
+===========================================================================
+PATCC - Professional AI Trading & Capital Companion
+Version             : 0.4.0
+Build Date          : 2026-07-09
+===========================================================================
+Ticker              : XLV
+Profile             : etf
+
+DATA VALIDATION
+-----------------------------------------------------------------
+Provider            : Yahoo Finance
+Mode                : Research / Watchlist
+Real-Time           : False
+Last Bar            : 2026-07-10 00:00:00
+Rows Downloaded     : 1255
+
+MARKET STATE
+-----------------------------------------------------------------
+Trend               : Strong Bullish
+Momentum            : Overbought
+Volatility          : Low
+Volume              : Below Average
+Market Bias         : Buy
+Risk Level          : Conservative
+
+SCORING
+-----------------------------------------------------------------
+Overall Score       : 70
+Grade               : B
+Recommendation      : Good Candidate
+
+TARGETS
+-----------------------------------------------------------------
+Current Price       : 160.84
+Support             : 160.38
+Resistance          : 161.09
+Target 1            : 161.09
+Target 2            : 161.53
+Target 3            : 161.99
+Stop Loss           : 158.96
+
+Risk/Reward T1      : 0.13
+Risk/Reward T2      : 0.37
+Risk/Reward T3      : 0.61
+
+Probability T1      : 75%
+Probability T2      : 75%
+Probability T3      : 75%
+
+HYG — SUCCESS
+----------------------------------------
+Timeframe            : 1d
+Price                : 79.71
+Score                : 68
+Grade                : C
+Action               : Watchlist
+Trend                : Strong Bullish
+Market State         : Not available
+Provider             : Yahoo Finance
+
+SCORING ENGINE OUTPUT
+----------------------------------------
+===========================================================================
+PATCC - Professional AI Trading & Capital Companion
+Version             : 0.4.0
+Build Date          : 2026-07-09
+===========================================================================
+Ticker              : HYG
+Profile             : stock
+
+DATA VALIDATION
+-----------------------------------------------------------------
+Provider            : Yahoo Finance
+Mode                : Research / Watchlist
+Real-Time           : False
+Last Bar            : 2026-07-10 00:00:00
+Rows Downloaded     : 1255
+
+MARKET STATE
+-----------------------------------------------------------------
+Trend               : Strong Bullish
+Momentum            : Bullish
+Volatility          : Low
+Volume              : Below Average
+Market Bias         : Buy
+Risk Level          : Conservative
+
+SCORING
+-----------------------------------------------------------------
+Overall Score       : 68
+Grade               : C
+Recommendation      : Watchlist
+
+TARGETS
+-----------------------------------------------------------------
+Current Price       : 79.71
+Support             : 79.67
+Resistance          : 79.74
+Target 1            : 79.74
+Target 2            : 79.77
+Target 3            : 79.81
+Stop Loss           : 79.58
+
+Risk/Reward T1      : 0.24
+Risk/Reward T2      : 0.48
+Risk/Reward T3      : 0.79
+
+Probability T1      : 75%
+Probability T2      : 75%
+Probability T3      : 75%
+
+IEF — SUCCESS
+----------------------------------------
+Timeframe            : 1d
+Price                : 93.63
+Score                : 49
+Grade                : D
+Action               : Weak Setup
+Trend                : Neutral
+Market State         : Not available
+Provider             : Yahoo Finance
+
+SCORING ENGINE OUTPUT
+----------------------------------------
+===========================================================================
+PATCC - Professional AI Trading & Capital Companion
+Version             : 0.4.0
+Build Date          : 2026-07-09
+===========================================================================
+Ticker              : IEF
+Profile             : etf
+
+DATA VALIDATION
+-----------------------------------------------------------------
+Provider            : Yahoo Finance
+Mode                : Research / Watchlist
+Real-Time           : False
+Last Bar            : 2026-07-10 00:00:00
+Rows Downloaded     : 1255
+
+MARKET STATE
+-----------------------------------------------------------------
+Trend               : Neutral
+Momentum            : Neutral
+Volatility          : Low
+Volume              : Above Average
+Market Bias         : Wait
+Risk Level          : Conservative
+
+SCORING
+-----------------------------------------------------------------
+Overall Score       : 49
+Grade               : D
+Recommendation      : Weak Setup
+
+TARGETS
+-----------------------------------------------------------------
+Current Price       : 93.63
+Support             : 93.63
+Resistance          : 93.72
+Target 1            : 93.72
+Target 2            : 93.64
+Target 3            : 93.64
+Stop Loss           : 93.46
+
+Risk/Reward T1      : 0.57
+Risk/Reward T2      : 0.04
+Risk/Reward T3      : 0.07
+
+Probability T1      : 75%
+Probability T2      : 75%
+Probability T3      : 75%
+
+TLT — SUCCESS
+----------------------------------------
+Timeframe            : 1d
+Price                : 84.47
+Score                : 26
+Grade                : F
+Action               : Avoid
+Trend                : Bearish
+Market State         : Not available
+Provider             : Yahoo Finance
+
+SCORING ENGINE OUTPUT
+----------------------------------------
+===========================================================================
+PATCC - Professional AI Trading & Capital Companion
+Version             : 0.4.0
+Build Date          : 2026-07-09
+===========================================================================
+Ticker              : TLT
+Profile             : etf
+
+DATA VALIDATION
+-----------------------------------------------------------------
+Provider            : Yahoo Finance
+Mode                : Research / Watchlist
+Real-Time           : False
+Last Bar            : 2026-07-10 00:00:00
+Rows Downloaded     : 1255
+
+MARKET STATE
+-----------------------------------------------------------------
+Trend               : Bearish
+Momentum            : Neutral
+Volatility          : Low
+Volume              : Below Average
+Market Bias         : Avoid
+Risk Level          : Conservative
+
+SCORING
+-----------------------------------------------------------------
+Overall Score       : 26
+Grade               : F
+Recommendation      : Avoid
+
+TARGETS
+-----------------------------------------------------------------
+Current Price       : 84.47
+Support             : 84.47
+Resistance          : 84.55
+Target 1            : 84.55
+Target 2            : 84.47
+Target 3            : 84.47
+Stop Loss           : 84.18
+
+Risk/Reward T1      : 0.29
+Risk/Reward T2      : 0.01
+Risk/Reward T3      : 0.02
+
+Probability T1      : 75%
+Probability T2      : 75%
+Probability T3      : 75%
+
+BIL — SUCCESS
+----------------------------------------
+Timeframe            : 1d
+Price                : 91.5
+Score                : 56
+Grade                : C
+Action               : Watchlist
+Trend                : Strong Bullish
+Market State         : Not available
+Provider             : Yahoo Finance
+
+SCORING ENGINE OUTPUT
+----------------------------------------
+===========================================================================
+PATCC - Professional AI Trading & Capital Companion
+Version             : 0.4.0
+Build Date          : 2026-07-09
+===========================================================================
+Ticker              : BIL
+Profile             : stock
+
+DATA VALIDATION
+-----------------------------------------------------------------
+Provider            : Yahoo Finance
+Mode                : Research / Watchlist
+Real-Time           : False
+Last Bar            : 2026-07-10 00:00:00
+Rows Downloaded     : 1255
+
+MARKET STATE
+-----------------------------------------------------------------
+Trend               : Strong Bullish
+Momentum            : Overbought
+Volatility          : Low
+Volume              : Below Average
+Market Bias         : Buy
+Risk Level          : Conservative
+
+SCORING
+-----------------------------------------------------------------
+Overall Score       : 56
+Grade               : C
+Recommendation      : Watchlist
+
+TARGETS
+-----------------------------------------------------------------
+Current Price       : 91.50
+Support             : 91.49
+Resistance          : 91.54
+Target 1            : 91.54
+Target 2            : 91.52
+Target 3            : 91.53
+Stop Loss           : 91.48
+
+Risk/Reward T1      : 2.06
+Risk/Reward T2      : 0.73
+Risk/Reward T3      : 1.21
+
+Probability T1      : 48%
+Probability T2      : 75%
+Probability T3      : 62%
+
+SOL-USD — SUCCESS
+----------------------------------------
+Timeframe            : 1d
+Price                : 77.01
+Score                : 66
+Grade                : C
+Action               : Watchlist
+Trend                : Bullish
+Market State         : Not available
+Provider             : Yahoo Finance
+
+SCORING ENGINE OUTPUT
+----------------------------------------
+===========================================================================
+PATCC - Professional AI Trading & Capital Companion
+Version             : 0.4.0
+Build Date          : 2026-07-09
+===========================================================================
+Ticker              : SOL-USD
+Profile             : crypto
+
+DATA VALIDATION
+-----------------------------------------------------------------
+Provider            : Yahoo Finance
+Mode                : Research / Watchlist
+Real-Time           : False
+Last Bar            : 2026-07-12 00:00:00
+Rows Downloaded     : 1827
+
+MARKET STATE
+-----------------------------------------------------------------
+Trend               : Bullish
+Momentum            : Bullish
+Volatility          : Medium
+Volume              : Below Average
+Market Bias         : Watch for Pullback
+Risk Level          : Moderate
+
+SCORING
+-----------------------------------------------------------------
+Overall Score       : 66
+Grade               : C
+Recommendation      : Watchlist
+
+TARGETS
+-----------------------------------------------------------------
+Current Price       : 77.01
+Support             : 76.90
+Resistance          : 77.07
+Target 1            : 77.07
+Target 2            : 77.17
+Target 3            : 77.28
+Stop Loss           : 75.28
+
+Risk/Reward T1      : 0.04
+Risk/Reward T2      : 0.10
+Risk/Reward T3      : 0.16
+
+Probability T1      : 75%
+Probability T2      : 75%
+Probability T3      : 75%
+
+XRP-USD — SUCCESS
+----------------------------------------
+Timeframe            : 1d
+Price                : 1.1
+Score                : 47
+Grade                : D
+Action               : Weak Setup
+Trend                : Bearish
+Market State         : Not available
+Provider             : Yahoo Finance
+
+SCORING ENGINE OUTPUT
+----------------------------------------
+===========================================================================
+PATCC - Professional AI Trading & Capital Companion
+Version             : 0.4.0
+Build Date          : 2026-07-09
+===========================================================================
+Ticker              : XRP-USD
+Profile             : crypto
+
+DATA VALIDATION
+-----------------------------------------------------------------
+Provider            : Yahoo Finance
+Mode                : Research / Watchlist
+Real-Time           : False
+Last Bar            : 2026-07-12 00:00:00
+Rows Downloaded     : 1827
+
+MARKET STATE
+-----------------------------------------------------------------
+Trend               : Bearish
+Momentum            : Bullish
+Volatility          : Medium
+Volume              : Below Average
+Market Bias         : Avoid
+Risk Level          : Moderate
+
+SCORING
+-----------------------------------------------------------------
+Overall Score       : 47
+Grade               : D
+Recommendation      : Weak Setup
+
+TARGETS
+-----------------------------------------------------------------
+Current Price       : 1.10
+Support             : 1.10
+Resistance          : 1.10
+Target 1            : 1.10
+Target 2            : 1.10
+Target 3            : 1.10
+Stop Loss           : 1.08
+
+Risk/Reward T1      : 0.05
+Risk/Reward T2      : 0.02
+Risk/Reward T3      : 0.03
+
+Probability T1      : 75%
+Probability T2      : 75%
+Probability T3      : 75%
+
+SOXS — SUCCESS
+----------------------------------------
+Timeframe            : 1d
+Price                : 4.08
+Score                : 28
+Grade                : F
+Action               : Avoid
+Trend                : Bearish
+Market State         : Not available
+Provider             : Yahoo Finance
+
+SCORING ENGINE OUTPUT
+----------------------------------------
+===========================================================================
+PATCC - Professional AI Trading & Capital Companion
+Version             : 0.4.0
+Build Date          : 2026-07-09
+===========================================================================
+Ticker              : SOXS
+Profile             : leveraged_etf
+
+DATA VALIDATION
+-----------------------------------------------------------------
+Provider            : Yahoo Finance
+Mode                : Research / Watchlist
+Real-Time           : False
+Last Bar            : 2026-07-10 00:00:00
+Rows Downloaded     : 1255
+
+MARKET STATE
+-----------------------------------------------------------------
+Trend               : Bearish
+Momentum            : Bullish
+Volatility          : High
+Volume              : Below Average
+Market Bias         : Avoid
+Risk Level          : Aggressive
+
+SCORING
+-----------------------------------------------------------------
+Overall Score       : 28
+Grade               : F
+Recommendation      : Avoid
+
+TARGETS
+-----------------------------------------------------------------
+Current Price       : 4.08
+Support             : 3.99
+Resistance          : 4.12
+Target 1            : 4.12
+Target 2            : 4.21
+Target 3            : 4.30
+Stop Loss           : 3.65
+
+Risk/Reward T1      : 0.09
+Risk/Reward T2      : 0.31
+Risk/Reward T3      : 0.52
+
+Probability T1      : 75%
+Probability T2      : 75%
+Probability T3      : 75%
+
+SQQQ — SUCCESS
+----------------------------------------
+Timeframe            : 1d
+Price                : 37.78
+Score                : 39
+Grade                : F
+Action               : Avoid
+Trend                : Bearish
+Market State         : Not available
+Provider             : Yahoo Finance
+
+SCORING ENGINE OUTPUT
+----------------------------------------
+===========================================================================
+PATCC - Professional AI Trading & Capital Companion
+Version             : 0.4.0
+Build Date          : 2026-07-09
+===========================================================================
+Ticker              : SQQQ
+Profile             : leveraged_etf
+
+DATA VALIDATION
+-----------------------------------------------------------------
+Provider            : Yahoo Finance
+Mode                : Research / Watchlist
+Real-Time           : False
+Last Bar            : 2026-07-10 00:00:00
+Rows Downloaded     : 1255
+
+MARKET STATE
+-----------------------------------------------------------------
+Trend               : Bearish
+Momentum            : Bullish
+Volatility          : High
+Volume              : Below Average
+Market Bias         : Avoid
+Risk Level          : Aggressive
+
+SCORING
+-----------------------------------------------------------------
+Overall Score       : 39
+Grade               : F
+Recommendation      : Avoid
+
+TARGETS
+-----------------------------------------------------------------
+Current Price       : 37.78
+Support             : 37.71
+Resistance          : 37.79
+Target 1            : 37.79
+Target 2            : 37.88
+Target 3            : 37.95
+Stop Loss           : 36.44
+
+Risk/Reward T1      : 0.00
+Risk/Reward T2      : 0.08
+Risk/Reward T3      : 0.13
+
+Probability T1      : 0%
+Probability T2      : 75%
+Probability T3      : 75%
+
+SOXL — SUCCESS
+----------------------------------------
+Timeframe            : 1d
+Price                : 192.26
+Score                : 40
+Grade                : D
+Action               : Weak Setup
+Trend                : Bullish
+Market State         : Not available
+Provider             : Yahoo Finance
+
+SCORING ENGINE OUTPUT
+----------------------------------------
+===========================================================================
+PATCC - Professional AI Trading & Capital Companion
+Version             : 0.4.0
+Build Date          : 2026-07-09
+===========================================================================
+Ticker              : SOXL
+Profile             : leveraged_etf
+
+DATA VALIDATION
+-----------------------------------------------------------------
+Provider            : Yahoo Finance
+Mode                : Research / Watchlist
+Real-Time           : False
+Last Bar            : 2026-07-10 00:00:00
+Rows Downloaded     : 1255
+
+MARKET STATE
+-----------------------------------------------------------------
+Trend               : Bullish
+Momentum            : Neutral
+Volatility          : High
+Volume              : Below Average
+Market Bias         : Watch for Pullback
+Risk Level          : Aggressive
+
+SCORING
+-----------------------------------------------------------------
+Overall Score       : 40
+Grade               : D
+Recommendation      : Weak Setup
+
+TARGETS
+-----------------------------------------------------------------
+Current Price       : 192.26
+Support             : 189.46
+Resistance          : 195.27
+Target 1            : 195.27
+Target 2            : 196.46
+Target 3            : 199.26
+Stop Loss           : 170.15
+
+Risk/Reward T1      : 0.14
+Risk/Reward T2      : 0.19
+Risk/Reward T3      : 0.32
+
+Probability T1      : 75%
+Probability T2      : 75%
+Probability T3      : 75%
+
+TQQQ — SUCCESS
+----------------------------------------
+Timeframe            : 1d
+Price                : 77.03
+Score                : 56
+Grade                : C
+Action               : Watchlist
+Trend                : Bullish
+Market State         : Not available
+Provider             : Yahoo Finance
+
+SCORING ENGINE OUTPUT
+----------------------------------------
+===========================================================================
+PATCC - Professional AI Trading & Capital Companion
+Version             : 0.4.0
+Build Date          : 2026-07-09
+===========================================================================
+Ticker              : TQQQ
+Profile             : leveraged_etf
+
+DATA VALIDATION
+-----------------------------------------------------------------
+Provider            : Yahoo Finance
+Mode                : Research / Watchlist
+Real-Time           : False
+Last Bar            : 2026-07-10 00:00:00
+Rows Downloaded     : 1255
+
+MARKET STATE
+-----------------------------------------------------------------
+Trend               : Bullish
+Momentum            : Neutral
+Volatility          : High
+Volume              : Below Average
+Market Bias         : Watch for Pullback
+Risk Level          : Aggressive
+
+SCORING
+-----------------------------------------------------------------
+Overall Score       : 56
+Grade               : C
+Recommendation      : Watchlist
+
+TARGETS
+-----------------------------------------------------------------
+Current Price       : 77.03
+Support             : 76.98
+Resistance          : 77.18
+Target 1            : 77.18
+Target 2            : 77.10
+Target 3            : 77.15
+Stop Loss           : 74.49
+
+Risk/Reward T1      : 0.06
+Risk/Reward T2      : 0.03
+Risk/Reward T3      : 0.05
 
 Probability T1      : 75%
 Probability T2      : 75%
