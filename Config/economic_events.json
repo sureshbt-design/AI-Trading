@@ -1,0 +1,405 @@
+{
+    "schema_version": "1.0.0",
+    "calendar_name": "PATCC Core Economic and Market Events",
+    "timezone": "America/New_York",
+    "description": "Configuration-driven economic and market-event definitions used by PATCC for event timing, asset awareness, explainability, and future event-risk analysis.",
+    "events": [
+      {
+        "event_id": "US_CPI",
+        "name": "US Consumer Price Index",
+        "short_name": "CPI",
+        "category": "Inflation",
+        "impact": "CRITICAL",
+        "scheduled_at": "2026-07-14T08:30:00-04:00",
+        "source": {
+          "provider": "US Bureau of Labor Statistics",
+          "source_type": "official",
+          "reliability": 100
+        },
+        "status_policy": {
+          "imminent_minutes": 30,
+          "reaction_minutes": 60,
+          "stabilization_minutes": 150
+        },
+        "historical_importance": 5,
+        "current_importance": 5,
+        "affected_asset_classes": [
+          "Equity",
+          "Fixed Income",
+          "Commodity",
+          "Crypto",
+          "Currency"
+        ],
+        "affected_assets": [
+          {
+            "ticker": "QQQ",
+            "sensitivity": "VERY_HIGH",
+            "directional_bias": "CONDITIONAL",
+            "transmission_channel": "Inflation changes expected interest rates and long-duration equity valuations."
+          },
+          {
+            "ticker": "SPY",
+            "sensitivity": "HIGH",
+            "directional_bias": "CONDITIONAL",
+            "transmission_channel": "Inflation affects monetary-policy expectations and broad equity risk appetite."
+          },
+          {
+            "ticker": "IWM",
+            "sensitivity": "HIGH",
+            "directional_bias": "CONDITIONAL",
+            "transmission_channel": "Inflation and rate expectations affect financing conditions and domestic economic sensitivity."
+          },
+          {
+            "ticker": "TLT",
+            "sensitivity": "VERY_HIGH",
+            "directional_bias": "CONDITIONAL",
+            "transmission_channel": "Inflation directly influences long-term Treasury yields and bond prices."
+          },
+          {
+            "ticker": "IEF",
+            "sensitivity": "HIGH",
+            "directional_bias": "CONDITIONAL",
+            "transmission_channel": "Inflation affects intermediate-term Treasury yield expectations."
+          },
+          {
+            "ticker": "GLD",
+            "sensitivity": "HIGH",
+            "directional_bias": "CONDITIONAL",
+            "transmission_channel": "Gold reacts through real yields, inflation expectations, and the US dollar."
+          },
+          {
+            "ticker": "SLV",
+            "sensitivity": "HIGH",
+            "directional_bias": "CONDITIONAL",
+            "transmission_channel": "Silver reacts through real yields, the dollar, inflation, and industrial-demand expectations."
+          },
+          {
+            "ticker": "BTC-USD",
+            "sensitivity": "HIGH",
+            "directional_bias": "CONDITIONAL",
+            "transmission_channel": "Crypto reacts to liquidity expectations, yields, dollar strength, and risk sentiment."
+          },
+          {
+            "ticker": "ETH-USD",
+            "sensitivity": "HIGH",
+            "directional_bias": "CONDITIONAL",
+            "transmission_channel": "Ethereum reacts to liquidity expectations, yields, and broader digital-asset risk appetite."
+          }
+        ],
+        "explanation": "CPI can materially alter expectations for Federal Reserve policy, Treasury yields, the US dollar, equities, precious metals, and crypto.",
+        "patcc_guidance": "Require a fresh market-data update after release before relying on pre-release technical signals."
+      },
+      {
+        "event_id": "US_FOMC_DECISION",
+        "name": "Federal Open Market Committee Rate Decision",
+        "short_name": "FOMC",
+        "category": "Central Bank",
+        "impact": "EXTREME",
+        "scheduled_at": "2026-07-14T14:00:00-04:00",
+        "source": {
+          "provider": "Federal Reserve",
+          "source_type": "official",
+          "reliability": 100
+        },
+        "status_policy": {
+          "imminent_minutes": 60,
+          "reaction_minutes": 90,
+          "stabilization_minutes": 180
+        },
+        "historical_importance": 5,
+        "current_importance": 5,
+        "affected_asset_classes": [
+          "Equity",
+          "Fixed Income",
+          "Commodity",
+          "Crypto",
+          "Currency"
+        ],
+        "affected_assets": [
+          {
+            "ticker": "SPY",
+            "sensitivity": "VERY_HIGH",
+            "directional_bias": "CONDITIONAL",
+            "transmission_channel": "Policy guidance changes discount rates, liquidity expectations, and risk appetite."
+          },
+          {
+            "ticker": "QQQ",
+            "sensitivity": "VERY_HIGH",
+            "directional_bias": "CONDITIONAL",
+            "transmission_channel": "Growth equities are especially sensitive to discount-rate expectations."
+          },
+          {
+            "ticker": "IWM",
+            "sensitivity": "HIGH",
+            "directional_bias": "CONDITIONAL",
+            "transmission_channel": "Small-cap companies are sensitive to financing conditions and domestic growth expectations."
+          },
+          {
+            "ticker": "TLT",
+            "sensitivity": "VERY_HIGH",
+            "directional_bias": "CONDITIONAL",
+            "transmission_channel": "Federal Reserve policy and guidance strongly influence Treasury yields."
+          },
+          {
+            "ticker": "GLD",
+            "sensitivity": "VERY_HIGH",
+            "directional_bias": "CONDITIONAL",
+            "transmission_channel": "Gold responds to real yields, monetary-policy expectations, and dollar movements."
+          },
+          {
+            "ticker": "BTC-USD",
+            "sensitivity": "HIGH",
+            "directional_bias": "CONDITIONAL",
+            "transmission_channel": "Crypto is sensitive to global liquidity, dollar strength, and risk appetite."
+          }
+        ],
+        "explanation": "FOMC decisions and guidance can rapidly reprice interest rates, currencies, equities, commodities, and crypto.",
+        "patcc_guidance": "Increase event-risk warnings and require post-event confirmation before issuing high-confidence ACTION recommendations."
+      },
+      {
+        "event_id": "US_NFP",
+        "name": "US Employment Situation Report",
+        "short_name": "Non-Farm Payrolls",
+        "category": "Employment",
+        "impact": "CRITICAL",
+        "scheduled_at": "2026-07-15T08:30:00-04:00",
+        "source": {
+          "provider": "US Bureau of Labor Statistics",
+          "source_type": "official",
+          "reliability": 100
+        },
+        "status_policy": {
+          "imminent_minutes": 30,
+          "reaction_minutes": 60,
+          "stabilization_minutes": 120
+        },
+        "historical_importance": 5,
+        "current_importance": 4,
+        "affected_asset_classes": [
+          "Equity",
+          "Fixed Income",
+          "Currency",
+          "Commodity"
+        ],
+        "affected_assets": [
+          {
+            "ticker": "SPY",
+            "sensitivity": "HIGH",
+            "directional_bias": "CONDITIONAL",
+            "transmission_channel": "Employment affects growth expectations, wages, inflation, and monetary policy."
+          },
+          {
+            "ticker": "IWM",
+            "sensitivity": "VERY_HIGH",
+            "directional_bias": "CONDITIONAL",
+            "transmission_channel": "Small caps are highly sensitive to domestic growth and financing conditions."
+          },
+          {
+            "ticker": "DIA",
+            "sensitivity": "HIGH",
+            "directional_bias": "CONDITIONAL",
+            "transmission_channel": "Industrial and cyclical companies respond to labor-market and growth expectations."
+          },
+          {
+            "ticker": "TLT",
+            "sensitivity": "HIGH",
+            "directional_bias": "CONDITIONAL",
+            "transmission_channel": "Employment strength can change rate expectations and Treasury yields."
+          },
+          {
+            "ticker": "GLD",
+            "sensitivity": "MEDIUM",
+            "directional_bias": "CONDITIONAL",
+            "transmission_channel": "Gold reacts indirectly through yields and the dollar."
+          }
+        ],
+        "explanation": "Employment data influences growth, wage inflation, Federal Reserve expectations, Treasury yields, and cyclical assets.",
+        "patcc_guidance": "Reassess broad equity, small-cap, Treasury, and dollar-sensitive signals after release."
+      },
+      {
+        "event_id": "EIA_CRUDE_INVENTORIES",
+        "name": "EIA Weekly Petroleum Status Report",
+        "short_name": "EIA Crude Inventories",
+        "category": "Energy",
+        "impact": "HIGH",
+        "scheduled_at": "2026-07-15T10:30:00-04:00",
+        "source": {
+          "provider": "US Energy Information Administration",
+          "source_type": "official",
+          "reliability": 100
+        },
+        "status_policy": {
+          "imminent_minutes": 20,
+          "reaction_minutes": 45,
+          "stabilization_minutes": 90
+        },
+        "historical_importance": 4,
+        "current_importance": 4,
+        "affected_asset_classes": [
+          "Commodity",
+          "Equity"
+        ],
+        "affected_assets": [
+          {
+            "ticker": "USO",
+            "sensitivity": "VERY_HIGH",
+            "directional_bias": "CONDITIONAL",
+            "transmission_channel": "Crude inventory changes directly affect near-term oil supply expectations."
+          },
+          {
+            "ticker": "XLE",
+            "sensitivity": "HIGH",
+            "directional_bias": "CONDITIONAL",
+            "transmission_channel": "Energy-company earnings and sentiment are strongly influenced by crude-oil prices."
+          },
+          {
+            "ticker": "XOP",
+            "sensitivity": "HIGH",
+            "directional_bias": "CONDITIONAL",
+            "transmission_channel": "Inventory surprises can affect exploration and production companies."
+          }
+        ],
+        "explanation": "Weekly petroleum inventories can create short-term volatility in crude oil, energy equities, refiners, and related ETFs.",
+        "patcc_guidance": "Refresh USO and XLE data after release and compare the actual reaction with the pre-event technical thesis."
+      },
+      {
+        "event_id": "EIA_NATURAL_GAS_STORAGE",
+        "name": "EIA Weekly Natural Gas Storage Report",
+        "short_name": "Natural Gas Storage",
+        "category": "Energy",
+        "impact": "HIGH",
+        "scheduled_at": "2026-07-16T10:30:00-04:00",
+        "source": {
+          "provider": "US Energy Information Administration",
+          "source_type": "official",
+          "reliability": 100
+        },
+        "status_policy": {
+          "imminent_minutes": 20,
+          "reaction_minutes": 45,
+          "stabilization_minutes": 90
+        },
+        "historical_importance": 4,
+        "current_importance": 4,
+        "affected_asset_classes": [
+          "Commodity"
+        ],
+        "affected_assets": [
+          {
+            "ticker": "UNG",
+            "sensitivity": "VERY_HIGH",
+            "directional_bias": "CONDITIONAL",
+            "transmission_channel": "Storage changes directly affect natural-gas supply and demand expectations."
+          }
+        ],
+        "explanation": "Natural-gas storage data can cause substantial volatility in natural-gas futures and related exchange-traded products.",
+        "patcc_guidance": "Treat pre-release UNG signals as provisional and require post-release price and volume confirmation."
+      },
+      {
+        "event_id": "TREASURY_10Y_AUCTION",
+        "name": "US Treasury 10-Year Note Auction",
+        "short_name": "10-Year Treasury Auction",
+        "category": "Treasury",
+        "impact": "HIGH",
+        "scheduled_at": "2026-07-14T13:00:00-04:00",
+        "source": {
+          "provider": "US Treasury",
+          "source_type": "official",
+          "reliability": 100
+        },
+        "status_policy": {
+          "imminent_minutes": 30,
+          "reaction_minutes": 45,
+          "stabilization_minutes": 90
+        },
+        "historical_importance": 4,
+        "current_importance": 4,
+        "affected_asset_classes": [
+          "Fixed Income",
+          "Equity",
+          "Commodity"
+        ],
+        "affected_assets": [
+          {
+            "ticker": "IEF",
+            "sensitivity": "VERY_HIGH",
+            "directional_bias": "CONDITIONAL",
+            "transmission_channel": "Auction demand directly influences intermediate Treasury yields."
+          },
+          {
+            "ticker": "TLT",
+            "sensitivity": "HIGH",
+            "directional_bias": "CONDITIONAL",
+            "transmission_channel": "Auction results can influence the broader Treasury yield curve."
+          },
+          {
+            "ticker": "QQQ",
+            "sensitivity": "MEDIUM",
+            "directional_bias": "CONDITIONAL",
+            "transmission_channel": "Growth-stock valuations react to changes in market interest rates."
+          },
+          {
+            "ticker": "GLD",
+            "sensitivity": "MEDIUM",
+            "directional_bias": "CONDITIONAL",
+            "transmission_channel": "Gold can react to real-yield and dollar changes following auction results."
+          }
+        ],
+        "explanation": "Treasury-auction demand can change yields, the dollar, equity valuations, and precious-metal conditions.",
+        "patcc_guidance": "Monitor Treasury and rate-sensitive assets before and after the auction."
+      },
+      {
+        "event_id": "OPTIONS_EXPIRATION",
+        "name": "Monthly Equity and Index Options Expiration",
+        "short_name": "Options Expiration",
+        "category": "Market Structure",
+        "impact": "HIGH",
+        "scheduled_at": "2026-07-17T16:00:00-04:00",
+        "source": {
+          "provider": "Exchange Calendar",
+          "source_type": "market_structure",
+          "reliability": 95
+        },
+        "status_policy": {
+          "imminent_minutes": 240,
+          "reaction_minutes": 30,
+          "stabilization_minutes": 60
+        },
+        "historical_importance": 4,
+        "current_importance": 4,
+        "affected_asset_classes": [
+          "Equity",
+          "Leveraged ETF",
+          "Index"
+        ],
+        "affected_assets": [
+          {
+            "ticker": "SPY",
+            "sensitivity": "HIGH",
+            "directional_bias": "NON_DIRECTIONAL",
+            "transmission_channel": "Dealer hedging and option-positioning flows can influence intraday price behavior."
+          },
+          {
+            "ticker": "QQQ",
+            "sensitivity": "HIGH",
+            "directional_bias": "NON_DIRECTIONAL",
+            "transmission_channel": "Large index-option positions can influence volatility and closing flows."
+          },
+          {
+            "ticker": "TQQQ",
+            "sensitivity": "HIGH",
+            "directional_bias": "NON_DIRECTIONAL",
+            "transmission_channel": "Leveraged exposure can amplify moves originating in QQQ and dealer hedging."
+          },
+          {
+            "ticker": "SQQQ",
+            "sensitivity": "HIGH",
+            "directional_bias": "NON_DIRECTIONAL",
+            "transmission_channel": "Inverse leveraged exposure can amplify QQQ-related expiration volatility."
+          }
+        ],
+        "explanation": "Options expiration can increase hedging activity, liquidity shifts, pinning behavior, and closing-session volatility.",
+        "patcc_guidance": "Increase awareness of non-directional flow effects and avoid interpreting every expiration-day move as fundamental."
+      }
+    ]
+  }

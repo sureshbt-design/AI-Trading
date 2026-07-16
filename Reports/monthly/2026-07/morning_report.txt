@@ -2,47 +2,47 @@
 PATCC - PROFESSIONAL AI TRADING & CAPITAL COMPANION
 MORNING COMMAND CENTER
 Version             : 0.1.0
-Generated           : Sunday, July 12, 2026 at 08:24:06 AM ET
+Generated           : Thursday, July 16, 2026 at 08:46:23 AM ET
 Timeframe           : 1d
 ==============================================================================
 
 EXECUTIVE SUMMARY
 ------------------------------------------------------------------------------
 Market Posture       : NEUTRAL — WAIT FOR CONFIRMATION
-Average Score        : 53.5
+Average Score        : 56.9
 Successful Scans     : 24
 Failed Scans         : 0
-Strongest Tickers   : DIA, SPY, IWM
-Weakest Tickers     : TLT, SOXS, ETH-USD
+Strongest Tickers   : DIA, XLV, XLF
+Weakest Tickers     : TLT, SOXS, UNG
 
 WATCHLIST SUMMARY
 ------------------------------------------------------------------------------
 Ticker      Status            Price    Score       Grade                Action
 ------------------------------------------------------------------------------
-DIA         SUCCESS          525.78       80           B        Good Candidate
-SPY         SUCCESS          754.95       80           B        Good Candidate
-QQQ         SUCCESS          725.51       62           C             Watchlist
-IWM         SUCCESS          295.99       75           B        Good Candidate
-UNG         SUCCESS           10.60       36           F                 Avoid
-USO         SUCCESS          108.70       47           D            Weak Setup
-GLD         SUCCESS          377.01       38           F                 Avoid
-SLV         SUCCESS           53.95       37           F                 Avoid
-BTC-USD     SUCCESS       63,999.80       52           D            Weak Setup
-ETH-USD     SUCCESS        1,804.77       30           F                 Avoid
-XLE         SUCCESS           55.08       74           B        Good Candidate
-XLF         SUCCESS           55.71       70           B        Good Candidate
-XLK         SUCCESS          185.78       59           C             Watchlist
-XLV         SUCCESS          160.84       70           B        Good Candidate
-HYG         SUCCESS           79.71       68           C             Watchlist
-IEF         SUCCESS           93.63       49           D            Weak Setup
-TLT         SUCCESS           84.47       26           F                 Avoid
-BIL         SUCCESS           91.50       56           C             Watchlist
-SOL-USD     SUCCESS           77.01       66           C             Watchlist
-XRP-USD     SUCCESS            1.10       47           D            Weak Setup
-SOXS        SUCCESS            4.08       28           F                 Avoid
-SQQQ        SUCCESS           37.78       39           F                 Avoid
-SOXL        SUCCESS          192.26       40           D            Weak Setup
-TQQQ        SUCCESS           77.03       56           C             Watchlist
+DIA         SUCCESS          525.95       80           B        Good Candidate
+SPY         SUCCESS          754.81       70           B        Good Candidate
+QQQ         SUCCESS          717.74       75           B        Good Candidate
+IWM         SUCCESS          295.77       62           C             Watchlist
+UNG         SUCCESS           10.55       30           F                 Avoid
+USO         SUCCESS          121.38       67           C             Watchlist
+GLD         SUCCESS          372.35       56           C             Watchlist
+SLV         SUCCESS           52.21       66           C             Watchlist
+BTC-USD     SUCCESS       63,809.34       68           C             Watchlist
+ETH-USD     SUCCESS        1,868.48       55           C             Watchlist
+XLE         SUCCESS           56.50       70           B        Good Candidate
+XLF         SUCCESS           56.56       76           B        Good Candidate
+XLK         SUCCESS          181.58       59           C             Watchlist
+XLV         SUCCESS          158.29       80           B        Good Candidate
+HYG         SUCCESS           79.81       73           B        Good Candidate
+IEF         SUCCESS           93.78       44           D            Weak Setup
+TLT         SUCCESS           84.24       26           F                 Avoid
+BIL         SUCCESS           91.52       62           C             Watchlist
+SOL-USD     SUCCESS           75.71       30           F                 Avoid
+XRP-USD     SUCCESS            1.10       42           D            Weak Setup
+SOXS        SUCCESS           45.98       28           F                 Avoid
+SQQQ        SUCCESS           38.94       32           F                 Avoid
+SOXL        SUCCESS          165.55       46           D            Weak Setup
+TQQQ        SUCCESS           74.44       69           C             Watchlist
 
 TICKER DRILL-DOWN
 ------------------------------------------------------------------------------
@@ -50,7 +50,7 @@ TICKER DRILL-DOWN
 DIA — SUCCESS
 ----------------------------------------
 Timeframe            : 1d
-Price                : 525.78
+Price                : 525.95
 Score                : 80
 Grade                : B
 Action               : Good Candidate
@@ -73,8 +73,8 @@ DATA VALIDATION
 Provider            : Yahoo Finance
 Mode                : Research / Watchlist
 Real-Time           : False
-Last Bar            : 2026-07-10 00:00:00
-Rows Downloaded     : 1255
+Last Bar            : 2026-07-15 00:00:00
+Rows Downloaded     : 1254
 
 MARKET STATE
 -----------------------------------------------------------------
@@ -93,27 +93,27 @@ Recommendation      : Good Candidate
 
 TARGETS
 -----------------------------------------------------------------
-Current Price       : 525.78
-Support             : 523.73
+Current Price       : 525.95
+Support             : 525.85
 Resistance          : 526.47
 Target 1            : 526.47
-Target 2            : 528.86
-Target 3            : 530.91
-Stop Loss           : 521.00
+Target 2            : 526.10
+Target 3            : 526.20
+Stop Loss           : 523.21
 
-Risk/Reward T1      : 0.14
-Risk/Reward T2      : 0.64
-Risk/Reward T3      : 1.07
+Risk/Reward T1      : 0.19
+Risk/Reward T2      : 0.05
+Risk/Reward T3      : 0.09
 
 Probability T1      : 75%
 Probability T2      : 75%
-Probability T3      : 62%
+Probability T3      : 75%
 
 SPY — SUCCESS
 ----------------------------------------
 Timeframe            : 1d
-Price                : 754.95
-Score                : 80
+Price                : 754.81
+Score                : 70
 Grade                : B
 Action               : Good Candidate
 Trend                : Strong Bullish
@@ -135,8 +135,8 @@ DATA VALIDATION
 Provider            : Yahoo Finance
 Mode                : Research / Watchlist
 Real-Time           : False
-Last Bar            : 2026-07-10 00:00:00
-Rows Downloaded     : 1255
+Last Bar            : 2026-07-15 00:00:00
+Rows Downloaded     : 1254
 
 MARKET STATE
 -----------------------------------------------------------------
@@ -149,36 +149,36 @@ Risk Level          : Conservative
 
 SCORING
 -----------------------------------------------------------------
-Overall Score       : 80
+Overall Score       : 70
 Grade               : B
 Recommendation      : Good Candidate
 
 TARGETS
 -----------------------------------------------------------------
-Current Price       : 754.95
+Current Price       : 754.81
 Support             : 754.81
 Resistance          : 755.42
 Target 1            : 755.42
-Target 2            : 755.17
-Target 3            : 755.31
-Stop Loss           : 750.10
+Target 2            : 754.82
+Target 3            : 754.82
+Stop Loss           : 750.50
 
-Risk/Reward T1      : 0.10
-Risk/Reward T2      : 0.04
-Risk/Reward T3      : 0.07
+Risk/Reward T1      : 0.14
+Risk/Reward T2      : 0.00
+Risk/Reward T3      : 0.00
 
 Probability T1      : 75%
-Probability T2      : 75%
-Probability T3      : 75%
+Probability T2      : 0%
+Probability T3      : 0%
 
 QQQ — SUCCESS
 ----------------------------------------
 Timeframe            : 1d
-Price                : 725.51
-Score                : 62
-Grade                : C
-Action               : Watchlist
-Trend                : Bullish
+Price                : 717.74
+Score                : 75
+Grade                : B
+Action               : Good Candidate
+Trend                : Strong Bullish
 Market State         : Not available
 Provider             : Yahoo Finance
 
@@ -197,70 +197,8 @@ DATA VALIDATION
 Provider            : Yahoo Finance
 Mode                : Research / Watchlist
 Real-Time           : False
-Last Bar            : 2026-07-10 00:00:00
-Rows Downloaded     : 1255
-
-MARKET STATE
------------------------------------------------------------------
-Trend               : Bullish
-Momentum            : Neutral
-Volatility          : Low
-Volume              : Below Average
-Market Bias         : Watch for Pullback
-Risk Level          : Conservative
-
-SCORING
------------------------------------------------------------------
-Overall Score       : 62
-Grade               : C
-Recommendation      : Watchlist
-
-TARGETS
------------------------------------------------------------------
-Current Price       : 725.51
-Support             : 724.64
-Resistance          : 726.08
-Target 1            : 726.08
-Target 2            : 726.81
-Target 3            : 727.68
-Stop Loss           : 716.77
-
-Risk/Reward T1      : 0.07
-Risk/Reward T2      : 0.15
-Risk/Reward T3      : 0.25
-
-Probability T1      : 75%
-Probability T2      : 75%
-Probability T3      : 75%
-
-IWM — SUCCESS
-----------------------------------------
-Timeframe            : 1d
-Price                : 295.99
-Score                : 75
-Grade                : B
-Action               : Good Candidate
-Trend                : Strong Bullish
-Market State         : Not available
-Provider             : Yahoo Finance
-
-SCORING ENGINE OUTPUT
-----------------------------------------
-===========================================================================
-PATCC - Professional AI Trading & Capital Companion
-Version             : 0.4.0
-Build Date          : 2026-07-09
-===========================================================================
-Ticker              : IWM
-Profile             : etf
-
-DATA VALIDATION
------------------------------------------------------------------
-Provider            : Yahoo Finance
-Mode                : Research / Watchlist
-Real-Time           : False
-Last Bar            : 2026-07-10 00:00:00
-Rows Downloaded     : 1255
+Last Bar            : 2026-07-15 00:00:00
+Rows Downloaded     : 1254
 
 MARKET STATE
 -----------------------------------------------------------------
@@ -279,27 +217,89 @@ Recommendation      : Good Candidate
 
 TARGETS
 -----------------------------------------------------------------
-Current Price       : 295.99
-Support             : 295.73
-Resistance          : 296.80
-Target 1            : 296.80
-Target 2            : 296.38
-Target 3            : 296.64
-Stop Loss           : 293.39
+Current Price       : 717.74
+Support             : 717.00
+Resistance          : 718.74
+Target 1            : 718.74
+Target 2            : 718.85
+Target 3            : 719.59
+Stop Loss           : 709.56
 
-Risk/Reward T1      : 0.31
-Risk/Reward T2      : 0.15
-Risk/Reward T3      : 0.25
+Risk/Reward T1      : 0.12
+Risk/Reward T2      : 0.14
+Risk/Reward T3      : 0.23
 
 Probability T1      : 75%
+Probability T2      : 75%
+Probability T3      : 75%
+
+IWM — SUCCESS
+----------------------------------------
+Timeframe            : 1d
+Price                : 295.77
+Score                : 62
+Grade                : C
+Action               : Watchlist
+Trend                : Bullish
+Market State         : Not available
+Provider             : Yahoo Finance
+
+SCORING ENGINE OUTPUT
+----------------------------------------
+===========================================================================
+PATCC - Professional AI Trading & Capital Companion
+Version             : 0.4.0
+Build Date          : 2026-07-09
+===========================================================================
+Ticker              : IWM
+Profile             : etf
+
+DATA VALIDATION
+-----------------------------------------------------------------
+Provider            : Yahoo Finance
+Mode                : Research / Watchlist
+Real-Time           : False
+Last Bar            : 2026-07-15 00:00:00
+Rows Downloaded     : 1254
+
+MARKET STATE
+-----------------------------------------------------------------
+Trend               : Bullish
+Momentum            : Neutral
+Volatility          : Low
+Volume              : Below Average
+Market Bias         : Watch for Pullback
+Risk Level          : Conservative
+
+SCORING
+-----------------------------------------------------------------
+Overall Score       : 62
+Grade               : C
+Recommendation      : Watchlist
+
+TARGETS
+-----------------------------------------------------------------
+Current Price       : 295.77
+Support             : 295.73
+Resistance          : 295.78
+Target 1            : 295.78
+Target 2            : 295.83
+Target 3            : 295.87
+Stop Loss           : 293.59
+
+Risk/Reward T1      : 0.00
+Risk/Reward T2      : 0.03
+Risk/Reward T3      : 0.05
+
+Probability T1      : 0%
 Probability T2      : 75%
 Probability T3      : 75%
 
 UNG — SUCCESS
 ----------------------------------------
 Timeframe            : 1d
-Price                : 10.6
-Score                : 36
+Price                : 10.55
+Score                : 30
 Grade                : F
 Action               : Avoid
 Trend                : Bearish
@@ -321,37 +321,37 @@ DATA VALIDATION
 Provider            : Yahoo Finance
 Mode                : Research / Watchlist
 Real-Time           : False
-Last Bar            : 2026-07-10 00:00:00
-Rows Downloaded     : 1255
+Last Bar            : 2026-07-15 00:00:00
+Rows Downloaded     : 1254
 
 MARKET STATE
 -----------------------------------------------------------------
 Trend               : Bearish
-Momentum            : Neutral
+Momentum            : Oversold
 Volatility          : Medium
-Volume              : Above Average
+Volume              : Below Average
 Market Bias         : Avoid
 Risk Level          : Moderate
 
 SCORING
 -----------------------------------------------------------------
-Overall Score       : 36
+Overall Score       : 30
 Grade               : F
 Recommendation      : Avoid
 
 TARGETS
 -----------------------------------------------------------------
-Current Price       : 10.60
-Support             : 10.55
-Resistance          : 10.62
-Target 1            : 10.62
-Target 2            : 10.68
-Target 3            : 10.73
-Stop Loss           : 10.36
+Current Price       : 10.55
+Support             : 10.52
+Resistance          : 10.58
+Target 1            : 10.58
+Target 2            : 10.59
+Target 3            : 10.62
+Stop Loss           : 10.34
 
-Risk/Reward T1      : 0.08
-Risk/Reward T2      : 0.32
-Risk/Reward T3      : 0.53
+Risk/Reward T1      : 0.14
+Risk/Reward T2      : 0.21
+Risk/Reward T3      : 0.35
 
 Probability T1      : 75%
 Probability T2      : 75%
@@ -360,11 +360,11 @@ Probability T3      : 75%
 USO — SUCCESS
 ----------------------------------------
 Timeframe            : 1d
-Price                : 108.7
-Score                : 47
-Grade                : D
-Action               : Weak Setup
-Trend                : Neutral
+Price                : 121.38
+Score                : 67
+Grade                : C
+Action               : Watchlist
+Trend                : Bullish
 Market State         : Not available
 Provider             : Yahoo Finance
 
@@ -383,35 +383,35 @@ DATA VALIDATION
 Provider            : Yahoo Finance
 Mode                : Research / Watchlist
 Real-Time           : False
-Last Bar            : 2026-07-10 00:00:00
-Rows Downloaded     : 1255
+Last Bar            : 2026-07-15 00:00:00
+Rows Downloaded     : 1254
 
 MARKET STATE
 -----------------------------------------------------------------
-Trend               : Neutral
-Momentum            : Neutral
+Trend               : Bullish
+Momentum            : Overbought
 Volatility          : Medium
-Volume              : Below Average
-Market Bias         : Wait
+Volume              : Above Average
+Market Bias         : Watch for Pullback
 Risk Level          : Moderate
 
 SCORING
 -----------------------------------------------------------------
-Overall Score       : 47
-Grade               : D
-Recommendation      : Weak Setup
+Overall Score       : 67
+Grade               : C
+Recommendation      : Watchlist
 
 TARGETS
 -----------------------------------------------------------------
-Current Price       : 108.70
-Support             : 108.38
-Resistance          : 109.84
-Target 1            : 109.84
-Target 2            : 109.18
-Target 3            : 109.50
-Stop Loss           : 106.51
+Current Price       : 121.38
+Support             : 121.03
+Resistance          : 121.48
+Target 1            : 121.48
+Target 2            : 121.90
+Target 3            : 122.25
+Stop Loss           : 118.96
 
-Risk/Reward T1      : 0.52
+Risk/Reward T1      : 0.04
 Risk/Reward T2      : 0.22
 Risk/Reward T3      : 0.36
 
@@ -422,10 +422,10 @@ Probability T3      : 75%
 GLD — SUCCESS
 ----------------------------------------
 Timeframe            : 1d
-Price                : 377.01
-Score                : 38
-Grade                : F
-Action               : Avoid
+Price                : 372.35
+Score                : 56
+Grade                : C
+Action               : Watchlist
 Trend                : Bearish
 Market State         : Not available
 Provider             : Yahoo Finance
@@ -445,37 +445,37 @@ DATA VALIDATION
 Provider            : Yahoo Finance
 Mode                : Research / Watchlist
 Real-Time           : False
-Last Bar            : 2026-07-10 00:00:00
-Rows Downloaded     : 1255
+Last Bar            : 2026-07-15 00:00:00
+Rows Downloaded     : 1254
 
 MARKET STATE
 -----------------------------------------------------------------
 Trend               : Bearish
-Momentum            : Neutral
+Momentum            : Bullish
 Volatility          : Low
-Volume              : Below Average
+Volume              : Above Average
 Market Bias         : Avoid
 Risk Level          : Conservative
 
 SCORING
 -----------------------------------------------------------------
-Overall Score       : 38
-Grade               : F
-Recommendation      : Avoid
+Overall Score       : 56
+Grade               : C
+Recommendation      : Watchlist
 
 TARGETS
 -----------------------------------------------------------------
-Current Price       : 377.01
-Support             : 376.29
-Resistance          : 377.55
-Target 1            : 377.55
-Target 2            : 378.09
-Target 3            : 378.81
-Stop Loss           : 372.78
+Current Price       : 372.35
+Support             : 371.88
+Resistance          : 372.83
+Target 1            : 372.83
+Target 2            : 373.06
+Target 3            : 373.53
+Stop Loss           : 368.39
 
-Risk/Reward T1      : 0.13
-Risk/Reward T2      : 0.26
-Risk/Reward T3      : 0.43
+Risk/Reward T1      : 0.12
+Risk/Reward T2      : 0.18
+Risk/Reward T3      : 0.30
 
 Probability T1      : 75%
 Probability T2      : 75%
@@ -484,11 +484,11 @@ Probability T3      : 75%
 SLV — SUCCESS
 ----------------------------------------
 Timeframe            : 1d
-Price                : 53.95
-Score                : 37
-Grade                : F
-Action               : Avoid
-Trend                : Neutral
+Price                : 52.21
+Score                : 66
+Grade                : C
+Action               : Watchlist
+Trend                : Bullish
 Market State         : Not available
 Provider             : Yahoo Finance
 
@@ -507,37 +507,37 @@ DATA VALIDATION
 Provider            : Yahoo Finance
 Mode                : Research / Watchlist
 Real-Time           : False
-Last Bar            : 2026-07-10 00:00:00
-Rows Downloaded     : 1255
+Last Bar            : 2026-07-15 00:00:00
+Rows Downloaded     : 1254
 
 MARKET STATE
 -----------------------------------------------------------------
-Trend               : Neutral
-Momentum            : Neutral
+Trend               : Bullish
+Momentum            : Bullish
 Volatility          : Medium
 Volume              : Below Average
-Market Bias         : Wait
+Market Bias         : Watch for Pullback
 Risk Level          : Moderate
 
 SCORING
 -----------------------------------------------------------------
-Overall Score       : 37
-Grade               : F
-Recommendation      : Avoid
+Overall Score       : 66
+Grade               : C
+Recommendation      : Watchlist
 
 TARGETS
 -----------------------------------------------------------------
-Current Price       : 53.95
-Support             : 53.75
-Resistance          : 54.29
-Target 1            : 54.29
-Target 2            : 54.25
-Target 3            : 54.45
-Stop Loss           : 52.65
+Current Price       : 52.21
+Support             : 51.93
+Resistance          : 52.90
+Target 1            : 52.90
+Target 2            : 52.63
+Target 3            : 52.91
+Stop Loss           : 50.99
 
-Risk/Reward T1      : 0.26
-Risk/Reward T2      : 0.23
-Risk/Reward T3      : 0.38
+Risk/Reward T1      : 0.56
+Risk/Reward T2      : 0.34
+Risk/Reward T3      : 0.57
 
 Probability T1      : 75%
 Probability T2      : 75%
@@ -546,10 +546,10 @@ Probability T3      : 75%
 BTC-USD — SUCCESS
 ----------------------------------------
 Timeframe            : 1d
-Price                : 63999.8
-Score                : 52
-Grade                : D
-Action               : Weak Setup
+Price                : 63809.34
+Score                : 68
+Grade                : C
+Action               : Watchlist
 Trend                : Neutral
 Market State         : Not available
 Provider             : Yahoo Finance
@@ -569,7 +569,7 @@ DATA VALIDATION
 Provider            : Yahoo Finance
 Mode                : Research / Watchlist
 Real-Time           : False
-Last Bar            : 2026-07-12 00:00:00
+Last Bar            : 2026-07-16 00:00:00
 Rows Downloaded     : 1827
 
 MARKET STATE
@@ -577,29 +577,29 @@ MARKET STATE
 Trend               : Neutral
 Momentum            : Bullish
 Volatility          : Low
-Volume              : Below Average
+Volume              : Above Average
 Market Bias         : Wait
 Risk Level          : Conservative
 
 SCORING
 -----------------------------------------------------------------
-Overall Score       : 52
-Grade               : D
-Recommendation      : Weak Setup
+Overall Score       : 68
+Grade               : C
+Recommendation      : Watchlist
 
 TARGETS
 -----------------------------------------------------------------
-Current Price       : 63999.80
-Support             : 63870.93
-Resistance          : 64128.04
-Target 1            : 64128.04
-Target 2            : 64193.11
-Target 3            : 64321.98
-Stop Loss           : 62935.59
+Current Price       : 63809.34
+Support             : 63785.62
+Resistance          : 63851.95
+Target 1            : 63851.95
+Target 2            : 63844.92
+Target 3            : 63868.64
+Stop Loss           : 62934.37
 
-Risk/Reward T1      : 0.12
-Risk/Reward T2      : 0.18
-Risk/Reward T3      : 0.30
+Risk/Reward T1      : 0.05
+Risk/Reward T2      : 0.04
+Risk/Reward T3      : 0.07
 
 Probability T1      : 75%
 Probability T2      : 75%
@@ -608,11 +608,11 @@ Probability T3      : 75%
 ETH-USD — SUCCESS
 ----------------------------------------
 Timeframe            : 1d
-Price                : 1804.77
-Score                : 30
-Grade                : F
-Action               : Avoid
-Trend                : Bearish
+Price                : 1868.48
+Score                : 55
+Grade                : C
+Action               : Watchlist
+Trend                : Neutral
 Market State         : Not available
 Provider             : Yahoo Finance
 
@@ -631,37 +631,37 @@ DATA VALIDATION
 Provider            : Yahoo Finance
 Mode                : Research / Watchlist
 Real-Time           : False
-Last Bar            : 2026-07-12 00:00:00
+Last Bar            : 2026-07-16 00:00:00
 Rows Downloaded     : 1827
 
 MARKET STATE
 -----------------------------------------------------------------
-Trend               : Bearish
-Momentum            : Overbought
+Trend               : Neutral
+Momentum            : Bullish
 Volatility          : Medium
-Volume              : Below Average
-Market Bias         : Avoid
+Volume              : Above Average
+Market Bias         : Wait
 Risk Level          : Moderate
 
 SCORING
 -----------------------------------------------------------------
-Overall Score       : 30
-Grade               : F
-Recommendation      : Avoid
+Overall Score       : 55
+Grade               : C
+Recommendation      : Watchlist
 
 TARGETS
 -----------------------------------------------------------------
-Current Price       : 1804.77
-Support             : 1786.30
-Resistance          : 1805.91
-Target 1            : 1805.91
-Target 2            : 1832.48
-Target 3            : 1850.96
-Stop Loss           : 1751.79
+Current Price       : 1868.48
+Support             : 1863.64
+Resistance          : 1889.06
+Target 1            : 1889.06
+Target 2            : 1875.75
+Target 3            : 1880.59
+Stop Loss           : 1828.88
 
-Risk/Reward T1      : 0.02
-Risk/Reward T2      : 0.52
-Risk/Reward T3      : 0.87
+Risk/Reward T1      : 0.52
+Risk/Reward T2      : 0.18
+Risk/Reward T3      : 0.31
 
 Probability T1      : 75%
 Probability T2      : 75%
@@ -670,8 +670,8 @@ Probability T3      : 75%
 XLE — SUCCESS
 ----------------------------------------
 Timeframe            : 1d
-Price                : 55.08
-Score                : 74
+Price                : 56.5
+Score                : 70
 Grade                : B
 Action               : Good Candidate
 Trend                : Bullish
@@ -693,37 +693,37 @@ DATA VALIDATION
 Provider            : Yahoo Finance
 Mode                : Research / Watchlist
 Real-Time           : False
-Last Bar            : 2026-07-10 00:00:00
-Rows Downloaded     : 1255
+Last Bar            : 2026-07-15 00:00:00
+Rows Downloaded     : 1254
 
 MARKET STATE
 -----------------------------------------------------------------
 Trend               : Bullish
 Momentum            : Bullish
 Volatility          : Low
-Volume              : Below Average
+Volume              : Above Average
 Market Bias         : Watch for Pullback
 Risk Level          : Conservative
 
 SCORING
 -----------------------------------------------------------------
-Overall Score       : 74
+Overall Score       : 70
 Grade               : B
 Recommendation      : Good Candidate
 
 TARGETS
 -----------------------------------------------------------------
-Current Price       : 55.08
-Support             : 55.06
-Resistance          : 55.08
-Target 1            : 55.08
-Target 2            : 55.11
-Target 3            : 55.12
-Stop Loss           : 54.57
+Current Price       : 56.50
+Support             : 56.44
+Resistance          : 56.51
+Target 1            : 56.51
+Target 2            : 56.59
+Target 3            : 56.64
+Stop Loss           : 55.91
 
-Risk/Reward T1      : 0.01
-Risk/Reward T2      : 0.05
-Risk/Reward T3      : 0.08
+Risk/Reward T1      : 0.02
+Risk/Reward T2      : 0.15
+Risk/Reward T3      : 0.24
 
 Probability T1      : 75%
 Probability T2      : 75%
@@ -732,8 +732,8 @@ Probability T3      : 75%
 XLF — SUCCESS
 ----------------------------------------
 Timeframe            : 1d
-Price                : 55.71
-Score                : 70
+Price                : 56.56
+Score                : 76
 Grade                : B
 Action               : Good Candidate
 Trend                : Strong Bullish
@@ -755,46 +755,46 @@ DATA VALIDATION
 Provider            : Yahoo Finance
 Mode                : Research / Watchlist
 Real-Time           : False
-Last Bar            : 2026-07-10 00:00:00
-Rows Downloaded     : 1255
+Last Bar            : 2026-07-15 00:00:00
+Rows Downloaded     : 1254
 
 MARKET STATE
 -----------------------------------------------------------------
 Trend               : Strong Bullish
 Momentum            : Overbought
 Volatility          : Low
-Volume              : Below Average
+Volume              : Above Average
 Market Bias         : Buy
 Risk Level          : Conservative
 
 SCORING
 -----------------------------------------------------------------
-Overall Score       : 70
+Overall Score       : 76
 Grade               : B
 Recommendation      : Good Candidate
 
 TARGETS
 -----------------------------------------------------------------
-Current Price       : 55.71
-Support             : 55.58
-Resistance          : 55.80
-Target 1            : 55.80
-Target 2            : 55.90
-Target 3            : 56.03
-Stop Loss           : 55.20
+Current Price       : 56.56
+Support             : 56.18
+Resistance          : 56.59
+Target 1            : 56.59
+Target 2            : 57.13
+Target 3            : 57.51
+Stop Loss           : 55.78
 
-Risk/Reward T1      : 0.18
-Risk/Reward T2      : 0.38
-Risk/Reward T3      : 0.64
+Risk/Reward T1      : 0.04
+Risk/Reward T2      : 0.73
+Risk/Reward T3      : 1.21
 
 Probability T1      : 75%
 Probability T2      : 75%
-Probability T3      : 75%
+Probability T3      : 62%
 
 XLK — SUCCESS
 ----------------------------------------
 Timeframe            : 1d
-Price                : 185.78
+Price                : 181.58
 Score                : 59
 Grade                : C
 Action               : Watchlist
@@ -817,8 +817,8 @@ DATA VALIDATION
 Provider            : Yahoo Finance
 Mode                : Research / Watchlist
 Real-Time           : False
-Last Bar            : 2026-07-10 00:00:00
-Rows Downloaded     : 1255
+Last Bar            : 2026-07-15 00:00:00
+Rows Downloaded     : 1254
 
 MARKET STATE
 -----------------------------------------------------------------
@@ -837,17 +837,17 @@ Recommendation      : Watchlist
 
 TARGETS
 -----------------------------------------------------------------
-Current Price       : 185.78
-Support             : 185.60
-Resistance          : 186.05
-Target 1            : 186.05
-Target 2            : 186.05
-Target 3            : 186.23
-Stop Loss           : 182.71
+Current Price       : 181.58
+Support             : 181.42
+Resistance          : 181.63
+Target 1            : 181.63
+Target 2            : 181.81
+Target 3            : 181.97
+Stop Loss           : 178.58
 
-Risk/Reward T1      : 0.09
-Risk/Reward T2      : 0.09
-Risk/Reward T3      : 0.15
+Risk/Reward T1      : 0.02
+Risk/Reward T2      : 0.08
+Risk/Reward T3      : 0.13
 
 Probability T1      : 75%
 Probability T2      : 75%
@@ -856,8 +856,8 @@ Probability T3      : 75%
 XLV — SUCCESS
 ----------------------------------------
 Timeframe            : 1d
-Price                : 160.84
-Score                : 70
+Price                : 158.29
+Score                : 80
 Grade                : B
 Action               : Good Candidate
 Trend                : Strong Bullish
@@ -879,13 +879,13 @@ DATA VALIDATION
 Provider            : Yahoo Finance
 Mode                : Research / Watchlist
 Real-Time           : False
-Last Bar            : 2026-07-10 00:00:00
-Rows Downloaded     : 1255
+Last Bar            : 2026-07-15 00:00:00
+Rows Downloaded     : 1254
 
 MARKET STATE
 -----------------------------------------------------------------
 Trend               : Strong Bullish
-Momentum            : Overbought
+Momentum            : Bullish
 Volatility          : Low
 Volume              : Below Average
 Market Bias         : Buy
@@ -893,23 +893,23 @@ Risk Level          : Conservative
 
 SCORING
 -----------------------------------------------------------------
-Overall Score       : 70
+Overall Score       : 80
 Grade               : B
 Recommendation      : Good Candidate
 
 TARGETS
 -----------------------------------------------------------------
-Current Price       : 160.84
-Support             : 160.38
-Resistance          : 161.09
-Target 1            : 161.09
-Target 2            : 161.53
-Target 3            : 161.99
-Stop Loss           : 158.96
+Current Price       : 158.29
+Support             : 157.96
+Resistance          : 159.35
+Target 1            : 159.35
+Target 2            : 158.78
+Target 3            : 159.11
+Stop Loss           : 156.51
 
-Risk/Reward T1      : 0.13
-Risk/Reward T2      : 0.37
-Risk/Reward T3      : 0.61
+Risk/Reward T1      : 0.60
+Risk/Reward T2      : 0.28
+Risk/Reward T3      : 0.46
 
 Probability T1      : 75%
 Probability T2      : 75%
@@ -918,10 +918,10 @@ Probability T3      : 75%
 HYG — SUCCESS
 ----------------------------------------
 Timeframe            : 1d
-Price                : 79.71
-Score                : 68
-Grade                : C
-Action               : Watchlist
+Price                : 79.81
+Score                : 73
+Grade                : B
+Action               : Good Candidate
 Trend                : Strong Bullish
 Market State         : Not available
 Provider             : Yahoo Finance
@@ -941,8 +941,8 @@ DATA VALIDATION
 Provider            : Yahoo Finance
 Mode                : Research / Watchlist
 Real-Time           : False
-Last Bar            : 2026-07-10 00:00:00
-Rows Downloaded     : 1255
+Last Bar            : 2026-07-15 00:00:00
+Rows Downloaded     : 1254
 
 MARKET STATE
 -----------------------------------------------------------------
@@ -955,33 +955,33 @@ Risk Level          : Conservative
 
 SCORING
 -----------------------------------------------------------------
-Overall Score       : 68
-Grade               : C
-Recommendation      : Watchlist
+Overall Score       : 73
+Grade               : B
+Recommendation      : Good Candidate
 
 TARGETS
 -----------------------------------------------------------------
-Current Price       : 79.71
-Support             : 79.67
-Resistance          : 79.74
-Target 1            : 79.74
-Target 2            : 79.77
-Target 3            : 79.81
-Stop Loss           : 79.58
+Current Price       : 79.81
+Support             : 79.73
+Resistance          : 79.83
+Target 1            : 79.83
+Target 2            : 79.93
+Target 3            : 80.01
+Stop Loss           : 79.64
 
-Risk/Reward T1      : 0.24
-Risk/Reward T2      : 0.48
-Risk/Reward T3      : 0.79
+Risk/Reward T1      : 0.12
+Risk/Reward T2      : 0.70
+Risk/Reward T3      : 1.17
 
 Probability T1      : 75%
 Probability T2      : 75%
-Probability T3      : 75%
+Probability T3      : 62%
 
 IEF — SUCCESS
 ----------------------------------------
 Timeframe            : 1d
-Price                : 93.63
-Score                : 49
+Price                : 93.78
+Score                : 44
 Grade                : D
 Action               : Weak Setup
 Trend                : Neutral
@@ -1003,8 +1003,8 @@ DATA VALIDATION
 Provider            : Yahoo Finance
 Mode                : Research / Watchlist
 Real-Time           : False
-Last Bar            : 2026-07-10 00:00:00
-Rows Downloaded     : 1255
+Last Bar            : 2026-07-15 00:00:00
+Rows Downloaded     : 1254
 
 MARKET STATE
 -----------------------------------------------------------------
@@ -1017,23 +1017,23 @@ Risk Level          : Conservative
 
 SCORING
 -----------------------------------------------------------------
-Overall Score       : 49
+Overall Score       : 44
 Grade               : D
 Recommendation      : Weak Setup
 
 TARGETS
 -----------------------------------------------------------------
-Current Price       : 93.63
-Support             : 93.63
-Resistance          : 93.72
-Target 1            : 93.72
-Target 2            : 93.64
-Target 3            : 93.64
-Stop Loss           : 93.46
+Current Price       : 93.78
+Support             : 93.76
+Resistance          : 93.79
+Target 1            : 93.79
+Target 2            : 93.80
+Target 3            : 93.82
+Stop Loss           : 93.61
 
-Risk/Reward T1      : 0.57
-Risk/Reward T2      : 0.04
-Risk/Reward T3      : 0.07
+Risk/Reward T1      : 0.06
+Risk/Reward T2      : 0.14
+Risk/Reward T3      : 0.24
 
 Probability T1      : 75%
 Probability T2      : 75%
@@ -1042,7 +1042,7 @@ Probability T3      : 75%
 TLT — SUCCESS
 ----------------------------------------
 Timeframe            : 1d
-Price                : 84.47
+Price                : 84.24
 Score                : 26
 Grade                : F
 Action               : Avoid
@@ -1065,13 +1065,13 @@ DATA VALIDATION
 Provider            : Yahoo Finance
 Mode                : Research / Watchlist
 Real-Time           : False
-Last Bar            : 2026-07-10 00:00:00
-Rows Downloaded     : 1255
+Last Bar            : 2026-07-15 00:00:00
+Rows Downloaded     : 1254
 
 MARKET STATE
 -----------------------------------------------------------------
 Trend               : Bearish
-Momentum            : Neutral
+Momentum            : Oversold
 Volatility          : Low
 Volume              : Below Average
 Market Bias         : Avoid
@@ -1085,17 +1085,17 @@ Recommendation      : Avoid
 
 TARGETS
 -----------------------------------------------------------------
-Current Price       : 84.47
-Support             : 84.47
-Resistance          : 84.55
-Target 1            : 84.55
-Target 2            : 84.47
-Target 3            : 84.47
-Stop Loss           : 84.18
+Current Price       : 84.24
+Support             : 84.12
+Resistance          : 84.28
+Target 1            : 84.28
+Target 2            : 84.42
+Target 3            : 84.55
+Stop Loss           : 83.86
 
-Risk/Reward T1      : 0.29
-Risk/Reward T2      : 0.01
-Risk/Reward T3      : 0.02
+Risk/Reward T1      : 0.11
+Risk/Reward T2      : 0.49
+Risk/Reward T3      : 0.81
 
 Probability T1      : 75%
 Probability T2      : 75%
@@ -1104,8 +1104,8 @@ Probability T3      : 75%
 BIL — SUCCESS
 ----------------------------------------
 Timeframe            : 1d
-Price                : 91.5
-Score                : 56
+Price                : 91.52
+Score                : 62
 Grade                : C
 Action               : Watchlist
 Trend                : Strong Bullish
@@ -1127,50 +1127,50 @@ DATA VALIDATION
 Provider            : Yahoo Finance
 Mode                : Research / Watchlist
 Real-Time           : False
-Last Bar            : 2026-07-10 00:00:00
-Rows Downloaded     : 1255
+Last Bar            : 2026-07-15 00:00:00
+Rows Downloaded     : 1254
 
 MARKET STATE
 -----------------------------------------------------------------
 Trend               : Strong Bullish
 Momentum            : Overbought
 Volatility          : Low
-Volume              : Below Average
+Volume              : Above Average
 Market Bias         : Buy
 Risk Level          : Conservative
 
 SCORING
 -----------------------------------------------------------------
-Overall Score       : 56
+Overall Score       : 62
 Grade               : C
 Recommendation      : Watchlist
 
 TARGETS
 -----------------------------------------------------------------
-Current Price       : 91.50
-Support             : 91.49
-Resistance          : 91.54
-Target 1            : 91.54
-Target 2            : 91.52
-Target 3            : 91.53
-Stop Loss           : 91.48
+Current Price       : 91.52
+Support             : 91.51
+Resistance          : 91.56
+Target 1            : 91.56
+Target 2            : 91.53
+Target 3            : 91.54
+Stop Loss           : 91.50
 
-Risk/Reward T1      : 2.06
-Risk/Reward T2      : 0.73
-Risk/Reward T3      : 1.21
+Risk/Reward T1      : 1.99
+Risk/Reward T2      : 0.75
+Risk/Reward T3      : 1.25
 
-Probability T1      : 48%
+Probability T1      : 62%
 Probability T2      : 75%
 Probability T3      : 62%
 
 SOL-USD — SUCCESS
 ----------------------------------------
 Timeframe            : 1d
-Price                : 77.01
-Score                : 66
-Grade                : C
-Action               : Watchlist
-Trend                : Bullish
+Price                : 75.71
+Score                : 30
+Grade                : F
+Action               : Avoid
+Trend                : Bearish
 Market State         : Not available
 Provider             : Yahoo Finance
 
@@ -1189,47 +1189,47 @@ DATA VALIDATION
 Provider            : Yahoo Finance
 Mode                : Research / Watchlist
 Real-Time           : False
-Last Bar            : 2026-07-12 00:00:00
+Last Bar            : 2026-07-16 00:00:00
 Rows Downloaded     : 1827
 
 MARKET STATE
 -----------------------------------------------------------------
-Trend               : Bullish
-Momentum            : Bullish
+Trend               : Bearish
+Momentum            : Neutral
 Volatility          : Medium
 Volume              : Below Average
-Market Bias         : Watch for Pullback
+Market Bias         : Avoid
 Risk Level          : Moderate
 
 SCORING
 -----------------------------------------------------------------
-Overall Score       : 66
-Grade               : C
-Recommendation      : Watchlist
+Overall Score       : 30
+Grade               : F
+Recommendation      : Avoid
 
 TARGETS
 -----------------------------------------------------------------
-Current Price       : 77.01
-Support             : 76.90
-Resistance          : 77.07
-Target 1            : 77.07
-Target 2            : 77.17
-Target 3            : 77.28
-Stop Loss           : 75.28
+Current Price       : 75.71
+Support             : 74.55
+Resistance          : 75.92
+Target 1            : 75.92
+Target 2            : 77.45
+Target 3            : 78.61
+Stop Loss           : 73.25
 
-Risk/Reward T1      : 0.04
-Risk/Reward T2      : 0.10
-Risk/Reward T3      : 0.16
+Risk/Reward T1      : 0.09
+Risk/Reward T2      : 0.71
+Risk/Reward T3      : 1.18
 
 Probability T1      : 75%
 Probability T2      : 75%
-Probability T3      : 75%
+Probability T3      : 62%
 
 XRP-USD — SUCCESS
 ----------------------------------------
 Timeframe            : 1d
 Price                : 1.1
-Score                : 47
+Score                : 42
 Grade                : D
 Action               : Weak Setup
 Trend                : Bearish
@@ -1251,7 +1251,7 @@ DATA VALIDATION
 Provider            : Yahoo Finance
 Mode                : Research / Watchlist
 Real-Time           : False
-Last Bar            : 2026-07-12 00:00:00
+Last Bar            : 2026-07-16 00:00:00
 Rows Downloaded     : 1827
 
 MARKET STATE
@@ -1265,7 +1265,7 @@ Risk Level          : Moderate
 
 SCORING
 -----------------------------------------------------------------
-Overall Score       : 47
+Overall Score       : 42
 Grade               : D
 Recommendation      : Weak Setup
 
@@ -1279,9 +1279,9 @@ Target 2            : 1.10
 Target 3            : 1.10
 Stop Loss           : 1.08
 
-Risk/Reward T1      : 0.05
-Risk/Reward T2      : 0.02
-Risk/Reward T3      : 0.03
+Risk/Reward T1      : 0.04
+Risk/Reward T2      : 0.05
+Risk/Reward T3      : 0.08
 
 Probability T1      : 75%
 Probability T2      : 75%
@@ -1290,7 +1290,7 @@ Probability T3      : 75%
 SOXS — SUCCESS
 ----------------------------------------
 Timeframe            : 1d
-Price                : 4.08
+Price                : 45.98
 Score                : 28
 Grade                : F
 Action               : Avoid
@@ -1313,8 +1313,8 @@ DATA VALIDATION
 Provider            : Yahoo Finance
 Mode                : Research / Watchlist
 Real-Time           : False
-Last Bar            : 2026-07-10 00:00:00
-Rows Downloaded     : 1255
+Last Bar            : 2026-07-15 00:00:00
+Rows Downloaded     : 1254
 
 MARKET STATE
 -----------------------------------------------------------------
@@ -1333,17 +1333,17 @@ Recommendation      : Avoid
 
 TARGETS
 -----------------------------------------------------------------
-Current Price       : 4.08
-Support             : 3.99
-Resistance          : 4.12
-Target 1            : 4.12
-Target 2            : 4.21
-Target 3            : 4.30
-Stop Loss           : 3.65
+Current Price       : 45.98
+Support             : 44.88
+Resistance          : 46.30
+Target 1            : 46.30
+Target 2            : 47.63
+Target 3            : 48.74
+Stop Loss           : 41.26
 
-Risk/Reward T1      : 0.09
-Risk/Reward T2      : 0.31
-Risk/Reward T3      : 0.52
+Risk/Reward T1      : 0.07
+Risk/Reward T2      : 0.35
+Risk/Reward T3      : 0.58
 
 Probability T1      : 75%
 Probability T2      : 75%
@@ -1352,8 +1352,8 @@ Probability T3      : 75%
 SQQQ — SUCCESS
 ----------------------------------------
 Timeframe            : 1d
-Price                : 37.78
-Score                : 39
+Price                : 38.94
+Score                : 32
 Grade                : F
 Action               : Avoid
 Trend                : Bearish
@@ -1375,13 +1375,13 @@ DATA VALIDATION
 Provider            : Yahoo Finance
 Mode                : Research / Watchlist
 Real-Time           : False
-Last Bar            : 2026-07-10 00:00:00
-Rows Downloaded     : 1255
+Last Bar            : 2026-07-15 00:00:00
+Rows Downloaded     : 1254
 
 MARKET STATE
 -----------------------------------------------------------------
 Trend               : Bearish
-Momentum            : Bullish
+Momentum            : Neutral
 Volatility          : High
 Volume              : Below Average
 Market Bias         : Avoid
@@ -1389,33 +1389,33 @@ Risk Level          : Aggressive
 
 SCORING
 -----------------------------------------------------------------
-Overall Score       : 39
+Overall Score       : 32
 Grade               : F
 Recommendation      : Avoid
 
 TARGETS
 -----------------------------------------------------------------
-Current Price       : 37.78
-Support             : 37.71
-Resistance          : 37.79
-Target 1            : 37.79
-Target 2            : 37.88
-Target 3            : 37.95
-Stop Loss           : 36.44
+Current Price       : 38.94
+Support             : 38.90
+Resistance          : 38.98
+Target 1            : 38.98
+Target 2            : 39.00
+Target 3            : 39.04
+Stop Loss           : 37.69
 
-Risk/Reward T1      : 0.00
-Risk/Reward T2      : 0.08
-Risk/Reward T3      : 0.13
+Risk/Reward T1      : 0.03
+Risk/Reward T2      : 0.05
+Risk/Reward T3      : 0.08
 
-Probability T1      : 0%
+Probability T1      : 75%
 Probability T2      : 75%
 Probability T3      : 75%
 
 SOXL — SUCCESS
 ----------------------------------------
 Timeframe            : 1d
-Price                : 192.26
-Score                : 40
+Price                : 165.55
+Score                : 46
 Grade                : D
 Action               : Weak Setup
 Trend                : Bullish
@@ -1437,37 +1437,37 @@ DATA VALIDATION
 Provider            : Yahoo Finance
 Mode                : Research / Watchlist
 Real-Time           : False
-Last Bar            : 2026-07-10 00:00:00
-Rows Downloaded     : 1255
+Last Bar            : 2026-07-15 00:00:00
+Rows Downloaded     : 1254
 
 MARKET STATE
 -----------------------------------------------------------------
 Trend               : Bullish
 Momentum            : Neutral
 Volatility          : High
-Volume              : Below Average
+Volume              : Above Average
 Market Bias         : Watch for Pullback
 Risk Level          : Aggressive
 
 SCORING
 -----------------------------------------------------------------
-Overall Score       : 40
+Overall Score       : 46
 Grade               : D
 Recommendation      : Weak Setup
 
 TARGETS
 -----------------------------------------------------------------
-Current Price       : 192.26
-Support             : 189.46
-Resistance          : 195.27
-Target 1            : 195.27
-Target 2            : 196.46
-Target 3            : 199.26
-Stop Loss           : 170.15
+Current Price       : 165.55
+Support             : 161.55
+Resistance          : 166.00
+Target 1            : 166.00
+Target 2            : 171.55
+Target 3            : 175.55
+Stop Loss           : 143.62
 
-Risk/Reward T1      : 0.14
-Risk/Reward T2      : 0.19
-Risk/Reward T3      : 0.32
+Risk/Reward T1      : 0.02
+Risk/Reward T2      : 0.27
+Risk/Reward T3      : 0.46
 
 Probability T1      : 75%
 Probability T2      : 75%
@@ -1476,11 +1476,11 @@ Probability T3      : 75%
 TQQQ — SUCCESS
 ----------------------------------------
 Timeframe            : 1d
-Price                : 77.03
-Score                : 56
+Price                : 74.44
+Score                : 69
 Grade                : C
 Action               : Watchlist
-Trend                : Bullish
+Trend                : Strong Bullish
 Market State         : Not available
 Provider             : Yahoo Finance
 
@@ -1499,37 +1499,37 @@ DATA VALIDATION
 Provider            : Yahoo Finance
 Mode                : Research / Watchlist
 Real-Time           : False
-Last Bar            : 2026-07-10 00:00:00
-Rows Downloaded     : 1255
+Last Bar            : 2026-07-15 00:00:00
+Rows Downloaded     : 1254
 
 MARKET STATE
 -----------------------------------------------------------------
-Trend               : Bullish
-Momentum            : Neutral
+Trend               : Strong Bullish
+Momentum            : Bullish
 Volatility          : High
 Volume              : Below Average
-Market Bias         : Watch for Pullback
+Market Bias         : Buy
 Risk Level          : Aggressive
 
 SCORING
 -----------------------------------------------------------------
-Overall Score       : 56
+Overall Score       : 69
 Grade               : C
 Recommendation      : Watchlist
 
 TARGETS
 -----------------------------------------------------------------
-Current Price       : 77.03
-Support             : 76.98
-Resistance          : 77.18
-Target 1            : 77.18
-Target 2            : 77.10
-Target 3            : 77.15
-Stop Loss           : 74.49
+Current Price       : 74.44
+Support             : 74.33
+Resistance          : 74.53
+Target 1            : 74.53
+Target 2            : 74.61
+Target 3            : 74.72
+Stop Loss           : 72.00
 
-Risk/Reward T1      : 0.06
-Risk/Reward T2      : 0.03
-Risk/Reward T3      : 0.05
+Risk/Reward T1      : 0.04
+Risk/Reward T2      : 0.07
+Risk/Reward T3      : 0.11
 
 Probability T1      : 75%
 Probability T2      : 75%
