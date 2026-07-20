@@ -51,3 +51,7 @@ Logs/**/*
 !Data/processed/.gitkeep
 !Data/models/.gitkeep
 !Logs/.gitkeep
+
+# Local backup files
+*.bak
+*.bak2
