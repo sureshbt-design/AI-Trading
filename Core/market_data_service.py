@@ -61,6 +61,7 @@ class MarketDataService:
             period=period,
             interval=interval,
             auto_adjust=request.auto_adjust,
+            progress=False,
         )
 
         cleaned = self._validate(ticker, df)

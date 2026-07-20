@@ -5,11 +5,11 @@ Decision-fusion logic for PATCC hierarchical multi-timeframe analysis.
 
 The engine combines:
 
-Weekly     - Structural regime
-Daily      - Primary swing direction
-60-minute  - Setup quality
-15-minute  - Entry confirmation
-5-minute   - Execution timing
+Weekly      - Structural regime
+Daily       - Primary swing direction
+60-minute   - Setup quality
+15-minute   - Entry confirmation
+5-minute    - Execution timing
 
 Lower timeframes refine timing but cannot override materially bearish
 higher-timeframe structure.
@@ -23,9 +23,7 @@ from typing import Iterable
 
 @dataclass(frozen=True)
 class FusionResult:
-    """
-    Final decision produced from the five timeframe analyses.
-    """
+    """Final decision produced from the five timeframe analyses."""
 
     fusion_score: int
     swing_bias: str
@@ -44,9 +42,7 @@ class FusionResult:
 
 
 class TimeframeFusionEngine:
-    """
-    Combine PATCC timeframe evidence into one hierarchical decision.
-    """
+    """Combine PATCC timeframe evidence into one hierarchical decision."""
 
     DEFAULT_WEIGHTS = {
         "weekly": 0.20,
@@ -83,10 +79,6 @@ class TimeframeFusionEngine:
         self,
         analyses: Iterable,
     ) -> FusionResult:
-        """
-        Fuse all required timeframe analyses.
-        """
-
         analysis_list = list(analyses)
 
         if not analysis_list:
@@ -114,10 +106,7 @@ class TimeframeFusionEngine:
         entry = by_key["entry"]
 
         counts = self._count_trends(analysis_list)
-
-        fusion_score = self._weighted_score(
-            analysis_list
-        )
+        fusion_score = self._weighted_score(analysis_list)
 
         swing_bias = self._swing_bias(
             weekly=weekly,
@@ -132,6 +121,7 @@ class TimeframeFusionEngine:
         )
 
         entry_status = self._entry_status(
+            fusion_score=fusion_score,
             swing_bias=swing_bias,
             weekly=weekly,
             daily=daily,
@@ -319,9 +309,42 @@ class TimeframeFusionEngine:
 
         return "Mixed / Transitional"
 
+    @staticmethod
+    def _improving_entry_evidence(
+        setup,
+        entry,
+    ) -> bool:
+        setup_fp = setup.institutional_footprint
+        entry_fp = entry.institutional_footprint
+
+        setup_improving = (
+            setup_fp.classification
+            in {
+                "Strong Accumulation",
+                "Accumulation",
+                "Neutral / Unconfirmed",
+            }
+            and setup.indicators.price_above_dema8
+        )
+
+        entry_improving = (
+            entry_fp.classification
+            in {
+                "Strong Accumulation",
+                "Accumulation",
+                "Neutral / Unconfirmed",
+            }
+            and entry.indicators.price_above_dema8
+            and entry.indicators.price_above_vwap20
+            and entry.indicators.dema8_slope > 0
+        )
+
+        return setup_improving or entry_improving
+
     def _entry_status(
         self,
         *,
+        fusion_score: int,
         swing_bias: str,
         weekly,
         daily,
@@ -347,6 +370,29 @@ class TimeframeFusionEngine:
             setup.institutional_footprint.classification
         )
 
+        higher_timeframes_supportive = (
+            swing_bias
+            in {
+                "Bullish",
+                "Cautiously Bullish",
+                "Neutral / Bullish Structure",
+            }
+        )
+
+        higher_timeframe_strength = (
+            weekly_trend in self.BULLISH_TRENDS
+            and daily_trend in self.BULLISH_TRENDS
+            and daily.score.overall_score >= 70
+            and fusion_score >= 60
+        )
+
+        improving_entry_evidence = (
+            self._improving_entry_evidence(
+                setup,
+                entry,
+            )
+        )
+
         if (
             weekly_trend in self.BEARISH_TRENDS
             and daily_trend in self.BEARISH_TRENDS
@@ -356,26 +402,26 @@ class TimeframeFusionEngine:
         if daily_footprint == "Distribution":
             return "Avoid - Daily Distribution"
 
-        if hourly_footprint == "Distribution":
-            return "Avoid - 60-Minute Distribution"
-
         if daily_trend in self.BEARISH_TRENDS:
             return "No New Long Entry"
+
+        # A weak 60-minute footprint remains a hard avoid only when
+        # higher-timeframe structure is not strong or lower-timeframe
+        # evidence is not improving.
+        if hourly_footprint == "Distribution":
+            if (
+                higher_timeframe_strength
+                and improving_entry_evidence
+            ):
+                return "Wait - 60-Minute Confirmation"
+
+            return "Avoid - 60-Minute Distribution"
 
         if hourly_trend in self.BEARISH_TRENDS:
             return "Wait - 60-Minute Trend Bearish"
 
         if setup_trend in self.BEARISH_TRENDS:
             return "Wait - 15-Minute Breakdown"
-
-        higher_timeframes_supportive = (
-            swing_bias
-            in {
-                "Bullish",
-                "Cautiously Bullish",
-                "Neutral / Bullish Structure",
-            }
-        )
 
         hourly_supportive = (
             hourly_trend in self.BULLISH_TRENDS
@@ -446,6 +492,12 @@ class TimeframeFusionEngine:
             return (
                 "Hold existing position if risk permits; "
                 "do not add yet"
+            )
+
+        if entry_status == "Wait - 60-Minute Confirmation":
+            return (
+                "Keep on the opportunity queue; no new entry until "
+                "60-minute money flow and VWAP improve"
             )
 
         if entry_status.startswith("Wait -"):
@@ -599,7 +651,7 @@ class TimeframeFusionEngine:
             else "below"
         )
 
-        return [
+        reasons = [
             (
                 f"Weekly structural trend is "
                 f"{weekly.market_state.trend}."
@@ -628,8 +680,19 @@ class TimeframeFusionEngine:
                 f"5-minute price is {dema_state} DEMA-8 "
                 f"and {vwap_state} VWAP-20."
             ),
-            f"Final entry decision is {entry_status}.",
         ]
+
+        if entry_status == "Wait - 60-Minute Confirmation":
+            reasons.append(
+                "Higher-timeframe structure remains constructive, "
+                "but the 60-minute money-flow layer has not confirmed."
+            )
+
+        reasons.append(
+            f"Final entry decision is {entry_status}."
+        )
+
+        return reasons
 
     def _warnings(
         self,
@@ -713,4 +776,3 @@ class TimeframeFusionEngine:
                 result.append(value)
 
         return result
-        
