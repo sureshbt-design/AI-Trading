@@ -24,6 +24,9 @@ class AnalysisResult:
     score: Any
     targets: Any
 
+    # Institutional-style price and volume footprint
+    institutional_footprint: Any = None
+
     # Market structure
     market_trend: str = "Unknown"
     market_structure: str = ""
