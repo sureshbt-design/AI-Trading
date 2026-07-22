@@ -1,18 +1,19 @@
 """
 market_data_service.py
 
-Single gateway for downloading and validating market data.
+Single gateway for retrieving, normalizing, and validating market data.
 """
 
 from dataclasses import dataclass
+from datetime import datetime
 from typing import Optional
 
 import pandas as pd
-import yfinance as yf
 
-from dataclasses import dataclass
-from datetime import datetime
+from Core.market_data_provider import ProviderRequest
+from Core.providers.yahoo_provider import YahooMarketDataProvider
 from Core.timeframe_manager import TimeframeManager
+
 
 @dataclass
 class MarketDataResponse:
@@ -24,6 +25,7 @@ class MarketDataResponse:
     rows: int
     data: pd.DataFrame
 
+
 @dataclass
 class MarketDataRequest:
     """
@@ -34,63 +36,80 @@ class MarketDataRequest:
     """
 
     ticker: str
-
     timeframe: str = "1d"
-
     period: str | None = None
     interval: str | None = None
-
     auto_adjust: bool = True
 
 
 class MarketDataService:
-    """Download and validate OHLCV market data."""
+    """
+    Retrieve and validate OHLCV market data through a provider-neutral gateway.
+    """
 
     REQUIRED_COLUMNS = ["Open", "High", "Low", "Close", "Volume"]
 
+    def __init__(self, provider=None) -> None:
+        self.provider = provider or YahooMarketDataProvider()
+
     def get_price_history(self, request: MarketDataRequest) -> MarketDataResponse:
         ticker = request.ticker.upper().strip()
-        # Resolve timeframe defaults
+
         config = TimeframeManager.get_config(request.timeframe)
 
         period = request.period or config.period
         interval = request.interval or config.interval
 
-        df = yf.download(
-            ticker,
+        provider_request = ProviderRequest(
+            ticker=ticker,
             period=period,
             interval=interval,
             auto_adjust=request.auto_adjust,
-            progress=False,
         )
 
-        cleaned = self._validate(ticker, df)
+        provider_response = self.provider.get_price_history(provider_request)
+
+        cleaned = self._validate(ticker, provider_response.data)
 
         return MarketDataResponse(
-           ticker=ticker,
-           source="Yahoo Finance",
-           mode="Research / Watchlist",
-           realtime=False,
-           last_bar=cleaned.index[-1].to_pydatetime(),
-           rows=len(cleaned),
-           data=cleaned,
+            ticker=ticker,
+            source=provider_response.source,
+            mode=provider_response.mode,
+            realtime=provider_response.realtime,
+            last_bar=cleaned.index[-1].to_pydatetime(),
+            rows=len(cleaned),
+            data=cleaned,
         )
 
-    def _validate(self, ticker: str, data: Optional[pd.DataFrame]) -> pd.DataFrame:
+    def _validate(
+        self,
+        ticker: str,
+        data: Optional[pd.DataFrame],
+    ) -> pd.DataFrame:
         if data is None or data.empty:
             raise ValueError(f"No market data returned for ticker: {ticker}")
 
         if isinstance(data.columns, pd.MultiIndex):
+            data = data.copy()
             data.columns = data.columns.get_level_values(0)
 
-        missing = [col for col in self.REQUIRED_COLUMNS if col not in data.columns]
-        if missing:
-            raise ValueError(f"{ticker} missing required columns: {missing}")
+        missing = [
+            column
+            for column in self.REQUIRED_COLUMNS
+            if column not in data.columns
+        ]
 
-        cleaned = data[self.REQUIRED_COLUMNS].dropna()
+        if missing:
+            raise ValueError(
+                f"{ticker} missing required columns: {missing}"
+            )
+
+        cleaned = data[self.REQUIRED_COLUMNS].dropna().copy()
 
         if cleaned.empty:
-            raise ValueError(f"{ticker} has no valid OHLCV rows after cleanup")
+            raise ValueError(
+                f"{ticker} has no valid OHLCV rows after cleanup"
+            )
 
         return cleaned
 
@@ -116,4 +135,3 @@ if __name__ == "__main__":
     print("=" * 60)
 
     print(response.data.tail())
-    
