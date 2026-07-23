@@ -2,47 +2,47 @@
 PATCC - PROFESSIONAL AI TRADING & CAPITAL COMPANION
 MORNING COMMAND CENTER
 Version             : 0.1.0
-Generated           : Thursday, July 16, 2026 at 08:46:23 AM ET
+Generated           : Thursday, July 23, 2026 at 08:28:44 AM ET
 Timeframe           : 1d
 ==============================================================================
 
 EXECUTIVE SUMMARY
 ------------------------------------------------------------------------------
-Market Posture       : NEUTRAL — WAIT FOR CONFIRMATION
-Average Score        : 56.9
+Market Posture       : INSUFFICIENT DATA
+Average Score        : N/A
 Successful Scans     : 24
 Failed Scans         : 0
-Strongest Tickers   : DIA, XLV, XLF
-Weakest Tickers     : TLT, SOXS, UNG
+Strongest Tickers   : Not available
+Weakest Tickers     : Not available
 
 WATCHLIST SUMMARY
 ------------------------------------------------------------------------------
 Ticker      Status            Price    Score       Grade                Action
 ------------------------------------------------------------------------------
-DIA         SUCCESS          525.95       80           B        Good Candidate
-SPY         SUCCESS          754.81       70           B        Good Candidate
-QQQ         SUCCESS          717.74       75           B        Good Candidate
-IWM         SUCCESS          295.77       62           C             Watchlist
-UNG         SUCCESS           10.55       30           F                 Avoid
-USO         SUCCESS          121.38       67           C             Watchlist
-GLD         SUCCESS          372.35       56           C             Watchlist
-SLV         SUCCESS           52.21       66           C             Watchlist
-BTC-USD     SUCCESS       63,809.34       68           C             Watchlist
-ETH-USD     SUCCESS        1,868.48       55           C             Watchlist
-XLE         SUCCESS           56.50       70           B        Good Candidate
-XLF         SUCCESS           56.56       76           B        Good Candidate
-XLK         SUCCESS          181.58       59           C             Watchlist
-XLV         SUCCESS          158.29       80           B        Good Candidate
-HYG         SUCCESS           79.81       73           B        Good Candidate
-IEF         SUCCESS           93.78       44           D            Weak Setup
-TLT         SUCCESS           84.24       26           F                 Avoid
-BIL         SUCCESS           91.52       62           C             Watchlist
-SOL-USD     SUCCESS           75.71       30           F                 Avoid
-XRP-USD     SUCCESS            1.10       42           D            Weak Setup
-SOXS        SUCCESS           45.98       28           F                 Avoid
-SQQQ        SUCCESS           38.94       32           F                 Avoid
-SOXL        SUCCESS          165.55       46           D            Weak Setup
-TQQQ        SUCCESS           74.44       69           C             Watchlist
+DIA         SUCCESS             N/A      N/A Not availab         Not available
+SPY         SUCCESS             N/A      N/A Not availab         Not available
+QQQ         SUCCESS             N/A      N/A Not availab         Not available
+IWM         SUCCESS             N/A      N/A Not availab         Not available
+UNG         SUCCESS             N/A      N/A Not availab         Not available
+USO         SUCCESS             N/A      N/A Not availab         Not available
+GLD         SUCCESS             N/A      N/A Not availab         Not available
+SLV         SUCCESS             N/A      N/A Not availab         Not available
+BTC-USD     SUCCESS             N/A      N/A Not availab         Not available
+ETH-USD     SUCCESS             N/A      N/A Not availab         Not available
+XLE         SUCCESS             N/A      N/A Not availab         Not available
+XLF         SUCCESS             N/A      N/A Not availab         Not available
+XLK         SUCCESS             N/A      N/A Not availab         Not available
+XLV         SUCCESS             N/A      N/A Not availab         Not available
+HYG         SUCCESS             N/A      N/A Not availab         Not available
+IEF         SUCCESS             N/A      N/A Not availab         Not available
+TLT         SUCCESS             N/A      N/A Not availab         Not available
+BIL         SUCCESS             N/A      N/A Not availab         Not available
+SOL-USD     SUCCESS             N/A      N/A Not availab         Not available
+XRP-USD     SUCCESS             N/A      N/A Not availab         Not available
+SOXS        SUCCESS             N/A      N/A Not availab         Not available
+SQQQ        SUCCESS             N/A      N/A Not availab         Not available
+SOXL        SUCCESS             N/A      N/A Not availab         Not available
+TQQQ        SUCCESS             N/A      N/A Not availab         Not available
 
 TICKER DRILL-DOWN
 ------------------------------------------------------------------------------
@@ -50,1490 +50,506 @@ TICKER DRILL-DOWN
 DIA — SUCCESS
 ----------------------------------------
 Timeframe            : 1d
-Price                : 525.95
-Score                : 80
-Grade                : B
-Action               : Good Candidate
-Trend                : Strong Bullish
+Price                : N/A
+Score                : N/A
+Grade                : Not available
+Action               : Not available
+Trend                : Not available
 Market State         : Not available
-Provider             : Yahoo Finance
+Provider             : Not available
 
 SCORING ENGINE OUTPUT
 ----------------------------------------
-===========================================================================
-PATCC - Professional AI Trading & Capital Companion
-Version             : 0.4.0
-Build Date          : 2026-07-09
-===========================================================================
-Ticker              : DIA
-Profile             : etf
-
-DATA VALIDATION
------------------------------------------------------------------
-Provider            : Yahoo Finance
-Mode                : Research / Watchlist
-Real-Time           : False
-Last Bar            : 2026-07-15 00:00:00
-Rows Downloaded     : 1254
-
-MARKET STATE
------------------------------------------------------------------
-Trend               : Strong Bullish
-Momentum            : Bullish
-Volatility          : Low
-Volume              : Below Average
-Market Bias         : Buy
-Risk Level          : Conservative
-
-SCORING
------------------------------------------------------------------
-Overall Score       : 80
-Grade               : B
-Recommendation      : Good Candidate
-
-TARGETS
------------------------------------------------------------------
-Current Price       : 525.95
-Support             : 525.85
-Resistance          : 526.47
-Target 1            : 526.47
-Target 2            : 526.10
-Target 3            : 526.20
-Stop Loss           : 523.21
-
-Risk/Reward T1      : 0.19
-Risk/Reward T2      : 0.05
-Risk/Reward T3      : 0.09
-
-Probability T1      : 75%
-Probability T2      : 75%
-Probability T3      : 75%
+PATCC DAILY CANDIDATE TABLE
+----------------------------------------------------------------------------------------------------------------
+Ticker  Score Gr Trend           Volume        DEMA-8          VWAP  FP  Footprint            RS       Status   
+----------------------------------------------------------------------------------------------------------------
+DIA        73 B  Strong Bullish  Below Average Above/Falling   Below  49 Neutral / Unconfirme   -0.92% WAIT     
+----------------------------------------------------------------------------------------------------------------
+QUALIFIED = evidence aligned; WAIT = strong structure but entry confirmation incomplete.
 
 SPY — SUCCESS
 ----------------------------------------
 Timeframe            : 1d
-Price                : 754.81
-Score                : 70
-Grade                : B
-Action               : Good Candidate
-Trend                : Strong Bullish
+Price                : N/A
+Score                : N/A
+Grade                : Not available
+Action               : Not available
+Trend                : Not available
 Market State         : Not available
-Provider             : Yahoo Finance
+Provider             : Not available
 
 SCORING ENGINE OUTPUT
 ----------------------------------------
-===========================================================================
-PATCC - Professional AI Trading & Capital Companion
-Version             : 0.4.0
-Build Date          : 2026-07-09
-===========================================================================
-Ticker              : SPY
-Profile             : etf
-
-DATA VALIDATION
------------------------------------------------------------------
-Provider            : Yahoo Finance
-Mode                : Research / Watchlist
-Real-Time           : False
-Last Bar            : 2026-07-15 00:00:00
-Rows Downloaded     : 1254
-
-MARKET STATE
------------------------------------------------------------------
-Trend               : Strong Bullish
-Momentum            : Bullish
-Volatility          : Low
-Volume              : Below Average
-Market Bias         : Buy
-Risk Level          : Conservative
-
-SCORING
------------------------------------------------------------------
-Overall Score       : 70
-Grade               : B
-Recommendation      : Good Candidate
-
-TARGETS
------------------------------------------------------------------
-Current Price       : 754.81
-Support             : 754.81
-Resistance          : 755.42
-Target 1            : 755.42
-Target 2            : 754.82
-Target 3            : 754.82
-Stop Loss           : 750.50
-
-Risk/Reward T1      : 0.14
-Risk/Reward T2      : 0.00
-Risk/Reward T3      : 0.00
-
-Probability T1      : 75%
-Probability T2      : 0%
-Probability T3      : 0%
+PATCC DAILY CANDIDATE TABLE
+----------------------------------------------------------------------------------------------------------------
+Ticker  Score Gr Trend           Volume        DEMA-8          VWAP  FP  Footprint            RS       Status   
+----------------------------------------------------------------------------------------------------------------
+SPY        74 B  Strong Bullish  Below Average Above/Falling   Above  57 Neutral / Unconfirme   +0.00% WAIT     
+----------------------------------------------------------------------------------------------------------------
+QUALIFIED = evidence aligned; WAIT = strong structure but entry confirmation incomplete.
 
 QQQ — SUCCESS
 ----------------------------------------
 Timeframe            : 1d
-Price                : 717.74
-Score                : 75
-Grade                : B
-Action               : Good Candidate
-Trend                : Strong Bullish
+Price                : N/A
+Score                : N/A
+Grade                : Not available
+Action               : Not available
+Trend                : Not available
 Market State         : Not available
-Provider             : Yahoo Finance
+Provider             : Not available
 
 SCORING ENGINE OUTPUT
 ----------------------------------------
-===========================================================================
-PATCC - Professional AI Trading & Capital Companion
-Version             : 0.4.0
-Build Date          : 2026-07-09
-===========================================================================
-Ticker              : QQQ
-Profile             : etf
-
-DATA VALIDATION
------------------------------------------------------------------
-Provider            : Yahoo Finance
-Mode                : Research / Watchlist
-Real-Time           : False
-Last Bar            : 2026-07-15 00:00:00
-Rows Downloaded     : 1254
-
-MARKET STATE
------------------------------------------------------------------
-Trend               : Strong Bullish
-Momentum            : Bullish
-Volatility          : Low
-Volume              : Below Average
-Market Bias         : Buy
-Risk Level          : Conservative
-
-SCORING
------------------------------------------------------------------
-Overall Score       : 75
-Grade               : B
-Recommendation      : Good Candidate
-
-TARGETS
------------------------------------------------------------------
-Current Price       : 717.74
-Support             : 717.00
-Resistance          : 718.74
-Target 1            : 718.74
-Target 2            : 718.85
-Target 3            : 719.59
-Stop Loss           : 709.56
-
-Risk/Reward T1      : 0.12
-Risk/Reward T2      : 0.14
-Risk/Reward T3      : 0.23
-
-Probability T1      : 75%
-Probability T2      : 75%
-Probability T3      : 75%
+PATCC DAILY CANDIDATE TABLE
+----------------------------------------------------------------------------------------------------------------
+Ticker  Score Gr Trend           Volume        DEMA-8          VWAP  FP  Footprint            RS       Status   
+----------------------------------------------------------------------------------------------------------------
+QQQ        66 C  Bullish         Below Average Above/Rising    Below  40 Weak / Distribution    -3.05% AVOID    
+----------------------------------------------------------------------------------------------------------------
+QUALIFIED = evidence aligned; WAIT = strong structure but entry confirmation incomplete.
 
 IWM — SUCCESS
 ----------------------------------------
 Timeframe            : 1d
-Price                : 295.77
-Score                : 62
-Grade                : C
-Action               : Watchlist
-Trend                : Bullish
+Price                : N/A
+Score                : N/A
+Grade                : Not available
+Action               : Not available
+Trend                : Not available
 Market State         : Not available
-Provider             : Yahoo Finance
+Provider             : Not available
 
 SCORING ENGINE OUTPUT
 ----------------------------------------
-===========================================================================
-PATCC - Professional AI Trading & Capital Companion
-Version             : 0.4.0
-Build Date          : 2026-07-09
-===========================================================================
-Ticker              : IWM
-Profile             : etf
-
-DATA VALIDATION
------------------------------------------------------------------
-Provider            : Yahoo Finance
-Mode                : Research / Watchlist
-Real-Time           : False
-Last Bar            : 2026-07-15 00:00:00
-Rows Downloaded     : 1254
-
-MARKET STATE
------------------------------------------------------------------
-Trend               : Bullish
-Momentum            : Neutral
-Volatility          : Low
-Volume              : Below Average
-Market Bias         : Watch for Pullback
-Risk Level          : Conservative
-
-SCORING
------------------------------------------------------------------
-Overall Score       : 62
-Grade               : C
-Recommendation      : Watchlist
-
-TARGETS
------------------------------------------------------------------
-Current Price       : 295.77
-Support             : 295.73
-Resistance          : 295.78
-Target 1            : 295.78
-Target 2            : 295.83
-Target 3            : 295.87
-Stop Loss           : 293.59
-
-Risk/Reward T1      : 0.00
-Risk/Reward T2      : 0.03
-Risk/Reward T3      : 0.05
-
-Probability T1      : 0%
-Probability T2      : 75%
-Probability T3      : 75%
+PATCC DAILY CANDIDATE TABLE
+----------------------------------------------------------------------------------------------------------------
+Ticker  Score Gr Trend           Volume        DEMA-8          VWAP  FP  Footprint            RS       Status   
+----------------------------------------------------------------------------------------------------------------
+IWM        65 C  Bullish         Below Average Below/Falling   Below  30 Weak / Distribution    -2.40% AVOID    
+----------------------------------------------------------------------------------------------------------------
+QUALIFIED = evidence aligned; WAIT = strong structure but entry confirmation incomplete.
 
 UNG — SUCCESS
 ----------------------------------------
 Timeframe            : 1d
-Price                : 10.55
-Score                : 30
-Grade                : F
-Action               : Avoid
-Trend                : Bearish
+Price                : N/A
+Score                : N/A
+Grade                : Not available
+Action               : Not available
+Trend                : Not available
 Market State         : Not available
-Provider             : Yahoo Finance
+Provider             : Not available
 
 SCORING ENGINE OUTPUT
 ----------------------------------------
-===========================================================================
-PATCC - Professional AI Trading & Capital Companion
-Version             : 0.4.0
-Build Date          : 2026-07-09
-===========================================================================
-Ticker              : UNG
-Profile             : etf
-
-DATA VALIDATION
------------------------------------------------------------------
-Provider            : Yahoo Finance
-Mode                : Research / Watchlist
-Real-Time           : False
-Last Bar            : 2026-07-15 00:00:00
-Rows Downloaded     : 1254
-
-MARKET STATE
------------------------------------------------------------------
-Trend               : Bearish
-Momentum            : Oversold
-Volatility          : Medium
-Volume              : Below Average
-Market Bias         : Avoid
-Risk Level          : Moderate
-
-SCORING
------------------------------------------------------------------
-Overall Score       : 30
-Grade               : F
-Recommendation      : Avoid
-
-TARGETS
------------------------------------------------------------------
-Current Price       : 10.55
-Support             : 10.52
-Resistance          : 10.58
-Target 1            : 10.58
-Target 2            : 10.59
-Target 3            : 10.62
-Stop Loss           : 10.34
-
-Risk/Reward T1      : 0.14
-Risk/Reward T2      : 0.21
-Risk/Reward T3      : 0.35
-
-Probability T1      : 75%
-Probability T2      : 75%
-Probability T3      : 75%
+PATCC DAILY CANDIDATE TABLE
+----------------------------------------------------------------------------------------------------------------
+Ticker  Score Gr Trend           Volume        DEMA-8          VWAP  FP  Footprint            RS       Status   
+----------------------------------------------------------------------------------------------------------------
+UNG        41 D  Bearish         Below Average Above/Rising    Below  58 Neutral / Unconfirme   -9.71% WATCH    
+----------------------------------------------------------------------------------------------------------------
+QUALIFIED = evidence aligned; WAIT = strong structure but entry confirmation incomplete.
 
 USO — SUCCESS
 ----------------------------------------
 Timeframe            : 1d
-Price                : 121.38
-Score                : 67
-Grade                : C
-Action               : Watchlist
-Trend                : Bullish
+Price                : N/A
+Score                : N/A
+Grade                : Not available
+Action               : Not available
+Trend                : Not available
 Market State         : Not available
-Provider             : Yahoo Finance
+Provider             : Not available
 
 SCORING ENGINE OUTPUT
 ----------------------------------------
-===========================================================================
-PATCC - Professional AI Trading & Capital Companion
-Version             : 0.4.0
-Build Date          : 2026-07-09
-===========================================================================
-Ticker              : USO
-Profile             : etf
-
-DATA VALIDATION
------------------------------------------------------------------
-Provider            : Yahoo Finance
-Mode                : Research / Watchlist
-Real-Time           : False
-Last Bar            : 2026-07-15 00:00:00
-Rows Downloaded     : 1254
-
-MARKET STATE
------------------------------------------------------------------
-Trend               : Bullish
-Momentum            : Overbought
-Volatility          : Medium
-Volume              : Above Average
-Market Bias         : Watch for Pullback
-Risk Level          : Moderate
-
-SCORING
------------------------------------------------------------------
-Overall Score       : 67
-Grade               : C
-Recommendation      : Watchlist
-
-TARGETS
------------------------------------------------------------------
-Current Price       : 121.38
-Support             : 121.03
-Resistance          : 121.48
-Target 1            : 121.48
-Target 2            : 121.90
-Target 3            : 122.25
-Stop Loss           : 118.96
-
-Risk/Reward T1      : 0.04
-Risk/Reward T2      : 0.22
-Risk/Reward T3      : 0.36
-
-Probability T1      : 75%
-Probability T2      : 75%
-Probability T3      : 75%
+PATCC DAILY CANDIDATE TABLE
+----------------------------------------------------------------------------------------------------------------
+Ticker  Score Gr Trend           Volume        DEMA-8          VWAP  FP  Footprint            RS       Status   
+----------------------------------------------------------------------------------------------------------------
+USO        86 A  Bullish         Above Average Above/Rising    Above  88 Strong Accumulation   +16.47% QUALIFIED
+----------------------------------------------------------------------------------------------------------------
+QUALIFIED = evidence aligned; WAIT = strong structure but entry confirmation incomplete.
 
 GLD — SUCCESS
 ----------------------------------------
 Timeframe            : 1d
-Price                : 372.35
-Score                : 56
-Grade                : C
-Action               : Watchlist
-Trend                : Bearish
+Price                : N/A
+Score                : N/A
+Grade                : Not available
+Action               : Not available
+Trend                : Not available
 Market State         : Not available
-Provider             : Yahoo Finance
+Provider             : Not available
 
 SCORING ENGINE OUTPUT
 ----------------------------------------
-===========================================================================
-PATCC - Professional AI Trading & Capital Companion
-Version             : 0.4.0
-Build Date          : 2026-07-09
-===========================================================================
-Ticker              : GLD
-Profile             : etf
-
-DATA VALIDATION
------------------------------------------------------------------
-Provider            : Yahoo Finance
-Mode                : Research / Watchlist
-Real-Time           : False
-Last Bar            : 2026-07-15 00:00:00
-Rows Downloaded     : 1254
-
-MARKET STATE
------------------------------------------------------------------
-Trend               : Bearish
-Momentum            : Bullish
-Volatility          : Low
-Volume              : Above Average
-Market Bias         : Avoid
-Risk Level          : Conservative
-
-SCORING
------------------------------------------------------------------
-Overall Score       : 56
-Grade               : C
-Recommendation      : Watchlist
-
-TARGETS
------------------------------------------------------------------
-Current Price       : 372.35
-Support             : 371.88
-Resistance          : 372.83
-Target 1            : 372.83
-Target 2            : 373.06
-Target 3            : 373.53
-Stop Loss           : 368.39
-
-Risk/Reward T1      : 0.12
-Risk/Reward T2      : 0.18
-Risk/Reward T3      : 0.30
-
-Probability T1      : 75%
-Probability T2      : 75%
-Probability T3      : 75%
+PATCC DAILY CANDIDATE TABLE
+----------------------------------------------------------------------------------------------------------------
+Ticker  Score Gr Trend           Volume        DEMA-8          VWAP  FP  Footprint            RS       Status   
+----------------------------------------------------------------------------------------------------------------
+GLD        69 C  Neutral         Above Average Above/Rising    Above  60 Neutral / Unconfirme   -1.41% QUALIFIED
+----------------------------------------------------------------------------------------------------------------
+QUALIFIED = evidence aligned; WAIT = strong structure but entry confirmation incomplete.
 
 SLV — SUCCESS
 ----------------------------------------
 Timeframe            : 1d
-Price                : 52.21
-Score                : 66
-Grade                : C
-Action               : Watchlist
-Trend                : Bullish
+Price                : N/A
+Score                : N/A
+Grade                : Not available
+Action               : Not available
+Trend                : Not available
 Market State         : Not available
-Provider             : Yahoo Finance
+Provider             : Not available
 
 SCORING ENGINE OUTPUT
 ----------------------------------------
-===========================================================================
-PATCC - Professional AI Trading & Capital Companion
-Version             : 0.4.0
-Build Date          : 2026-07-09
-===========================================================================
-Ticker              : SLV
-Profile             : etf
-
-DATA VALIDATION
------------------------------------------------------------------
-Provider            : Yahoo Finance
-Mode                : Research / Watchlist
-Real-Time           : False
-Last Bar            : 2026-07-15 00:00:00
-Rows Downloaded     : 1254
-
-MARKET STATE
------------------------------------------------------------------
-Trend               : Bullish
-Momentum            : Bullish
-Volatility          : Medium
-Volume              : Below Average
-Market Bias         : Watch for Pullback
-Risk Level          : Moderate
-
-SCORING
------------------------------------------------------------------
-Overall Score       : 66
-Grade               : C
-Recommendation      : Watchlist
-
-TARGETS
------------------------------------------------------------------
-Current Price       : 52.21
-Support             : 51.93
-Resistance          : 52.90
-Target 1            : 52.90
-Target 2            : 52.63
-Target 3            : 52.91
-Stop Loss           : 50.99
-
-Risk/Reward T1      : 0.56
-Risk/Reward T2      : 0.34
-Risk/Reward T3      : 0.57
-
-Probability T1      : 75%
-Probability T2      : 75%
-Probability T3      : 75%
+PATCC DAILY CANDIDATE TABLE
+----------------------------------------------------------------------------------------------------------------
+Ticker  Score Gr Trend           Volume        DEMA-8          VWAP  FP  Footprint            RS       Status   
+----------------------------------------------------------------------------------------------------------------
+SLV        40 D  Bearish         Below Average Above/Rising    Above  47 Neutral / Unconfirme   -5.13% QUALIFIED
+----------------------------------------------------------------------------------------------------------------
+QUALIFIED = evidence aligned; WAIT = strong structure but entry confirmation incomplete.
 
 BTC-USD — SUCCESS
 ----------------------------------------
 Timeframe            : 1d
-Price                : 63809.34
-Score                : 68
-Grade                : C
-Action               : Watchlist
-Trend                : Neutral
+Price                : N/A
+Score                : N/A
+Grade                : Not available
+Action               : Not available
+Trend                : Not available
 Market State         : Not available
-Provider             : Yahoo Finance
+Provider             : Not available
 
 SCORING ENGINE OUTPUT
 ----------------------------------------
-===========================================================================
-PATCC - Professional AI Trading & Capital Companion
-Version             : 0.4.0
-Build Date          : 2026-07-09
-===========================================================================
-Ticker              : BTC-USD
-Profile             : crypto
-
-DATA VALIDATION
------------------------------------------------------------------
-Provider            : Yahoo Finance
-Mode                : Research / Watchlist
-Real-Time           : False
-Last Bar            : 2026-07-16 00:00:00
-Rows Downloaded     : 1827
-
-MARKET STATE
------------------------------------------------------------------
-Trend               : Neutral
-Momentum            : Bullish
-Volatility          : Low
-Volume              : Above Average
-Market Bias         : Wait
-Risk Level          : Conservative
-
-SCORING
------------------------------------------------------------------
-Overall Score       : 68
-Grade               : C
-Recommendation      : Watchlist
-
-TARGETS
------------------------------------------------------------------
-Current Price       : 63809.34
-Support             : 63785.62
-Resistance          : 63851.95
-Target 1            : 63851.95
-Target 2            : 63844.92
-Target 3            : 63868.64
-Stop Loss           : 62934.37
-
-Risk/Reward T1      : 0.05
-Risk/Reward T2      : 0.04
-Risk/Reward T3      : 0.07
-
-Probability T1      : 75%
-Probability T2      : 75%
-Probability T3      : 75%
+PATCC DAILY CANDIDATE TABLE
+----------------------------------------------------------------------------------------------------------------
+Ticker  Score Gr Trend           Volume        DEMA-8          VWAP  FP  Footprint            RS       Status   
+----------------------------------------------------------------------------------------------------------------
+BTC-USD    69 C  Neutral         Below Average Below/Falling   Above  67 Accumulation           +3.59% WATCH    
+----------------------------------------------------------------------------------------------------------------
+QUALIFIED = evidence aligned; WAIT = strong structure but entry confirmation incomplete.
 
 ETH-USD — SUCCESS
 ----------------------------------------
 Timeframe            : 1d
-Price                : 1868.48
-Score                : 55
-Grade                : C
-Action               : Watchlist
-Trend                : Neutral
+Price                : N/A
+Score                : N/A
+Grade                : Not available
+Action               : Not available
+Trend                : Not available
 Market State         : Not available
-Provider             : Yahoo Finance
+Provider             : Not available
 
 SCORING ENGINE OUTPUT
 ----------------------------------------
-===========================================================================
-PATCC - Professional AI Trading & Capital Companion
-Version             : 0.4.0
-Build Date          : 2026-07-09
-===========================================================================
-Ticker              : ETH-USD
-Profile             : crypto
-
-DATA VALIDATION
------------------------------------------------------------------
-Provider            : Yahoo Finance
-Mode                : Research / Watchlist
-Real-Time           : False
-Last Bar            : 2026-07-16 00:00:00
-Rows Downloaded     : 1827
-
-MARKET STATE
------------------------------------------------------------------
-Trend               : Neutral
-Momentum            : Bullish
-Volatility          : Medium
-Volume              : Above Average
-Market Bias         : Wait
-Risk Level          : Moderate
-
-SCORING
------------------------------------------------------------------
-Overall Score       : 55
-Grade               : C
-Recommendation      : Watchlist
-
-TARGETS
------------------------------------------------------------------
-Current Price       : 1868.48
-Support             : 1863.64
-Resistance          : 1889.06
-Target 1            : 1889.06
-Target 2            : 1875.75
-Target 3            : 1880.59
-Stop Loss           : 1828.88
-
-Risk/Reward T1      : 0.52
-Risk/Reward T2      : 0.18
-Risk/Reward T3      : 0.31
-
-Probability T1      : 75%
-Probability T2      : 75%
-Probability T3      : 75%
+PATCC DAILY CANDIDATE TABLE
+----------------------------------------------------------------------------------------------------------------
+Ticker  Score Gr Trend           Volume        DEMA-8          VWAP  FP  Footprint            RS       Status   
+----------------------------------------------------------------------------------------------------------------
+ETH-USD    79 B  Bullish         Below Average Below/Rising    Above  80 Strong Accumulation   +14.21% WAIT     
+----------------------------------------------------------------------------------------------------------------
+QUALIFIED = evidence aligned; WAIT = strong structure but entry confirmation incomplete.
 
 XLE — SUCCESS
 ----------------------------------------
 Timeframe            : 1d
-Price                : 56.5
-Score                : 70
-Grade                : B
-Action               : Good Candidate
-Trend                : Bullish
+Price                : N/A
+Score                : N/A
+Grade                : Not available
+Action               : Not available
+Trend                : Not available
 Market State         : Not available
-Provider             : Yahoo Finance
+Provider             : Not available
 
 SCORING ENGINE OUTPUT
 ----------------------------------------
-===========================================================================
-PATCC - Professional AI Trading & Capital Companion
-Version             : 0.4.0
-Build Date          : 2026-07-09
-===========================================================================
-Ticker              : XLE
-Profile             : etf
-
-DATA VALIDATION
------------------------------------------------------------------
-Provider            : Yahoo Finance
-Mode                : Research / Watchlist
-Real-Time           : False
-Last Bar            : 2026-07-15 00:00:00
-Rows Downloaded     : 1254
-
-MARKET STATE
------------------------------------------------------------------
-Trend               : Bullish
-Momentum            : Bullish
-Volatility          : Low
-Volume              : Above Average
-Market Bias         : Watch for Pullback
-Risk Level          : Conservative
-
-SCORING
------------------------------------------------------------------
-Overall Score       : 70
-Grade               : B
-Recommendation      : Good Candidate
-
-TARGETS
------------------------------------------------------------------
-Current Price       : 56.50
-Support             : 56.44
-Resistance          : 56.51
-Target 1            : 56.51
-Target 2            : 56.59
-Target 3            : 56.64
-Stop Loss           : 55.91
-
-Risk/Reward T1      : 0.02
-Risk/Reward T2      : 0.15
-Risk/Reward T3      : 0.24
-
-Probability T1      : 75%
-Probability T2      : 75%
-Probability T3      : 75%
+PATCC DAILY CANDIDATE TABLE
+----------------------------------------------------------------------------------------------------------------
+Ticker  Score Gr Trend           Volume        DEMA-8          VWAP  FP  Footprint            RS       Status   
+----------------------------------------------------------------------------------------------------------------
+XLE        78 B  Strong Bullish  Below Average Above/Rising    Above  82 Strong Accumulation    +6.82% QUALIFIED
+----------------------------------------------------------------------------------------------------------------
+QUALIFIED = evidence aligned; WAIT = strong structure but entry confirmation incomplete.
 
 XLF — SUCCESS
 ----------------------------------------
 Timeframe            : 1d
-Price                : 56.56
-Score                : 76
-Grade                : B
-Action               : Good Candidate
-Trend                : Strong Bullish
+Price                : N/A
+Score                : N/A
+Grade                : Not available
+Action               : Not available
+Trend                : Not available
 Market State         : Not available
-Provider             : Yahoo Finance
+Provider             : Not available
 
 SCORING ENGINE OUTPUT
 ----------------------------------------
-===========================================================================
-PATCC - Professional AI Trading & Capital Companion
-Version             : 0.4.0
-Build Date          : 2026-07-09
-===========================================================================
-Ticker              : XLF
-Profile             : etf
-
-DATA VALIDATION
------------------------------------------------------------------
-Provider            : Yahoo Finance
-Mode                : Research / Watchlist
-Real-Time           : False
-Last Bar            : 2026-07-15 00:00:00
-Rows Downloaded     : 1254
-
-MARKET STATE
------------------------------------------------------------------
-Trend               : Strong Bullish
-Momentum            : Overbought
-Volatility          : Low
-Volume              : Above Average
-Market Bias         : Buy
-Risk Level          : Conservative
-
-SCORING
------------------------------------------------------------------
-Overall Score       : 76
-Grade               : B
-Recommendation      : Good Candidate
-
-TARGETS
------------------------------------------------------------------
-Current Price       : 56.56
-Support             : 56.18
-Resistance          : 56.59
-Target 1            : 56.59
-Target 2            : 57.13
-Target 3            : 57.51
-Stop Loss           : 55.78
-
-Risk/Reward T1      : 0.04
-Risk/Reward T2      : 0.73
-Risk/Reward T3      : 1.21
-
-Probability T1      : 75%
-Probability T2      : 75%
-Probability T3      : 62%
+PATCC DAILY CANDIDATE TABLE
+----------------------------------------------------------------------------------------------------------------
+Ticker  Score Gr Trend           Volume        DEMA-8          VWAP  FP  Footprint            RS       Status   
+----------------------------------------------------------------------------------------------------------------
+XLF        85 A  Strong Bullish  Below Average Below/Falling   Above  51 Neutral / Unconfirme   +2.14% WAIT     
+----------------------------------------------------------------------------------------------------------------
+QUALIFIED = evidence aligned; WAIT = strong structure but entry confirmation incomplete.
 
 XLK — SUCCESS
 ----------------------------------------
 Timeframe            : 1d
-Price                : 181.58
-Score                : 59
-Grade                : C
-Action               : Watchlist
-Trend                : Bullish
+Price                : N/A
+Score                : N/A
+Grade                : Not available
+Action               : Not available
+Trend                : Not available
 Market State         : Not available
-Provider             : Yahoo Finance
+Provider             : Not available
 
 SCORING ENGINE OUTPUT
 ----------------------------------------
-===========================================================================
-PATCC - Professional AI Trading & Capital Companion
-Version             : 0.4.0
-Build Date          : 2026-07-09
-===========================================================================
-Ticker              : XLK
-Profile             : etf
-
-DATA VALIDATION
------------------------------------------------------------------
-Provider            : Yahoo Finance
-Mode                : Research / Watchlist
-Real-Time           : False
-Last Bar            : 2026-07-15 00:00:00
-Rows Downloaded     : 1254
-
-MARKET STATE
------------------------------------------------------------------
-Trend               : Bullish
-Momentum            : Neutral
-Volatility          : Medium
-Volume              : Below Average
-Market Bias         : Watch for Pullback
-Risk Level          : Moderate
-
-SCORING
------------------------------------------------------------------
-Overall Score       : 59
-Grade               : C
-Recommendation      : Watchlist
-
-TARGETS
------------------------------------------------------------------
-Current Price       : 181.58
-Support             : 181.42
-Resistance          : 181.63
-Target 1            : 181.63
-Target 2            : 181.81
-Target 3            : 181.97
-Stop Loss           : 178.58
-
-Risk/Reward T1      : 0.02
-Risk/Reward T2      : 0.08
-Risk/Reward T3      : 0.13
-
-Probability T1      : 75%
-Probability T2      : 75%
-Probability T3      : 75%
+PATCC DAILY CANDIDATE TABLE
+----------------------------------------------------------------------------------------------------------------
+Ticker  Score Gr Trend           Volume        DEMA-8          VWAP  FP  Footprint            RS       Status   
+----------------------------------------------------------------------------------------------------------------
+XLK        66 C  Bullish         Below Average Above/Rising    Below  42 Weak / Distribution    -4.01% AVOID    
+----------------------------------------------------------------------------------------------------------------
+QUALIFIED = evidence aligned; WAIT = strong structure but entry confirmation incomplete.
 
 XLV — SUCCESS
 ----------------------------------------
 Timeframe            : 1d
-Price                : 158.29
-Score                : 80
-Grade                : B
-Action               : Good Candidate
-Trend                : Strong Bullish
+Price                : N/A
+Score                : N/A
+Grade                : Not available
+Action               : Not available
+Trend                : Not available
 Market State         : Not available
-Provider             : Yahoo Finance
+Provider             : Not available
 
 SCORING ENGINE OUTPUT
 ----------------------------------------
-===========================================================================
-PATCC - Professional AI Trading & Capital Companion
-Version             : 0.4.0
-Build Date          : 2026-07-09
-===========================================================================
-Ticker              : XLV
-Profile             : etf
-
-DATA VALIDATION
------------------------------------------------------------------
-Provider            : Yahoo Finance
-Mode                : Research / Watchlist
-Real-Time           : False
-Last Bar            : 2026-07-15 00:00:00
-Rows Downloaded     : 1254
-
-MARKET STATE
------------------------------------------------------------------
-Trend               : Strong Bullish
-Momentum            : Bullish
-Volatility          : Low
-Volume              : Below Average
-Market Bias         : Buy
-Risk Level          : Conservative
-
-SCORING
------------------------------------------------------------------
-Overall Score       : 80
-Grade               : B
-Recommendation      : Good Candidate
-
-TARGETS
------------------------------------------------------------------
-Current Price       : 158.29
-Support             : 157.96
-Resistance          : 159.35
-Target 1            : 159.35
-Target 2            : 158.78
-Target 3            : 159.11
-Stop Loss           : 156.51
-
-Risk/Reward T1      : 0.60
-Risk/Reward T2      : 0.28
-Risk/Reward T3      : 0.46
-
-Probability T1      : 75%
-Probability T2      : 75%
-Probability T3      : 75%
+PATCC DAILY CANDIDATE TABLE
+----------------------------------------------------------------------------------------------------------------
+Ticker  Score Gr Trend           Volume        DEMA-8          VWAP  FP  Footprint            RS       Status   
+----------------------------------------------------------------------------------------------------------------
+XLV        79 B  Strong Bullish  Below Average Below/Falling   Below  36 Weak / Distribution    +2.88% AVOID    
+----------------------------------------------------------------------------------------------------------------
+QUALIFIED = evidence aligned; WAIT = strong structure but entry confirmation incomplete.
 
 HYG — SUCCESS
 ----------------------------------------
 Timeframe            : 1d
-Price                : 79.81
-Score                : 73
-Grade                : B
-Action               : Good Candidate
-Trend                : Strong Bullish
+Price                : N/A
+Score                : N/A
+Grade                : Not available
+Action               : Not available
+Trend                : Not available
 Market State         : Not available
-Provider             : Yahoo Finance
+Provider             : Not available
 
 SCORING ENGINE OUTPUT
 ----------------------------------------
-===========================================================================
-PATCC - Professional AI Trading & Capital Companion
-Version             : 0.4.0
-Build Date          : 2026-07-09
-===========================================================================
-Ticker              : HYG
-Profile             : stock
-
-DATA VALIDATION
------------------------------------------------------------------
-Provider            : Yahoo Finance
-Mode                : Research / Watchlist
-Real-Time           : False
-Last Bar            : 2026-07-15 00:00:00
-Rows Downloaded     : 1254
-
-MARKET STATE
------------------------------------------------------------------
-Trend               : Strong Bullish
-Momentum            : Bullish
-Volatility          : Low
-Volume              : Below Average
-Market Bias         : Buy
-Risk Level          : Conservative
-
-SCORING
------------------------------------------------------------------
-Overall Score       : 73
-Grade               : B
-Recommendation      : Good Candidate
-
-TARGETS
------------------------------------------------------------------
-Current Price       : 79.81
-Support             : 79.73
-Resistance          : 79.83
-Target 1            : 79.83
-Target 2            : 79.93
-Target 3            : 80.01
-Stop Loss           : 79.64
-
-Risk/Reward T1      : 0.12
-Risk/Reward T2      : 0.70
-Risk/Reward T3      : 1.17
-
-Probability T1      : 75%
-Probability T2      : 75%
-Probability T3      : 62%
+PATCC DAILY CANDIDATE TABLE
+----------------------------------------------------------------------------------------------------------------
+Ticker  Score Gr Trend           Volume        DEMA-8          VWAP  FP  Footprint            RS       Status   
+----------------------------------------------------------------------------------------------------------------
+HYG        56 C  Bullish         Below Average Below/Falling   Below  14 Distribution           -1.86% AVOID    
+----------------------------------------------------------------------------------------------------------------
+QUALIFIED = evidence aligned; WAIT = strong structure but entry confirmation incomplete.
 
 IEF — SUCCESS
 ----------------------------------------
 Timeframe            : 1d
-Price                : 93.78
-Score                : 44
-Grade                : D
-Action               : Weak Setup
-Trend                : Neutral
+Price                : N/A
+Score                : N/A
+Grade                : Not available
+Action               : Not available
+Trend                : Not available
 Market State         : Not available
-Provider             : Yahoo Finance
+Provider             : Not available
 
 SCORING ENGINE OUTPUT
 ----------------------------------------
-===========================================================================
-PATCC - Professional AI Trading & Capital Companion
-Version             : 0.4.0
-Build Date          : 2026-07-09
-===========================================================================
-Ticker              : IEF
-Profile             : etf
-
-DATA VALIDATION
------------------------------------------------------------------
-Provider            : Yahoo Finance
-Mode                : Research / Watchlist
-Real-Time           : False
-Last Bar            : 2026-07-15 00:00:00
-Rows Downloaded     : 1254
-
-MARKET STATE
------------------------------------------------------------------
-Trend               : Neutral
-Momentum            : Neutral
-Volatility          : Low
-Volume              : Above Average
-Market Bias         : Wait
-Risk Level          : Conservative
-
-SCORING
------------------------------------------------------------------
-Overall Score       : 44
-Grade               : D
-Recommendation      : Weak Setup
-
-TARGETS
------------------------------------------------------------------
-Current Price       : 93.78
-Support             : 93.76
-Resistance          : 93.79
-Target 1            : 93.79
-Target 2            : 93.80
-Target 3            : 93.82
-Stop Loss           : 93.61
-
-Risk/Reward T1      : 0.06
-Risk/Reward T2      : 0.14
-Risk/Reward T3      : 0.24
-
-Probability T1      : 75%
-Probability T2      : 75%
-Probability T3      : 75%
+PATCC DAILY CANDIDATE TABLE
+----------------------------------------------------------------------------------------------------------------
+Ticker  Score Gr Trend           Volume        DEMA-8          VWAP  FP  Footprint            RS       Status   
+----------------------------------------------------------------------------------------------------------------
+IEF        40 D  Neutral         Below Average Below/Falling   Below  24 Distribution           -2.64% AVOID    
+----------------------------------------------------------------------------------------------------------------
+QUALIFIED = evidence aligned; WAIT = strong structure but entry confirmation incomplete.
 
 TLT — SUCCESS
 ----------------------------------------
 Timeframe            : 1d
-Price                : 84.24
-Score                : 26
-Grade                : F
-Action               : Avoid
-Trend                : Bearish
+Price                : N/A
+Score                : N/A
+Grade                : Not available
+Action               : Not available
+Trend                : Not available
 Market State         : Not available
-Provider             : Yahoo Finance
+Provider             : Not available
 
 SCORING ENGINE OUTPUT
 ----------------------------------------
-===========================================================================
-PATCC - Professional AI Trading & Capital Companion
-Version             : 0.4.0
-Build Date          : 2026-07-09
-===========================================================================
-Ticker              : TLT
-Profile             : etf
-
-DATA VALIDATION
------------------------------------------------------------------
-Provider            : Yahoo Finance
-Mode                : Research / Watchlist
-Real-Time           : False
-Last Bar            : 2026-07-15 00:00:00
-Rows Downloaded     : 1254
-
-MARKET STATE
------------------------------------------------------------------
-Trend               : Bearish
-Momentum            : Oversold
-Volatility          : Low
-Volume              : Below Average
-Market Bias         : Avoid
-Risk Level          : Conservative
-
-SCORING
------------------------------------------------------------------
-Overall Score       : 26
-Grade               : F
-Recommendation      : Avoid
-
-TARGETS
------------------------------------------------------------------
-Current Price       : 84.24
-Support             : 84.12
-Resistance          : 84.28
-Target 1            : 84.28
-Target 2            : 84.42
-Target 3            : 84.55
-Stop Loss           : 83.86
-
-Risk/Reward T1      : 0.11
-Risk/Reward T2      : 0.49
-Risk/Reward T3      : 0.81
-
-Probability T1      : 75%
-Probability T2      : 75%
-Probability T3      : 75%
+PATCC DAILY CANDIDATE TABLE
+----------------------------------------------------------------------------------------------------------------
+Ticker  Score Gr Trend           Volume        DEMA-8          VWAP  FP  Footprint            RS       Status   
+----------------------------------------------------------------------------------------------------------------
+TLT        26 F  Bearish         Below Average Below/Falling   Below   5 Distribution           -4.73% AVOID    
+----------------------------------------------------------------------------------------------------------------
+QUALIFIED = evidence aligned; WAIT = strong structure but entry confirmation incomplete.
 
 BIL — SUCCESS
 ----------------------------------------
 Timeframe            : 1d
-Price                : 91.52
-Score                : 62
-Grade                : C
-Action               : Watchlist
-Trend                : Strong Bullish
+Price                : N/A
+Score                : N/A
+Grade                : Not available
+Action               : Not available
+Trend                : Not available
 Market State         : Not available
-Provider             : Yahoo Finance
+Provider             : Not available
 
 SCORING ENGINE OUTPUT
 ----------------------------------------
-===========================================================================
-PATCC - Professional AI Trading & Capital Companion
-Version             : 0.4.0
-Build Date          : 2026-07-09
-===========================================================================
-Ticker              : BIL
-Profile             : stock
-
-DATA VALIDATION
------------------------------------------------------------------
-Provider            : Yahoo Finance
-Mode                : Research / Watchlist
-Real-Time           : False
-Last Bar            : 2026-07-15 00:00:00
-Rows Downloaded     : 1254
-
-MARKET STATE
------------------------------------------------------------------
-Trend               : Strong Bullish
-Momentum            : Overbought
-Volatility          : Low
-Volume              : Above Average
-Market Bias         : Buy
-Risk Level          : Conservative
-
-SCORING
------------------------------------------------------------------
-Overall Score       : 62
-Grade               : C
-Recommendation      : Watchlist
-
-TARGETS
------------------------------------------------------------------
-Current Price       : 91.52
-Support             : 91.51
-Resistance          : 91.56
-Target 1            : 91.56
-Target 2            : 91.53
-Target 3            : 91.54
-Stop Loss           : 91.50
-
-Risk/Reward T1      : 1.99
-Risk/Reward T2      : 0.75
-Risk/Reward T3      : 1.25
-
-Probability T1      : 62%
-Probability T2      : 75%
-Probability T3      : 62%
+PATCC DAILY CANDIDATE TABLE
+----------------------------------------------------------------------------------------------------------------
+Ticker  Score Gr Trend           Volume        DEMA-8          VWAP  FP  Footprint            RS       Status   
+----------------------------------------------------------------------------------------------------------------
+BIL        62 C  Strong Bullish  Below Average Below/Rising    Above  61 Neutral / Unconfirme   -1.59% WATCH    
+----------------------------------------------------------------------------------------------------------------
+QUALIFIED = evidence aligned; WAIT = strong structure but entry confirmation incomplete.
 
 SOL-USD — SUCCESS
 ----------------------------------------
 Timeframe            : 1d
-Price                : 75.71
-Score                : 30
-Grade                : F
-Action               : Avoid
-Trend                : Bearish
+Price                : N/A
+Score                : N/A
+Grade                : Not available
+Action               : Not available
+Trend                : Not available
 Market State         : Not available
-Provider             : Yahoo Finance
+Provider             : Not available
 
 SCORING ENGINE OUTPUT
 ----------------------------------------
-===========================================================================
-PATCC - Professional AI Trading & Capital Companion
-Version             : 0.4.0
-Build Date          : 2026-07-09
-===========================================================================
-Ticker              : SOL-USD
-Profile             : crypto
-
-DATA VALIDATION
------------------------------------------------------------------
-Provider            : Yahoo Finance
-Mode                : Research / Watchlist
-Real-Time           : False
-Last Bar            : 2026-07-16 00:00:00
-Rows Downloaded     : 1827
-
-MARKET STATE
------------------------------------------------------------------
-Trend               : Bearish
-Momentum            : Neutral
-Volatility          : Medium
-Volume              : Below Average
-Market Bias         : Avoid
-Risk Level          : Moderate
-
-SCORING
------------------------------------------------------------------
-Overall Score       : 30
-Grade               : F
-Recommendation      : Avoid
-
-TARGETS
------------------------------------------------------------------
-Current Price       : 75.71
-Support             : 74.55
-Resistance          : 75.92
-Target 1            : 75.92
-Target 2            : 77.45
-Target 3            : 78.61
-Stop Loss           : 73.25
-
-Risk/Reward T1      : 0.09
-Risk/Reward T2      : 0.71
-Risk/Reward T3      : 1.18
-
-Probability T1      : 75%
-Probability T2      : 75%
-Probability T3      : 62%
+PATCC DAILY CANDIDATE TABLE
+----------------------------------------------------------------------------------------------------------------
+Ticker  Score Gr Trend           Volume        DEMA-8          VWAP  FP  Footprint            RS       Status   
+----------------------------------------------------------------------------------------------------------------
+SOL-USD    73 B  Bullish         Below Average Above/Rising    Below  40 Weak / Distribution    +9.98% AVOID    
+----------------------------------------------------------------------------------------------------------------
+QUALIFIED = evidence aligned; WAIT = strong structure but entry confirmation incomplete.
 
 XRP-USD — SUCCESS
 ----------------------------------------
 Timeframe            : 1d
-Price                : 1.1
-Score                : 42
-Grade                : D
-Action               : Weak Setup
-Trend                : Bearish
+Price                : N/A
+Score                : N/A
+Grade                : Not available
+Action               : Not available
+Trend                : Not available
 Market State         : Not available
-Provider             : Yahoo Finance
+Provider             : Not available
 
 SCORING ENGINE OUTPUT
 ----------------------------------------
-===========================================================================
-PATCC - Professional AI Trading & Capital Companion
-Version             : 0.4.0
-Build Date          : 2026-07-09
-===========================================================================
-Ticker              : XRP-USD
-Profile             : crypto
-
-DATA VALIDATION
------------------------------------------------------------------
-Provider            : Yahoo Finance
-Mode                : Research / Watchlist
-Real-Time           : False
-Last Bar            : 2026-07-16 00:00:00
-Rows Downloaded     : 1827
-
-MARKET STATE
------------------------------------------------------------------
-Trend               : Bearish
-Momentum            : Bullish
-Volatility          : Medium
-Volume              : Below Average
-Market Bias         : Avoid
-Risk Level          : Moderate
-
-SCORING
------------------------------------------------------------------
-Overall Score       : 42
-Grade               : D
-Recommendation      : Weak Setup
-
-TARGETS
------------------------------------------------------------------
-Current Price       : 1.10
-Support             : 1.10
-Resistance          : 1.10
-Target 1            : 1.10
-Target 2            : 1.10
-Target 3            : 1.10
-Stop Loss           : 1.08
-
-Risk/Reward T1      : 0.04
-Risk/Reward T2      : 0.05
-Risk/Reward T3      : 0.08
-
-Probability T1      : 75%
-Probability T2      : 75%
-Probability T3      : 75%
+PATCC DAILY CANDIDATE TABLE
+----------------------------------------------------------------------------------------------------------------
+Ticker  Score Gr Trend           Volume        DEMA-8          VWAP  FP  Footprint            RS       Status   
+----------------------------------------------------------------------------------------------------------------
+XRP-USD    61 C  Neutral         Below Average Below/Rising    Above  44 Weak / Distribution    +1.02% AVOID    
+----------------------------------------------------------------------------------------------------------------
+QUALIFIED = evidence aligned; WAIT = strong structure but entry confirmation incomplete.
 
 SOXS — SUCCESS
 ----------------------------------------
 Timeframe            : 1d
-Price                : 45.98
-Score                : 28
-Grade                : F
-Action               : Avoid
-Trend                : Bearish
+Price                : N/A
+Score                : N/A
+Grade                : Not available
+Action               : Not available
+Trend                : Not available
 Market State         : Not available
-Provider             : Yahoo Finance
+Provider             : Not available
 
 SCORING ENGINE OUTPUT
 ----------------------------------------
-===========================================================================
-PATCC - Professional AI Trading & Capital Companion
-Version             : 0.4.0
-Build Date          : 2026-07-09
-===========================================================================
-Ticker              : SOXS
-Profile             : leveraged_etf
-
-DATA VALIDATION
------------------------------------------------------------------
-Provider            : Yahoo Finance
-Mode                : Research / Watchlist
-Real-Time           : False
-Last Bar            : 2026-07-15 00:00:00
-Rows Downloaded     : 1254
-
-MARKET STATE
------------------------------------------------------------------
-Trend               : Bearish
-Momentum            : Bullish
-Volatility          : High
-Volume              : Below Average
-Market Bias         : Avoid
-Risk Level          : Aggressive
-
-SCORING
------------------------------------------------------------------
-Overall Score       : 28
-Grade               : F
-Recommendation      : Avoid
-
-TARGETS
------------------------------------------------------------------
-Current Price       : 45.98
-Support             : 44.88
-Resistance          : 46.30
-Target 1            : 46.30
-Target 2            : 47.63
-Target 3            : 48.74
-Stop Loss           : 41.26
-
-Risk/Reward T1      : 0.07
-Risk/Reward T2      : 0.35
-Risk/Reward T3      : 0.58
-
-Probability T1      : 75%
-Probability T2      : 75%
-Probability T3      : 75%
+PATCC DAILY CANDIDATE TABLE
+----------------------------------------------------------------------------------------------------------------
+Ticker  Score Gr Trend           Volume        DEMA-8          VWAP  FP  Footprint            RS       Status   
+----------------------------------------------------------------------------------------------------------------
+SOXS       22 F  Bearish         Below Average Below/Falling   Above  55 Neutral / Unconfirme   +8.31% AVOID    
+----------------------------------------------------------------------------------------------------------------
+QUALIFIED = evidence aligned; WAIT = strong structure but entry confirmation incomplete.
 
 SQQQ — SUCCESS
 ----------------------------------------
 Timeframe            : 1d
-Price                : 38.94
-Score                : 32
-Grade                : F
-Action               : Avoid
-Trend                : Bearish
+Price                : N/A
+Score                : N/A
+Grade                : Not available
+Action               : Not available
+Trend                : Not available
 Market State         : Not available
-Provider             : Yahoo Finance
+Provider             : Not available
 
 SCORING ENGINE OUTPUT
 ----------------------------------------
-===========================================================================
-PATCC - Professional AI Trading & Capital Companion
-Version             : 0.4.0
-Build Date          : 2026-07-09
-===========================================================================
-Ticker              : SQQQ
-Profile             : leveraged_etf
-
-DATA VALIDATION
------------------------------------------------------------------
-Provider            : Yahoo Finance
-Mode                : Research / Watchlist
-Real-Time           : False
-Last Bar            : 2026-07-15 00:00:00
-Rows Downloaded     : 1254
-
-MARKET STATE
------------------------------------------------------------------
-Trend               : Bearish
-Momentum            : Neutral
-Volatility          : High
-Volume              : Below Average
-Market Bias         : Avoid
-Risk Level          : Aggressive
-
-SCORING
------------------------------------------------------------------
-Overall Score       : 32
-Grade               : F
-Recommendation      : Avoid
-
-TARGETS
------------------------------------------------------------------
-Current Price       : 38.94
-Support             : 38.90
-Resistance          : 38.98
-Target 1            : 38.98
-Target 2            : 39.00
-Target 3            : 39.04
-Stop Loss           : 37.69
-
-Risk/Reward T1      : 0.03
-Risk/Reward T2      : 0.05
-Risk/Reward T3      : 0.08
-
-Probability T1      : 75%
-Probability T2      : 75%
-Probability T3      : 75%
+PATCC DAILY CANDIDATE TABLE
+----------------------------------------------------------------------------------------------------------------
+Ticker  Score Gr Trend           Volume        DEMA-8          VWAP  FP  Footprint            RS       Status   
+----------------------------------------------------------------------------------------------------------------
+SQQQ       59 C  Neutral         Below Average Below/Falling   Above  49 Neutral / Unconfirme   +0.66% WATCH    
+----------------------------------------------------------------------------------------------------------------
+QUALIFIED = evidence aligned; WAIT = strong structure but entry confirmation incomplete.
 
 SOXL — SUCCESS
 ----------------------------------------
 Timeframe            : 1d
-Price                : 165.55
-Score                : 46
-Grade                : D
-Action               : Weak Setup
-Trend                : Bullish
+Price                : N/A
+Score                : N/A
+Grade                : Not available
+Action               : Not available
+Trend                : Not available
 Market State         : Not available
-Provider             : Yahoo Finance
+Provider             : Not available
 
 SCORING ENGINE OUTPUT
 ----------------------------------------
-===========================================================================
-PATCC - Professional AI Trading & Capital Companion
-Version             : 0.4.0
-Build Date          : 2026-07-09
-===========================================================================
-Ticker              : SOXL
-Profile             : leveraged_etf
-
-DATA VALIDATION
------------------------------------------------------------------
-Provider            : Yahoo Finance
-Mode                : Research / Watchlist
-Real-Time           : False
-Last Bar            : 2026-07-15 00:00:00
-Rows Downloaded     : 1254
-
-MARKET STATE
------------------------------------------------------------------
-Trend               : Bullish
-Momentum            : Neutral
-Volatility          : High
-Volume              : Above Average
-Market Bias         : Watch for Pullback
-Risk Level          : Aggressive
-
-SCORING
------------------------------------------------------------------
-Overall Score       : 46
-Grade               : D
-Recommendation      : Weak Setup
-
-TARGETS
------------------------------------------------------------------
-Current Price       : 165.55
-Support             : 161.55
-Resistance          : 166.00
-Target 1            : 166.00
-Target 2            : 171.55
-Target 3            : 175.55
-Stop Loss           : 143.62
-
-Risk/Reward T1      : 0.02
-Risk/Reward T2      : 0.27
-Risk/Reward T3      : 0.46
-
-Probability T1      : 75%
-Probability T2      : 75%
-Probability T3      : 75%
+PATCC DAILY CANDIDATE TABLE
+----------------------------------------------------------------------------------------------------------------
+Ticker  Score Gr Trend           Volume        DEMA-8          VWAP  FP  Footprint            RS       Status   
+----------------------------------------------------------------------------------------------------------------
+SOXL       36 F  Neutral         Below Average Above/Rising    Below  27 Distribution          -32.32% AVOID    
+----------------------------------------------------------------------------------------------------------------
+QUALIFIED = evidence aligned; WAIT = strong structure but entry confirmation incomplete.
 
 TQQQ — SUCCESS
 ----------------------------------------
 Timeframe            : 1d
-Price                : 74.44
-Score                : 69
-Grade                : C
-Action               : Watchlist
-Trend                : Strong Bullish
+Price                : N/A
+Score                : N/A
+Grade                : Not available
+Action               : Not available
+Trend                : Not available
 Market State         : Not available
-Provider             : Yahoo Finance
+Provider             : Not available
 
 SCORING ENGINE OUTPUT
 ----------------------------------------
-===========================================================================
-PATCC - Professional AI Trading & Capital Companion
-Version             : 0.4.0
-Build Date          : 2026-07-09
-===========================================================================
-Ticker              : TQQQ
-Profile             : leveraged_etf
-
-DATA VALIDATION
------------------------------------------------------------------
-Provider            : Yahoo Finance
-Mode                : Research / Watchlist
-Real-Time           : False
-Last Bar            : 2026-07-15 00:00:00
-Rows Downloaded     : 1254
-
-MARKET STATE
------------------------------------------------------------------
-Trend               : Strong Bullish
-Momentum            : Bullish
-Volatility          : High
-Volume              : Below Average
-Market Bias         : Buy
-Risk Level          : Aggressive
-
-SCORING
------------------------------------------------------------------
-Overall Score       : 69
-Grade               : C
-Recommendation      : Watchlist
-
-TARGETS
------------------------------------------------------------------
-Current Price       : 74.44
-Support             : 74.33
-Resistance          : 74.53
-Target 1            : 74.53
-Target 2            : 74.61
-Target 3            : 74.72
-Stop Loss           : 72.00
-
-Risk/Reward T1      : 0.04
-Risk/Reward T2      : 0.07
-Risk/Reward T3      : 0.11
-
-Probability T1      : 75%
-Probability T2      : 75%
-Probability T3      : 75%
+PATCC DAILY CANDIDATE TABLE
+----------------------------------------------------------------------------------------------------------------
+Ticker  Score Gr Trend           Volume        DEMA-8          VWAP  FP  Footprint            RS       Status   
+----------------------------------------------------------------------------------------------------------------
+TQQQ       59 C  Bullish         Below Average Above/Falling   Below  33 Weak / Distribution    -7.26% AVOID    
+----------------------------------------------------------------------------------------------------------------
+QUALIFIED = evidence aligned; WAIT = strong structure but entry confirmation incomplete.
 
 ==============================================================================
 PATCC v0.1 is decision support, not a guarantee of market outcomes.
